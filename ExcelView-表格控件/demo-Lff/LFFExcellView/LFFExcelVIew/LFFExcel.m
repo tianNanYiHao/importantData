@@ -17,7 +17,7 @@
 @synthesize data,titles,cellHeight,excelWidth,excelY,excelX;
 
 //自动计算表格的合适高度
--(CGFloat)initwithexcelWidthBycellHeight:(CGFloat)cellHeightt{
+-(CGFloat)initwithexcelHeightBycellHeight:(CGFloat)cellHeightt{
     CGFloat  excelHeight;
     excelHeight = data.count*cellHeightt;  //表格高
     
@@ -26,19 +26,30 @@
     trueExcelHeight = excelHeight>[UIScreen mainScreen].bounds.size.height-excelY?[UIScreen mainScreen].bounds.size.height-excelY-20:excelHeight;
     return trueExcelHeight;
 }
+//返回表格的总宽度
+-(CGFloat)returnExcelWidth:(CGFloat)excelXx{
+    CGFloat excelWidthh;
+    excelWidthh = [UIScreen mainScreen].bounds.size.width-2*excelXx;
+    return excelWidthh;
+}
+
+//返回表格的frame
+-(CGRect)returnFrameForexcelX:(CGFloat)excelXx excelY:(CGFloat)excelYy{
+    //根据单元格高度 获取exce表格的总高
+    CGFloat excelHeight =   [self initwithexcelHeightBycellHeight:cellHeight];
+    CGFloat excelWidthh =  [self returnExcelWidth:excelXx];
+    return CGRectMake(excelXx, excelYy, excelWidthh, excelHeight);
+}
 //计算单元格的长度
--(CGFloat)cellwidthByexcelWidth:(CGFloat)excelWidthh excelX:(CGFloat)excelX{
+-(CGFloat)cellWidth{
+    CGFloat excelWidthh =  [self returnExcelWidth:excelX];
     CGFloat cellWidth;
     cellWidth = excelWidthh/titles.count;
     return cellWidth;
 }
-//返回表格的frame
--(CGRect)returnFrameForsetexcelWidth:(CGFloat)excelWidthw excelX:(CGFloat)excelXx excelY:(CGFloat)excelYy{
-    //根据单元格高度 获取exce表格的总高
-  CGFloat excelHeight =   [self initwithexcelWidthBycellHeight:cellHeight];
-    return CGRectMake(excelXx, excelYy, excelWidthw, excelHeight);
-    
-}
+
+
+
 @end
 
 
@@ -63,11 +74,11 @@
     //初始化表格样式 以及获取数据
     dataSource = DataSource;
     //根据titles获取单元格长度
-    cellWidth = [dataSource cellwidthByexcelWidth:dataSource.excelWidth excelX:dataSource.excelX];
+    cellWidth = [dataSource cellWidth];
     //初始化显示视图及cell宽高
     cellHeight = dataSource.cellHeight;
     //计算frame
-    CGRect frame = [dataSource returnFrameForsetexcelWidth:dataSource.excelWidth excelX:dataSource.excelX excelY:dataSource.excelY];
+    CGRect frame = [dataSource returnFrameForexcelX:dataSource.excelX excelY:dataSource.excelY];
     
     
     self = [super initWithFrame:frame];
