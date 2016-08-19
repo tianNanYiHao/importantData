@@ -23,6 +23,7 @@
     CGFloat excelY;   //表格y
     CGFloat cellHeight; //单元格高
     CGFloat cellwidth; //单元格宽
+    
     //标题背景颜色
     UIColor *titleColor;
     
@@ -32,7 +33,9 @@
     //单元格线颜色
     UIColor *lineColor;
     
-    
+    //最后一个单元格是否有点击效果
+    BOOL anction;
+
 }
 @property(retain) NSMutableArray *titles;
 @property(retain) NSMutableArray *data;
@@ -44,11 +47,12 @@
 @property (nonatomic,strong) UIColor *titleColor;
 @property (nonatomic,strong) UIColor *cellColor;
 @property (nonatomic,strong) UIColor *lineColor;
+@property (nonatomic,assign) BOOL anction;
 @end
 
 
 
-
+typedef void(^LFFExcelComponentBlock)(NSInteger action);
 @interface LFFExcelComponent : UIView<UIScrollViewDelegate>{
     //上标题
     UIView *vTopLeft;
@@ -69,11 +73,10 @@
 }
 @property(readonly) CGFloat cellHeight;
 @property(readonly) CGFloat cellWidth;
-
+@property (nonatomic,assign)LFFExcelComponentBlock block;
 @property(retain) LFFExcelData *dataSource;
-
 //用数据源->初始化
--(instancetype)initWithdata:(LFFExcelData*)DataSource;
+-(instancetype)initWithdata:(LFFExcelData*)DataSource block:(LFFExcelComponentBlock)block;
 
 
 @end
