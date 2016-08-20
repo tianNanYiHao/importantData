@@ -52,7 +52,10 @@
 
 
 
-typedef void(^LFFExcelComponentBlock)(NSInteger action);
+@protocol LFFExcelDelegate <NSObject>
+- (void)btnAction:(NSInteger)index;
+@end
+
 @interface LFFExcelComponent : UIView<UIScrollViewDelegate>{
     //上标题
     UIView *vTopLeft;
@@ -73,10 +76,12 @@ typedef void(^LFFExcelComponentBlock)(NSInteger action);
 }
 @property(readonly) CGFloat cellHeight;
 @property(readonly) CGFloat cellWidth;
-@property (nonatomic,assign)LFFExcelComponentBlock block;
+@property (nonatomic,assign) id <LFFExcelDelegate> delegate;
+
+
 @property(retain) LFFExcelData *dataSource;
 //用数据源->初始化
--(instancetype)initWithdata:(LFFExcelData*)DataSource block:(LFFExcelComponentBlock)block;
+-(instancetype)initWithdata:(LFFExcelData*)DataSource;
 
 
 @end

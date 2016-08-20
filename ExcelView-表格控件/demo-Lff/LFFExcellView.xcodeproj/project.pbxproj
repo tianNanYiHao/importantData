@@ -16,6 +16,7 @@
 		BF444A341D657CEF00EABD88 /* LFFExcellViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF444A331D657CEF00EABD88 /* LFFExcellViewTests.m */; };
 		BF444A3F1D657CF000EABD88 /* LFFExcellViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF444A3E1D657CF000EABD88 /* LFFExcellViewUITests.m */; };
 		BF444A4F1D657DD500EABD88 /* LFFExcel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF444A4E1D657DD500EABD88 /* LFFExcel.m */; };
+		BF9F7F351D68427600015D45 /* pushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9F7F341D68427600015D45 /* pushViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		BF444A401D657CF000EABD88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF444A4D1D657DD500EABD88 /* LFFExcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFExcel.h; sourceTree = "<group>"; };
 		BF444A4E1D657DD500EABD88 /* LFFExcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFExcel.m; sourceTree = "<group>"; };
+		BF9F7F331D68427600015D45 /* pushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pushViewController.h; sourceTree = "<group>"; };
+		BF9F7F341D68427600015D45 /* pushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pushViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 				BF444A1D1D657CEF00EABD88 /* AppDelegate.m */,
 				BF444A1F1D657CEF00EABD88 /* ViewController.h */,
 				BF444A201D657CEF00EABD88 /* ViewController.m */,
+				BF9F7F331D68427600015D45 /* pushViewController.h */,
+				BF9F7F341D68427600015D45 /* pushViewController.m */,
 				BF444A221D657CEF00EABD88 /* Main.storyboard */,
 				BF444A251D657CEF00EABD88 /* Assets.xcassets */,
 				BF444A271D657CEF00EABD88 /* LaunchScreen.storyboard */,
@@ -283,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9F7F351D68427600015D45 /* pushViewController.m in Sources */,
 				BF444A211D657CEF00EABD88 /* ViewController.m in Sources */,
 				BF444A1E1D657CEF00EABD88 /* AppDelegate.m in Sources */,
 				BF444A4F1D657DD500EABD88 /* LFFExcel.m in Sources */,
@@ -516,6 +522,7 @@
 				BF444A451D657CF000EABD88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF444A461D657CF000EABD88 /* Build configuration list for PBXNativeTarget "LFFExcellViewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				BF444A481D657CF000EABD88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF444A491D657CF000EABD88 /* Build configuration list for PBXNativeTarget "LFFExcellViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				BF444A4B1D657CF000EABD88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

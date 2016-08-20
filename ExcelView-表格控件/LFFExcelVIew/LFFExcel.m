@@ -68,8 +68,7 @@
 }
 @synthesize dataSource;
 
--(instancetype)initWithdata:(LFFExcelData*)DataSource block:(LFFExcelComponentBlock)block{
-    _block = block;
+-(instancetype)initWithdata:(LFFExcelData*)DataSource{
     
     //初始化表格样式 以及获取数据
     dataSource = DataSource;
@@ -188,7 +187,9 @@
 }
 
 -(void)actionBtn:(UIButton*)btn{
-    _block(btn.tag);
+    if (dataSource.anction == YES && [_delegate respondsToSelector:@selector(btnAction:)]) {
+        [_delegate btnAction:btn.tag];
+    }
 }
 
 

@@ -11,8 +11,12 @@
 #define customBlue [UIColor colorWithRed:69/255.0 green:120/255.0 blue:245/255.0 alpha:1]
 #define customGray [UIColor colorWithRed:238/255.0 green:238/255.0 blue:245/255.0 alpha:1]
 #define customLineBlue [UIColor colorWithRed:151/255.0 green:170/255.0 blue:245/255.0 alpha:1]
-@interface ViewController ()
+#import "pushViewController.h"
 
+@interface ViewController ()<LFFExcelDelegate>
+{
+    
+}
 @end
 
 @implementation ViewController
@@ -55,18 +59,23 @@
     ds.cellColor = customGray;
     //设置单元格网格线颜色
     ds.lineColor = customLineBlue;
-    
     //设置按钮anction
     ds.anction = YES;
     
-    LFFExcelComponent *excel = [[LFFExcelComponent alloc] initWithdata:ds block:^(NSInteger action) {
-        NSLog(@"%ld",(long)action);
-    }];
+    LFFExcelComponent *excel = [[LFFExcelComponent alloc] initWithdata:ds];
+    excel.delegate = self;
     [self.view addSubview:excel];
     
+}
 
+#pragma mark LFFExcelDelegate
+-(void)btnAction:(NSInteger)index{
+    
+    pushViewController *p = [[pushViewController alloc] init];
+    [self.navigationController pushViewController:p animated:YES];
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
