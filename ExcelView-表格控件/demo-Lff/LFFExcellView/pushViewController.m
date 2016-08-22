@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"push";
-    self.view.backgroundColor = [UIColor orangeColor];
+    self.view.backgroundColor = [UIColor grayColor];
     
     
 }

@@ -24,6 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"表格";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    
     
     //数据初始化 及样式初始化
     LFFExcelData *ds = [[LFFExcelData alloc] init];
