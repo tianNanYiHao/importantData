@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF7E3E851DB88DA30042BDC4 /* LFFAddPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */; };
+		BF7E3E861DB88DA30042BDC4 /* LFFAddPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */; };
+		BF7E3E871DB88DA30042BDC4 /* LFFPickerVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */; };
+		BF7E3E881DB88DA30042BDC4 /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */; };
+		BF7E3E891DB88DA30042BDC4 /* TrickAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */; };
+		BF7E3E8A1DB88DA30042BDC4 /* TrickAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BF766C7D1DB86B7500EEB043 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BF766C7F1DB86B7500EEB043 /* libLFFPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLFFPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFAddPickerView.h; sourceTree = "<group>"; };
+		BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFAddPickerView.m; sourceTree = "<group>"; };
+		BF7E3E7F1DB88DA30042BDC4 /* LFFAddPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFAddPickerView.xib; sourceTree = "<group>"; };
+		BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
+		BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
+		BF7E3E821DB88DA30042BDC4 /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
+		BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickAddressModel.h; sourceTree = "<group>"; };
+		BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrickAddressModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF766C7C1DB86B7500EEB043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF766C761DB86B7500EEB043 = {
+			isa = PBXGroup;
+			children = (
+				BF766C811DB86B7500EEB043 /* LFFPicker */,
+				BF766C801DB86B7500EEB043 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF766C801DB86B7500EEB043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C7F1DB86B7500EEB043 /* libLFFPicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF766C811DB86B7500EEB043 /* LFFPicker */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E3E7C1DB88DA30042BDC4 /* LFFDatePickerView */,
+			);
+			path = LFFPicker;
+			sourceTree = "<group>";
+		};
+		BF7E3E7C1DB88DA30042BDC4 /* LFFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */,
+				BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */,
+				BF7E3E7F1DB88DA30042BDC4 /* LFFAddPickerView.xib */,
+				BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */,
+				BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */,
+				BF7E3E821DB88DA30042BDC4 /* LFFPickerVIew.xib */,
+				BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */,
+				BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */,
+			);
+			path = LFFDatePickerView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BF766C971DB86BB300EEB043 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7E3E891DB88DA30042BDC4 /* TrickAddressModel.h in Headers */,
+				BF7E3E871DB88DA30042BDC4 /* LFFPickerVIew.h in Headers */,
+				BF7E3E851DB88DA30042BDC4 /* LFFAddPickerView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BF766C7E1DB86B7500EEB043 /* LFFPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF766C881DB86B7500EEB043 /* Build configuration list for PBXNativeTarget "LFFPicker" */;
+			buildPhases = (
+				BF766C7B1DB86B7500EEB043 /* Sources */,
+				BF766C7C1DB86B7500EEB043 /* Frameworks */,
+				BF766C7D1DB86B7500EEB043 /* CopyFiles */,
+				BF766C971DB86BB300EEB043 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFFPicker;
+			productName = LFFPicker;
+			productReference = BF766C7F1DB86B7500EEB043 /* libLFFPicker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF766C771DB86B7500EEB043 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Lff;
+				TargetAttributes = {
+					BF766C7E1DB86B7500EEB043 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF766C7A1DB86B7500EEB043 /* Build configuration list for PBXProject "LFFPicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF766C761DB86B7500EEB043;
+			productRefGroup = BF766C801DB86B7500EEB043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF766C7E1DB86B7500EEB043 /* LFFPicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF766C7B1DB86B7500EEB043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7E3E8A1DB88DA30042BDC4 /* TrickAddressModel.m in Sources */,
+				BF7E3E861DB88DA30042BDC4 /* LFFAddPickerView.m in Sources */,
+				BF7E3E881DB88DA30042BDC4 /* LFFPickerVIew.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BF766C861DB86B7500EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF766C871DB86B7500EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF766C891DB86B7500EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BF766C8A1DB86B7500EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF766C7A1DB86B7500EEB043 /* Build configuration list for PBXProject "LFFPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C861DB86B7500EEB043 /* Debug */,
+				BF766C871DB86B7500EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF766C881DB86B7500EEB043 /* Build configuration list for PBXNativeTarget "LFFPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C891DB86B7500EEB043 /* Debug */,
+				BF766C8A1DB86B7500EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF766C771DB86B7500EEB043 /* Project object */;
+}
