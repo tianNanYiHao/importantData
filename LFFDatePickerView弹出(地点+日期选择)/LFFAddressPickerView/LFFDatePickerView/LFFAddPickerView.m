@@ -96,10 +96,17 @@
 - (IBAction)commitBtnClick:(id)sender {
     if ([_delegate respondsToSelector:@selector(hiddenLFFAddPickerView)] && [_delegate respondsToSelector:@selector(returnFromeLFFAddPickerInfo:)] && [_delegate respondsToSelector:@selector(returnToLFFAddPickerInfo:)]) {
         [_delegate hiddenLFFAddPickerView];
+        
         if ([_fromeAddress isEqualToString:@"1"]) {
             [_delegate returnFromeLFFAddPickerInfo:@[name1,nameCode1]];
+            _commitBtn.layer.borderColor =customGray.CGColor;
+            _commitBtn.titleLabel.textColor = customGray;
+            _commitBtn.userInteractionEnabled = NO;
         }else if ([_toAddress isEqualToString:@"2"]){
             [_delegate returnToLFFAddPickerInfo:@[name2,nameCode2]];
+            _commitBtn.layer.borderColor =customGray.CGColor;
+            _commitBtn.titleLabel.textColor = customGray;
+            _commitBtn.userInteractionEnabled = NO;
         }
         [self addAnimationToCustomView:sender];  
     }
