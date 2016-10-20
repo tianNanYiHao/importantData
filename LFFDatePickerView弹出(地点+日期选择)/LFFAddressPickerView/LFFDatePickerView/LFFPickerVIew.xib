@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LFFPickerVIew">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fG-Vi-bnb" userLabel="maskView">
+                    <frame key="frameInset" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTr-VE-9Xn" userLabel="maskBtn">
+                            <frame key="frameInset" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="hiddenBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="lCF-Wh-U7r"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-Ru-KlO" userLabel="showView">
+                            <frame key="frameInset" minX="20" minY="109" width="560" height="301"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2016-05-14" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoT-Qb-IkW">
+                                    <frame key="frameInset" minX="4" minY="8" width="552" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="Xfx-BZ-8oe"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" red="0.050980392159999999" green="0.37254901959999998" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PMD-jC-wfY">
+                                    <frame key="frameInset" minX="8" minY="34" width="544" height="216"/>
+                                    <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="216" id="LNS-w8-D87"/>
+                                    </constraints>
+                                    <date key="date" timeIntervalSinceReferenceDate="493720672.17207998">
+                                        <!--2016-08-24 08:37:52 +0000-->
+                                    </date>
+                                    <locale key="locale" localeIdentifier="zh"/>
+                                </datePicker>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWA-gG-HX1">
+                                    <frame key="frameInset" minX="25" minY="258" width="250" height="30"/>
+                                    <state key="normal" title="回到今天">
+                                        <color key="titleColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="goBackToday:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Ns-8a-x1P"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URH-Ww-7N6">
+                                    <frame key="frameInset" minX="293" minY="258" width="250" height="30"/>
+                                    <state key="normal" title=" 确  定"/>
+                                    <connections>
+                                        <action selector="sureBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="XcI-fC-2Qq"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="PMD-jC-wfY" secondAttribute="trailing" constant="8" id="6cG-o4-vm9"/>
+                                <constraint firstItem="URH-Ww-7N6" firstAttribute="leading" secondItem="VWA-gG-HX1" secondAttribute="trailing" constant="18" id="9E3-2q-hHn"/>
+                                <constraint firstItem="PMD-jC-wfY" firstAttribute="top" secondItem="CAH-Ru-KlO" secondAttribute="top" constant="34" id="DCq-Ly-U0F"/>
+                                <constraint firstAttribute="height" constant="301" id="DSp-FI-lQy"/>
+                                <constraint firstItem="SoT-Qb-IkW" firstAttribute="top" secondItem="CAH-Ru-KlO" secondAttribute="top" constant="8" id="FCY-79-kwe"/>
+                                <constraint firstAttribute="trailing" secondItem="URH-Ww-7N6" secondAttribute="trailing" constant="17" id="FYU-Ak-asj"/>
+                                <constraint firstAttribute="trailing" secondItem="SoT-Qb-IkW" secondAttribute="trailing" constant="4" id="PeW-3D-xiR"/>
+                                <constraint firstItem="SoT-Qb-IkW" firstAttribute="leading" secondItem="CAH-Ru-KlO" secondAttribute="leading" constant="4" id="avg-Kj-LwO"/>
+                                <constraint firstItem="PMD-jC-wfY" firstAttribute="leading" secondItem="CAH-Ru-KlO" secondAttribute="leading" constant="8" id="ejp-Gs-jWf"/>
+                                <constraint firstItem="URH-Ww-7N6" firstAttribute="width" secondItem="VWA-gG-HX1" secondAttribute="width" id="j6e-V9-g6B"/>
+                                <constraint firstItem="VWA-gG-HX1" firstAttribute="top" secondItem="PMD-jC-wfY" secondAttribute="bottom" constant="8" id="nnd-h3-YAm"/>
+                                <constraint firstItem="URH-Ww-7N6" firstAttribute="top" secondItem="PMD-jC-wfY" secondAttribute="bottom" constant="8" id="ppc-69-94n"/>
+                                <constraint firstItem="URH-Ww-7N6" firstAttribute="leading" secondItem="VWA-gG-HX1" secondAttribute="trailing" constant="18" id="ubc-a0-nYs"/>
+                                <constraint firstItem="VWA-gG-HX1" firstAttribute="leading" secondItem="CAH-Ru-KlO" secondAttribute="leading" constant="25" id="wFc-ue-Vsu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="CAH-Ru-KlO" secondAttribute="trailing" constant="20" id="JFe-oS-P71"/>
+                        <constraint firstItem="CAH-Ru-KlO" firstAttribute="top" secondItem="7fG-Vi-bnb" secondAttribute="top" constant="109" id="kw4-0R-ug5"/>
+                        <constraint firstItem="CAH-Ru-KlO" firstAttribute="leading" secondItem="7fG-Vi-bnb" secondAttribute="leading" constant="20" id="yQ3-dO-ueO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="7fG-Vi-bnb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0EH-PB-EBt"/>
+                <constraint firstItem="7fG-Vi-bnb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1bF-jA-QES"/>
+                <constraint firstAttribute="bottom" secondItem="7fG-Vi-bnb" secondAttribute="bottom" id="LNC-wR-r22"/>
+                <constraint firstAttribute="trailing" secondItem="7fG-Vi-bnb" secondAttribute="trailing" id="sRV-5t-6bs"/>
+            </constraints>
+            <connections>
+                <outlet property="datePickerView" destination="PMD-jC-wfY" id="aSp-za-x68"/>
+                <outlet property="goBackBtn" destination="VWA-gG-HX1" id="aSd-Va-Q9E"/>
+                <outlet property="maskBtn" destination="MTr-VE-9Xn" id="PLb-YZ-tZs"/>
+                <outlet property="showView" destination="CAH-Ru-KlO" id="a8B-Om-quX"/>
+                <outlet property="sureBtn" destination="URH-Ww-7N6" id="K9l-wd-GoI"/>
+                <outlet property="timeTitleLab" destination="SoT-Qb-IkW" id="Y0R-Tv-75w"/>
+            </connections>
+            <point key="canvasLocation" x="188" y="339"/>
+        </view>
+    </objects>
+</document>

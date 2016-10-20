@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LFFAddPickerView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TeT-nS-Lov" userLabel="maseView">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fS-tM-0UX">
+                            <connections>
+                                <action selector="maskViewHiddenSelf:" destination="iN0-l3-epB" eventType="touchUpInside" id="SKW-eO-36M"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROD-k5-Jd1" userLabel="showView">
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择站点" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pV-Kl-hu5">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" name="keyboardFocusIndicatorColor" catalog="System" colorSpace="catalog"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rhO-6c-d0n">
+                                    <frame key="frameInset" minY="25" maxY="36"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </pickerView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGI-yZ-oiQ">
+                                    <frame key="frameInset" minX="18" height="30" maxX="18" maxY="6"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <state key="normal" title="确       认"/>
+                                    <connections>
+                                        <action selector="commitBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="rpo-uV-xDf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="4pV-Kl-hu5" firstAttribute="top" secondItem="ROD-k5-Jd1" secondAttribute="top" constant="8" id="BIA-Co-JfU"/>
+                                <constraint firstAttribute="trailing" secondItem="4pV-Kl-hu5" secondAttribute="trailing" constant="8" id="NiF-Qm-IlY"/>
+                                <constraint firstItem="4pV-Kl-hu5" firstAttribute="leading" secondItem="ROD-k5-Jd1" secondAttribute="leading" constant="8" id="sdb-fu-YSA"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="ROD-k5-Jd1" firstAttribute="leading" secondItem="TeT-nS-Lov" secondAttribute="leading" constant="12" id="8QA-9B-KCW"/>
+                        <constraint firstItem="1fS-tM-0UX" firstAttribute="top" secondItem="TeT-nS-Lov" secondAttribute="top" id="Lf7-ct-Zdq"/>
+                        <constraint firstItem="1fS-tM-0UX" firstAttribute="leading" secondItem="TeT-nS-Lov" secondAttribute="leading" id="PAc-n5-2AY"/>
+                        <constraint firstAttribute="bottom" secondItem="1fS-tM-0UX" secondAttribute="bottom" id="WrS-L5-V64"/>
+                        <constraint firstAttribute="trailing" secondItem="1fS-tM-0UX" secondAttribute="trailing" id="kGH-lW-Wes"/>
+                        <constraint firstItem="ROD-k5-Jd1" firstAttribute="top" secondItem="TeT-nS-Lov" secondAttribute="top" constant="80" id="sSV-x5-7mz"/>
+                        <constraint firstAttribute="trailing" secondItem="ROD-k5-Jd1" secondAttribute="trailing" constant="11" id="tfh-6s-Gqc"/>
+                        <constraint firstAttribute="bottom" secondItem="ROD-k5-Jd1" secondAttribute="bottom" constant="138" id="ua5-UV-xGV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TeT-nS-Lov" secondAttribute="trailing" id="2LJ-WU-iDP"/>
+                <constraint firstItem="TeT-nS-Lov" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Tbs-8I-eS3"/>
+                <constraint firstItem="TeT-nS-Lov" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qXK-iP-sD6"/>
+                <constraint firstAttribute="bottom" secondItem="TeT-nS-Lov" secondAttribute="bottom" id="xqk-At-Ud2"/>
+            </constraints>
+            <connections>
+                <outlet property="addPickerView" destination="rhO-6c-d0n" id="FwQ-ep-LUr"/>
+                <outlet property="chooseLab" destination="4pV-Kl-hu5" id="bVp-Pt-4uW"/>
+                <outlet property="commitBtn" destination="xGI-yZ-oiQ" id="rcE-mB-GlG"/>
+                <outlet property="maskView" destination="TeT-nS-Lov" id="pdf-If-FMn"/>
+                <outlet property="showView" destination="ROD-k5-Jd1" id="f8x-a0-ntF"/>
+            </connections>
+        </view>
+    </objects>
+</document>

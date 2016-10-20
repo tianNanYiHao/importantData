@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF766BEE1DB76EAF00EEB043 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766BED1DB76EAF00EEB043 /* main.m */; };
+		BF766BF11DB76EB000EEB043 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766BF01DB76EB000EEB043 /* AppDelegate.m */; };
+		BF766BF41DB76EB000EEB043 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766BF31DB76EB000EEB043 /* ViewController.m */; };
+		BF766BF71DB76EB000EEB043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF766BF51DB76EB000EEB043 /* Main.storyboard */; };
+		BF766BF91DB76EB000EEB043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF766BF81DB76EB000EEB043 /* Assets.xcassets */; };
+		BF766BFC1DB76EB000EEB043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF766BFA1DB76EB000EEB043 /* LaunchScreen.storyboard */; };
+		BF766C071DB76EB100EEB043 /* LFFAddressPickerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766C061DB76EB100EEB043 /* LFFAddressPickerViewTests.m */; };
+		BF766C121DB76EB100EEB043 /* LFFAddressPickerViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766C111DB76EB100EEB043 /* LFFAddressPickerViewUITests.m */; };
+		BF766C231DB76F1100EEB043 /* LFFAddPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766C211DB76F1100EEB043 /* LFFAddPickerView.m */; };
+		BF766C241DB76F1100EEB043 /* LFFAddPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF766C221DB76F1100EEB043 /* LFFAddPickerView.xib */; };
+		BF766C2D1DB7708800EEB043 /* libLFFJFCompenyInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF766C291DB7708800EEB043 /* libLFFJFCompenyInfo.a */; };
+		BF766C2E1DB7708800EEB043 /* libLFFTrickAddress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF766C2A1DB7708800EEB043 /* libLFFTrickAddress.a */; };
+		BF766C2F1DB7708800EEB043 /* 捷丰商户.txt in Resources */ = {isa = PBXBuildFile; fileRef = BF766C2C1DB7708800EEB043 /* 捷丰商户.txt */; };
+		BF766C381DB8604C00EEB043 /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BF766C361DB8604C00EEB043 /* LFFPickerVIew.m */; };
+		BF766C391DB8604C00EEB043 /* LFFPickerVIew.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF766C371DB8604C00EEB043 /* LFFPickerVIew.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF766C031DB76EB000EEB043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF766BE11DB76EAF00EEB043 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF766BE81DB76EAF00EEB043;
+			remoteInfo = LFFAddressPickerView;
+		};
+		BF766C0E1DB76EB100EEB043 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF766BE11DB76EAF00EEB043 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF766BE81DB76EAF00EEB043;
+			remoteInfo = LFFAddressPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF766BE91DB76EAF00EEB043 /* LFFAddressPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LFFAddressPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF766BED1DB76EAF00EEB043 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF766BEF1DB76EB000EEB043 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BF766BF01DB76EB000EEB043 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BF766BF21DB76EB000EEB043 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BF766BF31DB76EB000EEB043 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BF766BF61DB76EB000EEB043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF766BF81DB76EB000EEB043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF766BFB1DB76EB000EEB043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF766BFD1DB76EB000EEB043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF766C021DB76EB000EEB043 /* LFFAddressPickerViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFFAddressPickerViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF766C061DB76EB100EEB043 /* LFFAddressPickerViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFAddressPickerViewTests.m; sourceTree = "<group>"; };
+		BF766C081DB76EB100EEB043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF766C0D1DB76EB100EEB043 /* LFFAddressPickerViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LFFAddressPickerViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF766C111DB76EB100EEB043 /* LFFAddressPickerViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LFFAddressPickerViewUITests.m; sourceTree = "<group>"; };
+		BF766C131DB76EB100EEB043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF766C201DB76F1100EEB043 /* LFFAddPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFAddPickerView.h; sourceTree = "<group>"; };
+		BF766C211DB76F1100EEB043 /* LFFAddPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFAddPickerView.m; sourceTree = "<group>"; };
+		BF766C221DB76F1100EEB043 /* LFFAddPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFAddPickerView.xib; sourceTree = "<group>"; };
+		BF766C281DB7708800EEB043 /* LFFStringarr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFStringarr.h; sourceTree = "<group>"; };
+		BF766C291DB7708800EEB043 /* libLFFJFCompenyInfo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLFFJFCompenyInfo.a; sourceTree = "<group>"; };
+		BF766C2A1DB7708800EEB043 /* libLFFTrickAddress.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libLFFTrickAddress.a; sourceTree = "<group>"; };
+		BF766C2B1DB7708800EEB043 /* TrickAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickAddressModel.h; sourceTree = "<group>"; };
+		BF766C2C1DB7708800EEB043 /* 捷丰商户.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "捷丰商户.txt"; sourceTree = "<group>"; };
+		BF766C351DB8604C00EEB043 /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
+		BF766C361DB8604C00EEB043 /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
+		BF766C371DB8604C00EEB043 /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF766BE61DB76EAF00EEB043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF766C2D1DB7708800EEB043 /* libLFFJFCompenyInfo.a in Frameworks */,
+				BF766C2E1DB7708800EEB043 /* libLFFTrickAddress.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766BFF1DB76EB000EEB043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766C0A1DB76EB100EEB043 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF766BE01DB76EAF00EEB043 = {
+			isa = PBXGroup;
+			children = (
+				BF766BEB1DB76EAF00EEB043 /* LFFAddressPickerView */,
+				BF766C051DB76EB000EEB043 /* LFFAddressPickerViewTests */,
+				BF766C101DB76EB100EEB043 /* LFFAddressPickerViewUITests */,
+				BF766BEA1DB76EAF00EEB043 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BF766BEA1DB76EAF00EEB043 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF766BE91DB76EAF00EEB043 /* LFFAddressPickerView.app */,
+				BF766C021DB76EB000EEB043 /* LFFAddressPickerViewTests.xctest */,
+				BF766C0D1DB76EB100EEB043 /* LFFAddressPickerViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF766BEB1DB76EAF00EEB043 /* LFFAddressPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C271DB7708800EEB043 /* LFFStringArray */,
+				BF766C1F1DB76F0A00EEB043 /* LFFDatePickerView */,
+				BF766BEF1DB76EB000EEB043 /* AppDelegate.h */,
+				BF766BF01DB76EB000EEB043 /* AppDelegate.m */,
+				BF766BF21DB76EB000EEB043 /* ViewController.h */,
+				BF766BF31DB76EB000EEB043 /* ViewController.m */,
+				BF766BF51DB76EB000EEB043 /* Main.storyboard */,
+				BF766BF81DB76EB000EEB043 /* Assets.xcassets */,
+				BF766BFA1DB76EB000EEB043 /* LaunchScreen.storyboard */,
+				BF766BFD1DB76EB000EEB043 /* Info.plist */,
+				BF766BEC1DB76EAF00EEB043 /* Supporting Files */,
+			);
+			path = LFFAddressPickerView;
+			sourceTree = "<group>";
+		};
+		BF766BEC1DB76EAF00EEB043 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF766BED1DB76EAF00EEB043 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF766C051DB76EB000EEB043 /* LFFAddressPickerViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C061DB76EB100EEB043 /* LFFAddressPickerViewTests.m */,
+				BF766C081DB76EB100EEB043 /* Info.plist */,
+			);
+			path = LFFAddressPickerViewTests;
+			sourceTree = "<group>";
+		};
+		BF766C101DB76EB100EEB043 /* LFFAddressPickerViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C111DB76EB100EEB043 /* LFFAddressPickerViewUITests.m */,
+				BF766C131DB76EB100EEB043 /* Info.plist */,
+			);
+			path = LFFAddressPickerViewUITests;
+			sourceTree = "<group>";
+		};
+		BF766C1F1DB76F0A00EEB043 /* LFFDatePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C201DB76F1100EEB043 /* LFFAddPickerView.h */,
+				BF766C211DB76F1100EEB043 /* LFFAddPickerView.m */,
+				BF766C221DB76F1100EEB043 /* LFFAddPickerView.xib */,
+				BF766C351DB8604C00EEB043 /* LFFPickerVIew.h */,
+				BF766C361DB8604C00EEB043 /* LFFPickerVIew.m */,
+				BF766C371DB8604C00EEB043 /* LFFPickerVIew.xib */,
+			);
+			path = LFFDatePickerView;
+			sourceTree = "<group>";
+		};
+		BF766C271DB7708800EEB043 /* LFFStringArray */ = {
+			isa = PBXGroup;
+			children = (
+				BF766C281DB7708800EEB043 /* LFFStringarr.h */,
+				BF766C291DB7708800EEB043 /* libLFFJFCompenyInfo.a */,
+				BF766C2A1DB7708800EEB043 /* libLFFTrickAddress.a */,
+				BF766C2B1DB7708800EEB043 /* TrickAddressModel.h */,
+				BF766C2C1DB7708800EEB043 /* 捷丰商户.txt */,
+			);
+			path = LFFStringArray;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF766BE81DB76EAF00EEB043 /* LFFAddressPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF766C161DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerView" */;
+			buildPhases = (
+				BF766BE51DB76EAF00EEB043 /* Sources */,
+				BF766BE61DB76EAF00EEB043 /* Frameworks */,
+				BF766BE71DB76EAF00EEB043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LFFAddressPickerView;
+			productName = LFFAddressPickerView;
+			productReference = BF766BE91DB76EAF00EEB043 /* LFFAddressPickerView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF766C011DB76EB000EEB043 /* LFFAddressPickerViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF766C191DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerViewTests" */;
+			buildPhases = (
+				BF766BFE1DB76EB000EEB043 /* Sources */,
+				BF766BFF1DB76EB000EEB043 /* Frameworks */,
+				BF766C001DB76EB000EEB043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF766C041DB76EB000EEB043 /* PBXTargetDependency */,
+			);
+			name = LFFAddressPickerViewTests;
+			productName = LFFAddressPickerViewTests;
+			productReference = BF766C021DB76EB000EEB043 /* LFFAddressPickerViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BF766C0C1DB76EB100EEB043 /* LFFAddressPickerViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF766C1C1DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerViewUITests" */;
+			buildPhases = (
+				BF766C091DB76EB100EEB043 /* Sources */,
+				BF766C0A1DB76EB100EEB043 /* Frameworks */,
+				BF766C0B1DB76EB100EEB043 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF766C0F1DB76EB100EEB043 /* PBXTargetDependency */,
+			);
+			name = LFFAddressPickerViewUITests;
+			productName = LFFAddressPickerViewUITests;
+			productReference = BF766C0D1DB76EB100EEB043 /* LFFAddressPickerViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF766BE11DB76EAF00EEB043 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Lff;
+				TargetAttributes = {
+					BF766BE81DB76EAF00EEB043 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Manual;
+					};
+					BF766C011DB76EB000EEB043 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BF766BE81DB76EAF00EEB043;
+					};
+					BF766C0C1DB76EB100EEB043 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BF766BE81DB76EAF00EEB043;
+					};
+				};
+			};
+			buildConfigurationList = BF766BE41DB76EAF00EEB043 /* Build configuration list for PBXProject "LFFAddressPickerView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF766BE01DB76EAF00EEB043;
+			productRefGroup = BF766BEA1DB76EAF00EEB043 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF766BE81DB76EAF00EEB043 /* LFFAddressPickerView */,
+				BF766C011DB76EB000EEB043 /* LFFAddressPickerViewTests */,
+				BF766C0C1DB76EB100EEB043 /* LFFAddressPickerViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF766BE71DB76EAF00EEB043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF766BFC1DB76EB000EEB043 /* LaunchScreen.storyboard in Resources */,
+				BF766C391DB8604C00EEB043 /* LFFPickerVIew.xib in Resources */,
+				BF766C2F1DB7708800EEB043 /* 捷丰商户.txt in Resources */,
+				BF766BF91DB76EB000EEB043 /* Assets.xcassets in Resources */,
+				BF766BF71DB76EB000EEB043 /* Main.storyboard in Resources */,
+				BF766C241DB76F1100EEB043 /* LFFAddPickerView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766C001DB76EB000EEB043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766C0B1DB76EB100EEB043 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF766BE51DB76EAF00EEB043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF766BF41DB76EB000EEB043 /* ViewController.m in Sources */,
+				BF766BF11DB76EB000EEB043 /* AppDelegate.m in Sources */,
+				BF766C381DB8604C00EEB043 /* LFFPickerVIew.m in Sources */,
+				BF766BEE1DB76EAF00EEB043 /* main.m in Sources */,
+				BF766C231DB76F1100EEB043 /* LFFAddPickerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766BFE1DB76EB000EEB043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF766C071DB76EB100EEB043 /* LFFAddressPickerViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF766C091DB76EB100EEB043 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF766C121DB76EB100EEB043 /* LFFAddressPickerViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF766C041DB76EB000EEB043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF766BE81DB76EAF00EEB043 /* LFFAddressPickerView */;
+			targetProxy = BF766C031DB76EB000EEB043 /* PBXContainerItemProxy */;
+		};
+		BF766C0F1DB76EB100EEB043 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF766BE81DB76EAF00EEB043 /* LFFAddressPickerView */;
+			targetProxy = BF766C0E1DB76EB100EEB043 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF766BF51DB76EB000EEB043 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF766BF61DB76EB000EEB043 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF766BFA1DB76EB000EEB043 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF766BFB1DB76EB000EEB043 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF766C141DB76EB100EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BF766C151DB76EB100EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF766C171DB76EB100EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LFFAddressPickerView/LFFStringArray",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25c17071-4197-4921-b670-524cae108f46";
+				PROVISIONING_PROFILE_SPECIFIER = 99_Development_All_App;
+			};
+			name = Debug;
+		};
+		BF766C181DB76EB100EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LFFAddressPickerView/LFFStringArray",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25c17071-4197-4921-b670-524cae108f46";
+				PROVISIONING_PROFILE_SPECIFIER = 99_Development_All_App;
+			};
+			name = Release;
+		};
+		BF766C1A1DB76EB100EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFFAddressPickerView.app/LFFAddressPickerView";
+			};
+			name = Debug;
+		};
+		BF766C1B1DB76EB100EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LFFAddressPickerView.app/LFFAddressPickerView";
+			};
+			name = Release;
+		};
+		BF766C1D1DB76EB100EEB043 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LFFAddressPickerView;
+			};
+			name = Debug;
+		};
+		BF766C1E1DB76EB100EEB043 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = LFFAddressPickerViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.LFFAddressPickerViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = LFFAddressPickerView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF766BE41DB76EAF00EEB043 /* Build configuration list for PBXProject "LFFAddressPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C141DB76EB100EEB043 /* Debug */,
+				BF766C151DB76EB100EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF766C161DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C171DB76EB100EEB043 /* Debug */,
+				BF766C181DB76EB100EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF766C191DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C1A1DB76EB100EEB043 /* Debug */,
+				BF766C1B1DB76EB100EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF766C1C1DB76EB100EEB043 /* Build configuration list for PBXNativeTarget "LFFAddressPickerViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF766C1D1DB76EB100EEB043 /* Debug */,
+				BF766C1E1DB76EB100EEB043 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF766BE11DB76EAF00EEB043 /* Project object */;
+}
