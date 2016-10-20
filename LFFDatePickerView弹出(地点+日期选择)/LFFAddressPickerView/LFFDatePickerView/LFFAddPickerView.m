@@ -17,6 +17,9 @@
     NSString *name1;
     NSString *name2;
     NSString *name;
+    NSString *nameCode1;
+    NSString *nameCode2;
+    
     
     
     
@@ -94,9 +97,9 @@
     if ([_delegate respondsToSelector:@selector(hiddenLFFAddPickerView)] && [_delegate respondsToSelector:@selector(returnFromeLFFAddPickerInfo:)] && [_delegate respondsToSelector:@selector(returnToLFFAddPickerInfo:)]) {
         [_delegate hiddenLFFAddPickerView];
         if ([_fromeAddress isEqualToString:@"1"]) {
-            [_delegate returnFromeLFFAddPickerInfo:@[name1,@"1"]];
+            [_delegate returnFromeLFFAddPickerInfo:@[name1,nameCode1]];
         }else if ([_toAddress isEqualToString:@"2"]){
-            [_delegate returnToLFFAddPickerInfo:@[name2,@"1"]];
+            [_delegate returnToLFFAddPickerInfo:@[name2,nameCode2]];
         }
         [self addAnimationToCustomView:sender];  
     }
@@ -127,8 +130,10 @@
     
     if ([_fromeAddress isEqualToString:@"1"]) {
         name1 = [_infoArray[row] addName];
+        nameCode1 = [_infoArray[row] addCode];
     }else if ([_toAddress isEqualToString:@"2"]){
         name2 = [_infoArray[row] addName];
+        nameCode2 = [_infoArray[row] addCode];
     }
 
     

@@ -82,9 +82,12 @@
 
 -(void)returnFromeLFFAddPickerInfo:(NSArray *)arr{
     _btn1.titleLabel.text = arr[0];
+//    _btn1.titleLabel.text = arr[1];
+    
 }
 -(void)returnToLFFAddPickerInfo:(NSArray *)arr{
     _btn2.titleLabel.text = arr[0];
+//    _btn2.titleLabel.text = arr[1];
 }
 
 - (void)didReceiveMemoryWarning {

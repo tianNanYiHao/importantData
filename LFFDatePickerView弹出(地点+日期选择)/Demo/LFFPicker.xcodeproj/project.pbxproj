@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF7E3E851DB88DA30042BDC4 /* LFFAddPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */; };
-		BF7E3E861DB88DA30042BDC4 /* LFFAddPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */; };
-		BF7E3E871DB88DA30042BDC4 /* LFFPickerVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */; };
-		BF7E3E881DB88DA30042BDC4 /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */; };
 		BF7E3E891DB88DA30042BDC4 /* TrickAddressModel.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */; };
 		BF7E3E8A1DB88DA30042BDC4 /* TrickAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */; };
+		BF7E3E9C1DB8966E0042BDC4 /* LFFAddPickerView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E961DB8966E0042BDC4 /* LFFAddPickerView.h */; };
+		BF7E3E9D1DB8966E0042BDC4 /* LFFAddPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E971DB8966E0042BDC4 /* LFFAddPickerView.m */; };
+		BF7E3E9E1DB8966E0042BDC4 /* LFFPickerVIew.h in Headers */ = {isa = PBXBuildFile; fileRef = BF7E3E991DB8966E0042BDC4 /* LFFPickerVIew.h */; };
+		BF7E3E9F1DB8966E0042BDC4 /* LFFPickerVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7E3E9A1DB8966E0042BDC4 /* LFFPickerVIew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,14 +29,14 @@
 
 /* Begin PBXFileReference section */
 		BF766C7F1DB86B7500EEB043 /* libLFFPicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLFFPicker.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFAddPickerView.h; sourceTree = "<group>"; };
-		BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFAddPickerView.m; sourceTree = "<group>"; };
-		BF7E3E7F1DB88DA30042BDC4 /* LFFAddPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFAddPickerView.xib; sourceTree = "<group>"; };
-		BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
-		BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
-		BF7E3E821DB88DA30042BDC4 /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
 		BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrickAddressModel.h; sourceTree = "<group>"; };
 		BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrickAddressModel.m; sourceTree = "<group>"; };
+		BF7E3E961DB8966E0042BDC4 /* LFFAddPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFAddPickerView.h; sourceTree = "<group>"; };
+		BF7E3E971DB8966E0042BDC4 /* LFFAddPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFAddPickerView.m; sourceTree = "<group>"; };
+		BF7E3E991DB8966E0042BDC4 /* LFFPickerVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFPickerVIew.h; sourceTree = "<group>"; };
+		BF7E3E9A1DB8966E0042BDC4 /* LFFPickerVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFPickerVIew.m; sourceTree = "<group>"; };
+		BF7E3EA91DB897080042BDC4 /* LFFAddPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFAddPickerView.xib; sourceTree = "<group>"; };
+		BF7E3EAA1DB897140042BDC4 /* LFFPickerVIew.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LFFPickerVIew.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,12 @@
 		BF7E3E7C1DB88DA30042BDC4 /* LFFDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
-				BF7E3E7D1DB88DA30042BDC4 /* LFFAddPickerView.h */,
-				BF7E3E7E1DB88DA30042BDC4 /* LFFAddPickerView.m */,
-				BF7E3E7F1DB88DA30042BDC4 /* LFFAddPickerView.xib */,
-				BF7E3E801DB88DA30042BDC4 /* LFFPickerVIew.h */,
-				BF7E3E811DB88DA30042BDC4 /* LFFPickerVIew.m */,
-				BF7E3E821DB88DA30042BDC4 /* LFFPickerVIew.xib */,
+				BF7E3E961DB8966E0042BDC4 /* LFFAddPickerView.h */,
+				BF7E3E971DB8966E0042BDC4 /* LFFAddPickerView.m */,
+				BF7E3EAA1DB897140042BDC4 /* LFFPickerVIew.xib */,
+				BF7E3E991DB8966E0042BDC4 /* LFFPickerVIew.h */,
+				BF7E3E9A1DB8966E0042BDC4 /* LFFPickerVIew.m */,
+				BF7E3EA91DB897080042BDC4 /* LFFAddPickerView.xib */,
 				BF7E3E831DB88DA30042BDC4 /* TrickAddressModel.h */,
 				BF7E3E841DB88DA30042BDC4 /* TrickAddressModel.m */,
 			);
@@ -96,9 +96,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7E3E9C1DB8966E0042BDC4 /* LFFAddPickerView.h in Headers */,
+				BF7E3E9E1DB8966E0042BDC4 /* LFFPickerVIew.h in Headers */,
 				BF7E3E891DB88DA30042BDC4 /* TrickAddressModel.h in Headers */,
-				BF7E3E871DB88DA30042BDC4 /* LFFPickerVIew.h in Headers */,
-				BF7E3E851DB88DA30042BDC4 /* LFFAddPickerView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,8 +162,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7E3E8A1DB88DA30042BDC4 /* TrickAddressModel.m in Sources */,
-				BF7E3E861DB88DA30042BDC4 /* LFFAddPickerView.m in Sources */,
-				BF7E3E881DB88DA30042BDC4 /* LFFPickerVIew.m in Sources */,
+				BF7E3E9F1DB8966E0042BDC4 /* LFFPickerVIew.m in Sources */,
+				BF7E3E9D1DB8966E0042BDC4 /* LFFAddPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
