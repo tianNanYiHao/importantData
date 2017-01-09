@@ -1,0 +1,569 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFA090941E16080E00D707A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090931E16080E00D707A7 /* main.m */; };
+		BFA090971E16080E00D707A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090961E16080E00D707A7 /* AppDelegate.m */; };
+		BFA0909A1E16080E00D707A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090991E16080E00D707A7 /* ViewController.m */; };
+		BFA0909D1E16080E00D707A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA0909B1E16080E00D707A7 /* Main.storyboard */; };
+		BFA0909F1E16080E00D707A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA0909E1E16080E00D707A7 /* Assets.xcassets */; };
+		BFA090A21E16080E00D707A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA090A01E16080E00D707A7 /* LaunchScreen.storyboard */; };
+		BFA090AD1E16080E00D707A7 /* customFaceSwitchLFFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090AC1E16080E00D707A7 /* customFaceSwitchLFFTests.m */; };
+		BFA090B81E16080E00D707A7 /* customFaceSwitchLFFUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090B71E16080E00D707A7 /* customFaceSwitchLFFUITests.m */; };
+		BFA090C81E16084200D707A7 /* SwitchLff.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090C71E16084200D707A7 /* SwitchLff.m */; };
+		BFA090CB1E164D0E00D707A7 /* AnimationManagerLff.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090CA1E164D0E00D707A7 /* AnimationManagerLff.m */; };
+		BFA090CE1E1B991800D707A7 /* EyeMouthLayerLff.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA090CD1E1B991800D707A7 /* EyeMouthLayerLff.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFA090A91E16080E00D707A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFA090871E16080E00D707A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA0908E1E16080E00D707A7;
+			remoteInfo = customFaceSwitchLFF;
+		};
+		BFA090B41E16080E00D707A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFA090871E16080E00D707A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA0908E1E16080E00D707A7;
+			remoteInfo = customFaceSwitchLFF;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFA0908F1E16080E00D707A7 /* customFaceSwitchLFF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = customFaceSwitchLFF.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA090931E16080E00D707A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFA090951E16080E00D707A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFA090961E16080E00D707A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFA090981E16080E00D707A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		BFA090991E16080E00D707A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		BFA0909C1E16080E00D707A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFA0909E1E16080E00D707A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFA090A11E16080E00D707A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFA090A31E16080E00D707A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA090A81E16080E00D707A7 /* customFaceSwitchLFFTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = customFaceSwitchLFFTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA090AC1E16080E00D707A7 /* customFaceSwitchLFFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customFaceSwitchLFFTests.m; sourceTree = "<group>"; };
+		BFA090AE1E16080E00D707A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA090B31E16080E00D707A7 /* customFaceSwitchLFFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = customFaceSwitchLFFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA090B71E16080E00D707A7 /* customFaceSwitchLFFUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = customFaceSwitchLFFUITests.m; sourceTree = "<group>"; };
+		BFA090B91E16080E00D707A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA090C61E16084200D707A7 /* SwitchLff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchLff.h; sourceTree = "<group>"; };
+		BFA090C71E16084200D707A7 /* SwitchLff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchLff.m; sourceTree = "<group>"; };
+		BFA090C91E164D0E00D707A7 /* AnimationManagerLff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationManagerLff.h; sourceTree = "<group>"; };
+		BFA090CA1E164D0E00D707A7 /* AnimationManagerLff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationManagerLff.m; sourceTree = "<group>"; };
+		BFA090CC1E1B991800D707A7 /* EyeMouthLayerLff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EyeMouthLayerLff.h; sourceTree = "<group>"; };
+		BFA090CD1E1B991800D707A7 /* EyeMouthLayerLff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EyeMouthLayerLff.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFA0908C1E16080E00D707A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090A51E16080E00D707A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090B01E16080E00D707A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFA090861E16080E00D707A7 = {
+			isa = PBXGroup;
+			children = (
+				BFA090911E16080E00D707A7 /* customFaceSwitchLFF */,
+				BFA090AB1E16080E00D707A7 /* customFaceSwitchLFFTests */,
+				BFA090B61E16080E00D707A7 /* customFaceSwitchLFFUITests */,
+				BFA090901E16080E00D707A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFA090901E16080E00D707A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFA0908F1E16080E00D707A7 /* customFaceSwitchLFF.app */,
+				BFA090A81E16080E00D707A7 /* customFaceSwitchLFFTests.xctest */,
+				BFA090B31E16080E00D707A7 /* customFaceSwitchLFFUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFA090911E16080E00D707A7 /* customFaceSwitchLFF */ = {
+			isa = PBXGroup;
+			children = (
+				BFA090C51E16082F00D707A7 /* SwtichLFF */,
+				BFA090951E16080E00D707A7 /* AppDelegate.h */,
+				BFA090961E16080E00D707A7 /* AppDelegate.m */,
+				BFA090981E16080E00D707A7 /* ViewController.h */,
+				BFA090991E16080E00D707A7 /* ViewController.m */,
+				BFA0909B1E16080E00D707A7 /* Main.storyboard */,
+				BFA0909E1E16080E00D707A7 /* Assets.xcassets */,
+				BFA090A01E16080E00D707A7 /* LaunchScreen.storyboard */,
+				BFA090A31E16080E00D707A7 /* Info.plist */,
+				BFA090921E16080E00D707A7 /* Supporting Files */,
+			);
+			path = customFaceSwitchLFF;
+			sourceTree = "<group>";
+		};
+		BFA090921E16080E00D707A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFA090931E16080E00D707A7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFA090AB1E16080E00D707A7 /* customFaceSwitchLFFTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFA090AC1E16080E00D707A7 /* customFaceSwitchLFFTests.m */,
+				BFA090AE1E16080E00D707A7 /* Info.plist */,
+			);
+			path = customFaceSwitchLFFTests;
+			sourceTree = "<group>";
+		};
+		BFA090B61E16080E00D707A7 /* customFaceSwitchLFFUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFA090B71E16080E00D707A7 /* customFaceSwitchLFFUITests.m */,
+				BFA090B91E16080E00D707A7 /* Info.plist */,
+			);
+			path = customFaceSwitchLFFUITests;
+			sourceTree = "<group>";
+		};
+		BFA090C51E16082F00D707A7 /* SwtichLFF */ = {
+			isa = PBXGroup;
+			children = (
+				BFA090C61E16084200D707A7 /* SwitchLff.h */,
+				BFA090C71E16084200D707A7 /* SwitchLff.m */,
+				BFA090CC1E1B991800D707A7 /* EyeMouthLayerLff.h */,
+				BFA090CD1E1B991800D707A7 /* EyeMouthLayerLff.m */,
+				BFA090C91E164D0E00D707A7 /* AnimationManagerLff.h */,
+				BFA090CA1E164D0E00D707A7 /* AnimationManagerLff.m */,
+			);
+			path = SwtichLFF;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFA0908E1E16080E00D707A7 /* customFaceSwitchLFF */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA090BC1E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFF" */;
+			buildPhases = (
+				BFA0908B1E16080E00D707A7 /* Sources */,
+				BFA0908C1E16080E00D707A7 /* Frameworks */,
+				BFA0908D1E16080E00D707A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = customFaceSwitchLFF;
+			productName = customFaceSwitchLFF;
+			productReference = BFA0908F1E16080E00D707A7 /* customFaceSwitchLFF.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFA090A71E16080E00D707A7 /* customFaceSwitchLFFTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA090BF1E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFFTests" */;
+			buildPhases = (
+				BFA090A41E16080E00D707A7 /* Sources */,
+				BFA090A51E16080E00D707A7 /* Frameworks */,
+				BFA090A61E16080E00D707A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFA090AA1E16080E00D707A7 /* PBXTargetDependency */,
+			);
+			name = customFaceSwitchLFFTests;
+			productName = customFaceSwitchLFFTests;
+			productReference = BFA090A81E16080E00D707A7 /* customFaceSwitchLFFTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFA090B21E16080E00D707A7 /* customFaceSwitchLFFUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA090C21E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFFUITests" */;
+			buildPhases = (
+				BFA090AF1E16080E00D707A7 /* Sources */,
+				BFA090B01E16080E00D707A7 /* Frameworks */,
+				BFA090B11E16080E00D707A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFA090B51E16080E00D707A7 /* PBXTargetDependency */,
+			);
+			name = customFaceSwitchLFFUITests;
+			productName = customFaceSwitchLFFUITests;
+			productReference = BFA090B31E16080E00D707A7 /* customFaceSwitchLFFUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFA090871E16080E00D707A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Lff;
+				TargetAttributes = {
+					BFA0908E1E16080E00D707A7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Manual;
+					};
+					BFA090A71E16080E00D707A7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFA0908E1E16080E00D707A7;
+					};
+					BFA090B21E16080E00D707A7 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFA0908E1E16080E00D707A7;
+					};
+				};
+			};
+			buildConfigurationList = BFA0908A1E16080E00D707A7 /* Build configuration list for PBXProject "customFaceSwitchLFF" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFA090861E16080E00D707A7;
+			productRefGroup = BFA090901E16080E00D707A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFA0908E1E16080E00D707A7 /* customFaceSwitchLFF */,
+				BFA090A71E16080E00D707A7 /* customFaceSwitchLFFTests */,
+				BFA090B21E16080E00D707A7 /* customFaceSwitchLFFUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFA0908D1E16080E00D707A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA090A21E16080E00D707A7 /* LaunchScreen.storyboard in Resources */,
+				BFA0909F1E16080E00D707A7 /* Assets.xcassets in Resources */,
+				BFA0909D1E16080E00D707A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090A61E16080E00D707A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090B11E16080E00D707A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFA0908B1E16080E00D707A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA090CE1E1B991800D707A7 /* EyeMouthLayerLff.m in Sources */,
+				BFA090C81E16084200D707A7 /* SwitchLff.m in Sources */,
+				BFA090CB1E164D0E00D707A7 /* AnimationManagerLff.m in Sources */,
+				BFA0909A1E16080E00D707A7 /* ViewController.m in Sources */,
+				BFA090971E16080E00D707A7 /* AppDelegate.m in Sources */,
+				BFA090941E16080E00D707A7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090A41E16080E00D707A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA090AD1E16080E00D707A7 /* customFaceSwitchLFFTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA090AF1E16080E00D707A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA090B81E16080E00D707A7 /* customFaceSwitchLFFUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFA090AA1E16080E00D707A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA0908E1E16080E00D707A7 /* customFaceSwitchLFF */;
+			targetProxy = BFA090A91E16080E00D707A7 /* PBXContainerItemProxy */;
+		};
+		BFA090B51E16080E00D707A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA0908E1E16080E00D707A7 /* customFaceSwitchLFF */;
+			targetProxy = BFA090B41E16080E00D707A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFA0909B1E16080E00D707A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA0909C1E16080E00D707A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFA090A01E16080E00D707A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA090A11E16080E00D707A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFA090BA1E16080E00D707A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFA090BB1E16080E00D707A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFA090BD1E16080E00D707A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25c17071-4197-4921-b670-524cae108f46";
+				PROVISIONING_PROFILE_SPECIFIER = 99_Development_All_App;
+			};
+			name = Debug;
+		};
+		BFA090BE1E16080E00D707A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFF/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFF;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "25c17071-4197-4921-b670-524cae108f46";
+				PROVISIONING_PROFILE_SPECIFIER = 99_Development_All_App;
+			};
+			name = Release;
+		};
+		BFA090C01E16080E00D707A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/customFaceSwitchLFF.app/customFaceSwitchLFF";
+			};
+			name = Debug;
+		};
+		BFA090C11E16080E00D707A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFFTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFFTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/customFaceSwitchLFF.app/customFaceSwitchLFF";
+			};
+			name = Release;
+		};
+		BFA090C31E16080E00D707A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFFUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = customFaceSwitchLFF;
+			};
+			name = Debug;
+		};
+		BFA090C41E16080E00D707A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				INFOPLIST_FILE = customFaceSwitchLFFUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiefeng.customFaceSwitchLFFUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = customFaceSwitchLFF;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFA0908A1E16080E00D707A7 /* Build configuration list for PBXProject "customFaceSwitchLFF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA090BA1E16080E00D707A7 /* Debug */,
+				BFA090BB1E16080E00D707A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFA090BC1E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFF" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA090BD1E16080E00D707A7 /* Debug */,
+				BFA090BE1E16080E00D707A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFA090BF1E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFFTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA090C01E16080E00D707A7 /* Debug */,
+				BFA090C11E16080E00D707A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFA090C21E16080E00D707A7 /* Build configuration list for PBXNativeTarget "customFaceSwitchLFFUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA090C31E16080E00D707A7 /* Debug */,
+				BFA090C41E16080E00D707A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFA090871E16080E00D707A7 /* Project object */;
+}
