@@ -1,0 +1,365 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFDBB18D1E272DD600EBC113 /* DDXMLElementAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB17E1E272DD600EBC113 /* DDXMLElementAdditions.m */; };
+		BFDBB18E1E272DD600EBC113 /* NSString+DDXML.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB1811E272DD600EBC113 /* NSString+DDXML.m */; };
+		BFDBB18F1E272DD600EBC113 /* DDXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB1841E272DD600EBC113 /* DDXMLDocument.m */; };
+		BFDBB1901E272DD600EBC113 /* DDXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB1861E272DD600EBC113 /* DDXMLElement.m */; };
+		BFDBB1911E272DD600EBC113 /* DDXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB1881E272DD600EBC113 /* DDXMLNode.m */; };
+		BFDBB1921E272DD600EBC113 /* XML.m in Sources */ = {isa = PBXBuildFile; fileRef = BFDBB18C1E272DD600EBC113 /* XML.m */; };
+		BFDBB1971E2730B400EBC113 /* XML.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDBB18B1E272DD600EBC113 /* XML.h */; };
+		BFDBB19A1E27323F00EBC113 /* DDXML.h in Headers */ = {isa = PBXBuildFile; fileRef = BFDBB1821E272DD600EBC113 /* DDXML.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BFDBB16D1E272DC800EBC113 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BFDBB16F1E272DC800EBC113 /* libxml.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libxml.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFDBB17D1E272DD600EBC113 /* DDXMLElementAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElementAdditions.h; sourceTree = "<group>"; };
+		BFDBB17E1E272DD600EBC113 /* DDXMLElementAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElementAdditions.m; sourceTree = "<group>"; };
+		BFDBB1801E272DD600EBC113 /* NSString+DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDXML.h"; sourceTree = "<group>"; };
+		BFDBB1811E272DD600EBC113 /* NSString+DDXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDXML.m"; sourceTree = "<group>"; };
+		BFDBB1821E272DD600EBC113 /* DDXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXML.h; sourceTree = "<group>"; };
+		BFDBB1831E272DD600EBC113 /* DDXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLDocument.h; sourceTree = "<group>"; };
+		BFDBB1841E272DD600EBC113 /* DDXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLDocument.m; sourceTree = "<group>"; };
+		BFDBB1851E272DD600EBC113 /* DDXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLElement.h; sourceTree = "<group>"; };
+		BFDBB1861E272DD600EBC113 /* DDXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLElement.m; sourceTree = "<group>"; };
+		BFDBB1871E272DD600EBC113 /* DDXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLNode.h; sourceTree = "<group>"; };
+		BFDBB1881E272DD600EBC113 /* DDXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDXMLNode.m; sourceTree = "<group>"; };
+		BFDBB18A1E272DD600EBC113 /* DDXMLPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDXMLPrivate.h; sourceTree = "<group>"; };
+		BFDBB18B1E272DD600EBC113 /* XML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XML.h; sourceTree = "<group>"; };
+		BFDBB18C1E272DD600EBC113 /* XML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XML.m; sourceTree = "<group>"; };
+		BFDBB1941E272E0F00EBC113 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFDBB16C1E272DC800EBC113 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFDBB1661E272DC800EBC113 = {
+			isa = PBXGroup;
+			children = (
+				BFDBB1711E272DC800EBC113 /* xml */,
+				BFDBB1701E272DC800EBC113 /* Products */,
+				BFDBB1931E272E0F00EBC113 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFDBB1701E272DC800EBC113 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB16F1E272DC800EBC113 /* libxml.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFDBB1711E272DC800EBC113 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB17B1E272DD600EBC113 /* KissXML */,
+				BFDBB18B1E272DD600EBC113 /* XML.h */,
+				BFDBB18C1E272DD600EBC113 /* XML.m */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		BFDBB17B1E272DD600EBC113 /* KissXML */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB17C1E272DD600EBC113 /* Additions */,
+				BFDBB17F1E272DD600EBC113 /* Categories */,
+				BFDBB1821E272DD600EBC113 /* DDXML.h */,
+				BFDBB1831E272DD600EBC113 /* DDXMLDocument.h */,
+				BFDBB1841E272DD600EBC113 /* DDXMLDocument.m */,
+				BFDBB1851E272DD600EBC113 /* DDXMLElement.h */,
+				BFDBB1861E272DD600EBC113 /* DDXMLElement.m */,
+				BFDBB1871E272DD600EBC113 /* DDXMLNode.h */,
+				BFDBB1881E272DD600EBC113 /* DDXMLNode.m */,
+				BFDBB1891E272DD600EBC113 /* Private */,
+			);
+			path = KissXML;
+			sourceTree = "<group>";
+		};
+		BFDBB17C1E272DD600EBC113 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB17D1E272DD600EBC113 /* DDXMLElementAdditions.h */,
+				BFDBB17E1E272DD600EBC113 /* DDXMLElementAdditions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		BFDBB17F1E272DD600EBC113 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB1801E272DD600EBC113 /* NSString+DDXML.h */,
+				BFDBB1811E272DD600EBC113 /* NSString+DDXML.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		BFDBB1891E272DD600EBC113 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB18A1E272DD600EBC113 /* DDXMLPrivate.h */,
+			);
+			path = Private;
+			sourceTree = "<group>";
+		};
+		BFDBB1931E272E0F00EBC113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBB1941E272E0F00EBC113 /* libxml2.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BFDBB1961E2730AC00EBC113 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDBB19A1E27323F00EBC113 /* DDXML.h in Headers */,
+				BFDBB1971E2730B400EBC113 /* XML.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BFDBB16E1E272DC800EBC113 /* xml */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFDBB1781E272DC800EBC113 /* Build configuration list for PBXNativeTarget "xml" */;
+			buildPhases = (
+				BFDBB16B1E272DC800EBC113 /* Sources */,
+				BFDBB16C1E272DC800EBC113 /* Frameworks */,
+				BFDBB16D1E272DC800EBC113 /* CopyFiles */,
+				BFDBB1961E2730AC00EBC113 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xml;
+			productName = xml;
+			productReference = BFDBB16F1E272DC800EBC113 /* libxml.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDBB1671E272DC800EBC113 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Lff;
+				TargetAttributes = {
+					BFDBB16E1E272DC800EBC113 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YS27375FC6;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BFDBB16A1E272DC800EBC113 /* Build configuration list for PBXProject "xml" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BFDBB1661E272DC800EBC113;
+			productRefGroup = BFDBB1701E272DC800EBC113 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFDBB16E1E272DC800EBC113 /* xml */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFDBB16B1E272DC800EBC113 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFDBB1901E272DD600EBC113 /* DDXMLElement.m in Sources */,
+				BFDBB1911E272DD600EBC113 /* DDXMLNode.m in Sources */,
+				BFDBB18D1E272DD600EBC113 /* DDXMLElementAdditions.m in Sources */,
+				BFDBB1921E272DD600EBC113 /* XML.m in Sources */,
+				BFDBB18F1E272DD600EBC113 /* DDXMLDocument.m in Sources */,
+				BFDBB18E1E272DD600EBC113 /* NSString+DDXML.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BFDBB1761E272DC800EBC113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lxml2";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFDBB1771E272DC800EBC113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lxml2";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFDBB1791E272DC800EBC113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BFDBB17A1E272DC800EBC113 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = YS27375FC6;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFDBB16A1E272DC800EBC113 /* Build configuration list for PBXProject "xml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDBB1761E272DC800EBC113 /* Debug */,
+				BFDBB1771E272DC800EBC113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFDBB1781E272DC800EBC113 /* Build configuration list for PBXNativeTarget "xml" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFDBB1791E272DC800EBC113 /* Debug */,
+				BFDBB17A1E272DC800EBC113 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDBB1671E272DC800EBC113 /* Project object */;
+}
