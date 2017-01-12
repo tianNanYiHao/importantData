@@ -1,0 +1,329 @@
+/* 
+  Localizable.strings
+  QuickPos
+
+  Created by 胡丹 on 15/4/27.
+  Copyright (c) 2015年 张倡榕. All rights reserved.
+*/
+
+
+
+/**************登录***************/
+"UserLogin" = "UserLogin";
+
+
+"Inputpwd" = "Please input password";
+
+"InputNumber" = "Please enter the phone number";
+
+"InputCorrectNumber" = "Please enter a correct phone number";
+
+"loging" = "In the login";
+
+"wifi" = "WiFi";
+
+"3G" = "3G Network";
+
+"NotConnected" = "Not connected";
+
+"NoInternetconnection" = "No Internet connection";
+
+"OK" = "Sure";
+
+"UnknownError" = "An unknown error";
+
+"UnknownErrorNet" = "未知网络";
+
+"ToResendToSecond" = "To resend(%i)s";
+
+"ToResend" = "To resend";
+
+"InputAccount" = "请输入账户";
+
+"InputCorrectAccount" = "Please enter the account";
+
+"InputCode" = "Please enter the password";
+
+"SigninSuccessful" = "Registered successfully";
+
+"InputName" = "Please enter your name";
+
+"InputID" = "Please enter the ID number";
+
+"InputCorrectID" = "Please enter the correct ID number";
+
+/**************用户协议***************/
+
+"UserAgreement" = "UserAgreement";
+
+
+
+
+
+
+
+/**************便民交易***************/
+
+"ConfirmToCancel?" = "Confirm to cancel?";
+
+"ConfirmCancel" = "Confirm to cancel";
+
+"ShutDown" = "Shut down";
+
+"PayTheAmount" = "Payment amount: ¥% @";
+
+"Sign" = "Please sign your name";
+
+"SignTheOrder" = "Sign purchase orders";
+
+"Complete" = "Complete";
+
+"Save" = "Save";
+
+"CommercialVersion" = "Commercial Version";
+
+"TransactionSlip" = "------%@Transaction receipt------";
+
+"MobilePaymentTerminal" = "%@Mobile phone payment terminal";
+
+"SaveFailed" = "Save Failed";
+
+"TransactionType" = "Transaction Type";
+
+"Date" = "Date";
+
+"Time" = "Time";
+
+"ThePersonThatHoldCardCardNumber" = "Cardholder card number";
+
+"TransactionSerialNumber" = "Transaction serial number";
+
+"TheOrderInformation" = "Order information";
+
+"CreditCardPayment" = "Credit card payment";
+
+"AccountToPay" = "Payment account";
+
+"QuickPayment" = "Fast payment";
+
+"VerificationCodeCannotBeEmpty" = "The verification code cannot be empty";
+
+"PleaseEnterTradingPassword" = "Please enter the password";
+
+"TradePassword" = "Transaction password";
+
+"Confirm" = "Confirm";
+
+"PasswordCannotBeEmpty" = "The transaction password can not be empty";
+
+"IdentificationOfFailure" = "Please insert the card reader to identify failure";
+
+"SuccessfulDeal" = "The success of the transaction";
+
+"EnterBankCardPassword" = "Please enter the bank card password";
+
+"Password" = "Password";
+
+"IsTrading" = "Is the transaction, please wait";
+
+"UploadSignaturePicture" = "Upload the signature in the picture, please wait";
+
+"IsPrinting" = "Is printing, please wait";
+
+"PrinterError" = "打印机出错，使用电子签购单";
+
+
+
+
+/**************商城***************/
+
+"AddGoodsPicture" = "Please add goods picture";
+
+"EnterGoodsName" = "Please enter the trade name right";
+
+"MaximumOfNineWords" = "Trade name for a maximum of nine words";
+
+"CorrectCommodityPrices" = "Please enter the correct commodity prices";
+
+"CorrectPrice" = "Please enter the correct price";
+
+"OrderHasBeenSubmitted-PleaseLater" = "Order has been submitted, please later";
+
+"TransferAccount" = "TransferAccount";
+
+"Securityverification" = "Security verification";
+
+"SmartSensors" = "Smart sensors";
+
+"FoodData" = "Food Data";
+
+"FoodInformation" = "Food Information disclosure";
+
+
+/**************我的账户***************/
+
+"MyAccount" = "My Account";
+
+"ImproveInformationForCertified" = "Improve my user information(Certified)";
+
+"ImproveInformationForNotThrough" = "Improve my user information(NotThrough)";
+
+"ImproveInformationForReviewing" = "Improve my user information(Reviewing)";
+
+"ImproveInformationForUnauthorized" = "Improve my user information(Unauthorized)";
+
+"ImproveInformationForLackOfPhotos" = "Improve my user information(LackOfPhotos)";
+
+"ImproveInformationForCross" = "Improve my user information(Upload)";
+
+"WithdrawalOfBank" = "Withdrawal to a bank account";
+
+"MyMoney" = "My Money";
+
+"TransactionRecords" = "Transaction records";
+
+"MyCreditCardMachine" = "My Credit Card Machine";
+
+"MyMessage" = "My Message";
+
+"ChangePassword" = "Change The Password";
+
+"NoTitle" = "No Title";
+
+/**************退出登入提示***************/
+
+"ExitLogin" = "If you want to quit?";
+
+"sure" = "Sure";
+
+"cancel" = "Cancel";
+
+
+/**************修改密码***************/
+
+"InputOldPassward" = "Please enter the old password";
+
+"InputNewPassward" = "Please enter a new password";
+
+"InputCode" = "Please enter the verification code";
+
+"ChangeComplete" = "Modify the success";
+
+
+/**************完善资料***************/
+
+"PerfectInformation" = "PerfectInformation";
+
+"InputName" = "Please enter your name";
+
+//"InputID" = "Please enter the ID number";
+                                            //重复了
+//"InputCorrectID" = "Please enter the correct ID number";
+
+"MBPLoading" = "Loading, please wait a moment";
+
+"UploadPicturesFirst" = "Please upload pictures first";
+
+"Uploading" = "Upload";
+
+"UploadIdPositive" = "Upload IDcard is positive";
+
+"UploadIdOpposite" = "Upload IDcard is opposite";
+
+"UpHeadIcon" = "Upload the Head portrait";
+
+
+
+/**************提现***************/
+
+"Transfer" = "Transfer the remittance";
+
+"AddBankCard" = "Add a bank card";
+
+"ImproveCardInformation" = "Please improve the card information";
+
+"InputRealName" = "Please fill in real name";
+
+"BindingSuccess" = "Binding success";
+
+"InputCardNumber" = "Please enter the card number";
+
+"ChooseBelongBank" = "Please select a belongs to the bank";
+
+"ChooseProvinces" = "Please select a province of opening an account";
+
+"ChooseCity" = "Please select a city to open an account";
+
+"TakeCash" = "Withdrawal";
+
+"TakeCashAmount" = "Please enter the withdrawal amount";
+
+"TakeCashComplete" = "Withdrawal successfully";
+
+"AmountMustBeInteger" = "Withdrawal amount must be an integer";
+
+"InputLoginPassward" = "Please enter login password";
+
+"BankList" = "Bank List";
+
+"ProvincesList" = "Provinces List";
+
+"CityList" = "City List";
+
+"BranchList" = "Branch List";
+
+
+
+
+/**************交易记录***************/
+
+"Income" = "Income";
+
+"All" = "All";
+
+"Spending" = "Spending";
+
+"Withdrawal" = "Withdrawal";
+
+
+
+"Drop-downToRefresh" = "The drop-down to refresh";
+
+"LoosenRefreshImmediately" = "Loosen the refresh immediately";
+
+"MJRefreshing" = "Refreshing";
+
+
+
+"Pull-upLoadMoreData" = "Pull-up can load more data";
+
+"LoosenMoreDataToBeLoadedImmediately" = "Loosen the more data to be loaded immediately";
+
+"MJLoading" = "Loading";
+
+"TransactionDetails" = "TransactionDetails";
+
+"NoAccountOfThePayee" = "No Account Of The Payee";
+
+
+
+/**************设置***************/
+
+"CleanComplete" = "Clean up the success";
+
+"Share" = "Share";
+
+"FAQ" = "FAQ";
+
+"ClearCache" = "Clear Cache";
+
+"CommentsAndFeedback" = "Comments and feedback";
+
+"ContactUs" = "Contact Us";
+
+"Version" = "Version information";
+
+
+
+
+

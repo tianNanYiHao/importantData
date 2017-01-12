@@ -1,0 +1,431 @@
+/* 
+  Localizable.strings
+  QuickPos
+
+  Created by 胡丹 on 15/4/27.
+  Copyright (c) 2015年 张倡榕. All rights reserved.
+*/
+
+
+
+"help" = "帮助";
+/**************登录***************/
+
+"UserLogin" = "用户登录";
+
+"Inputpwd" = "密码不能为空";
+
+"InputNumber" = "请输入手机号";
+
+"InputCorrectNumber" = "请输入正确的手机号";
+
+"loging" = "登录中";
+
+"wifi" = "无线网络";
+
+"3G" = "3G网络";
+
+"NotConnected" = "未连接";
+
+"NoInternetconnection" = "无网络连接";
+
+"OK" = "确定";
+
+"UnknownError" = "未知错误";
+
+"UnknownErrorNet" = "未知网络";
+
+"ToResendToSecond" = "%is重新发送";
+
+"ToResend" = "重新发送";
+
+"InputAccount" = "请输入账户";
+
+"InputCorrectAccount" = "请输入正确的账户";
+
+//"InputCode" = "请输入验证码";//重复
+
+"SigninSuccessful" = "注册成功";
+
+"InputName" = "请输入姓名";
+
+"InputID" = "请输入身份证号";
+
+"InputCorrectID" = "请输入正确的身份证号";
+
+"UpdateNewVersion" = "请更新新版本";
+
+"PasswordSuccessfully" = "密码修改成功";//1 = 本地化英语没写
+
+"VerificationCodeSentSuccessfully" = "验证码发送成功";//1
+
+
+
+
+
+
+
+/**************用户协议***************/
+
+"UserAgreement" = "用户协议";
+
+
+
+
+
+
+
+/**************便民交易***************/
+
+"ConfirmToCancel?" = "确认取消签名？";
+
+"ConfirmCancel" = "确认取消";
+
+"ShutDown" = "关闭";
+
+"PayTheAmount" = "支付金额：%@元";
+
+"Sign" = "请签名";
+
+"SignTheOrder" = "签购单";
+
+"Complete" = "完成";
+
+"Save" = "保存";
+
+"CommercialVersion" = "商务版";
+
+"TransactionSlip" = "------%@交易凭条------";
+
+"MobilePaymentTerminal" = "%@手机支付终端";
+
+"SaveFailed" = "保存失败";
+
+"TransactionType" = "交易类型";
+
+"Date" = "日期";
+
+"Time" = "时间";
+
+"ThePersonThatHoldCardCardNumber" = "持卡人卡号";
+
+"TransactionSerialNumber" = "交易流水号";
+
+"TheOrderInformation" = "订单信息";
+
+"CreditCardPayment" = "刷卡支付";
+
+"AccountToPay" = "账户支付";
+
+"QuickPayment" = "快捷支付";
+
+"VerificationCodeCannotBeEmpty" = "验证码不能为空";
+
+"PleaseEnterTradingPassword" = "请输入交易密码";
+
+"PleaseEnterPayPassword" = "请输入支付密码";
+
+"TradePassword" = "交易密码";
+
+"PayPassword" = "支付密码";
+
+"Confirm" = "确认";
+
+"PasswordCannotBeEmpty" = "交易密码不能为空";
+
+"IdentificationOfFailure" = "识别失败，请插入刷卡器";
+
+"SuccessfulDeal" = "交易成功";
+
+"EnterBankCardPassword" = "请输入银行卡密码";
+
+"Password" = "密码";
+
+"IsTrading" = "正在交易中，请稍后";
+
+"UploadSignaturePicture" = "上传签名图片中，请稍后";
+
+"IsPrinting" = "正在打印，请稍后";
+
+"PrinterError" = "打印机出错，使用电子签购单";
+
+"MobilePhoneNumberIsWrong" = "手机号码有错，请重新输入";
+
+"AccountBalanceIsInsufficient" = "账户余额不足";
+
+"OrderIsSubmitted" = "正在提交订单，请稍后";
+
+"CardBalance" = "卡余额";
+
+"IsQuery" = "正在查询中...";
+
+"BalanceInquiry" = "余额查询";
+
+"PrepaidPhone" = "手机充值";
+
+"Highest" = "最多输入6位整数";
+
+"Highest2bit" = "最多输入2位小数";
+
+"IncompleteInformation" = "信息不完整";
+
+"InputCorrectAmount" = "请输入正确的金额";
+
+"RealTimeReimbursement" = "实时还款";
+
+"RegularPayments" = "普通还款";
+
+"Securityverification" = "防伪验证";
+
+"SmartSensors" = "智能感应";
+
+"FoodData" = "食品追溯数据";
+
+"FoodInformation" = "食品信息公开";
+
+
+/**************商城***************/
+
+"EditGoods" = "编辑商品";
+
+"AddGoodsPicture" = "请添加商品图片";
+
+"EnterGoodsName" = "请输入正确商品名";
+
+"MaximumOfNineWords" = "商品名最多为九个字";
+
+"CorrectCommodityPrices" = "请输入正确的商品价格";
+
+"CorrectPrice" = "请输入正确价格";
+
+"OrderHasBeenSubmitted-PleaseLater" = "已提交订单，请稍后";
+"EditStoreTitle" = "编辑商城";
+"ShoppingCart" = "购物车";
+
+"TransferAccount" = "转账汇款";
+
+
+/**************我的账户***************/
+
+"MyAccount" = "我的账户";
+
+"ImproveInformationForCertified" = "实名认证(已认证)";
+
+"ImproveInformationForNotThrough" = "实名认证(审核未通过)";
+
+"ImproveInformationForReviewing" = "实名认证(审核中)";
+
+"ImproveInformationForUnauthorized" = "实名认证(未认证)";
+
+"ImproveInformationForLackOfPhotos" = "实名认证(缺少照片)";
+
+"ImproveInformationForCross" = "实名认证(图⽚上传中)";
+
+"WithdrawalOfBank" = "提款到银行账户";
+
+"TransactionRecords" = "交易记录";
+
+"MyMoney" = "我的理财";
+
+"MyCreditCardMachine" = "我的刷卡器";
+
+"QuickPosCode" = "快捷支付认证码";
+
+"MyMessage" = "我的消息";
+
+"ChangePassword" = "修改密码";
+
+"NoTitle" = "无标题";
+
+"PleaseInputQuickCode" = "请输入快捷支付认证码";
+
+"InputSixteenCode" = "请输入16位认证码";
+
+"InputRightCode" = "认证码错误,请联系代理商";
+
+/**************退出登录提示***************/
+
+"ExitLogin" = "是否要退出？";
+
+"sure" = "确定";
+
+"cancel" = "取消";
+
+
+/**************修改密码***************/
+
+"InputOldPassward" = "请输入旧密码";
+
+"InputNewPassward" = "请输入新密码";
+
+"InputCode" = "请输入验证码";
+
+"ChangeComplete" = "修改成功";
+
+
+/**************完善资料***************/
+"PerfectInformation" = "完善资料";
+
+"InputName" = "请输入姓名";
+
+"InputID" = "请输入身份证号";
+
+"InputCorrectID" = "请输入正确的身份证号";
+
+"InputAppUser" = "请输入正确的机构号";
+
+"MBPLoading" = "加载中，请稍等";
+
+"UploadPicturesFirst" = "请先上传图片";
+
+"Uploading" = "上传中";
+
+"UploadIdPositive" = "上传身份证正面照";
+
+"UploadIdOpposite" = "上传身份证反面照";
+
+"UpHeadIcon" = "上传头像";
+
+
+
+/**************提现***************/
+
+"Transfer" = "转账汇款";
+
+"AddBankCard" = "添加银行卡";
+
+"ImproveCardInformation" = "请完善卡信息";
+
+"InputRealName" = "请填写真实姓名";
+
+"BindingSuccess" = "绑定成功";
+
+"InputCardNumber" = "请输入卡号";
+
+"ChooseBelongBank" = "请选择所属银行";
+
+"ChooseProvinces" = "请选择开户省份";
+
+"ChooseCity" = "请选择开户城市";
+
+"TakeCash" = "提款";
+
+"TakeCashComplete" = "提现成功";
+
+"TakeCashAmount" = "请输入提现金额";
+
+"AmountMustBeInteger" = "提现金额必须为整数";
+
+"InputLoginPassward" = "请输入交易密码";
+
+"BankList" = "银行列表";
+
+"ProvincesList" = "省份列表";
+
+"CityList" = "城市列表";
+
+"BranchList" = "支行列表";
+
+"EnterAgain" = "确认卡号有误，请重新输入";
+
+"InputCorrectBankCardNumber" = "请输入正确的银行卡号";
+
+"InputBankCardNumber" = "请输入银行卡号";
+
+/**************交易记录***************/
+
+"Income" = "收入";
+
+"All" = "全部";
+
+"Spending" = "支出";
+
+"Withdrawal" = "提现";
+
+"NoRecord" = "无记录";//1
+
+"Drop-downToRefresh" = "下拉可以刷新";
+
+"LoosenRefreshImmediately" = "松开立即刷新";
+
+"MJRefreshing" = "刷新中";
+
+"Pull-upLoadMoreData" = "上拉可以加载更多数据";
+
+"LoosenMoreDataToBeLoadedImmediately" = "松开立即加载更多数据";
+
+"MJLoading" = "加载中";
+
+"TransactionDetails" = "交易详情";
+
+"NoAccountOfThePayee" = "无收款人账户";
+
+"ListLoading" = "加载中，请稍等";//1
+
+"NOmessage" = "无消息";//1
+
+/**************设置***************/
+
+"CleanComplete" = "清理成功";
+
+"Share" = "分享";
+
+"FAQ" = "FAQ";
+
+"ClearCache" = "清理缓存";
+
+"CommentsAndFeedback" = "意见和反馈";
+
+"ContactUs" = "联系我们";
+
+"Version" = "版本信息";
+
+"Loading" = "正在加载中。。。";
+"Operation" = "操作手册";
+
+"CompanyWebsite" = "公司官网";
+"ContactCompany" = "客服电话";
+
+
+
+/**************无卡支付***************/
+
+"InvalidCardNumber" = "无效卡号,请核对卡号";
+
+"PleaseEnterCorrectInformation" = "请输入正确信息";
+
+"PleaseEnterCorrectName" = "请输入正确的姓名";
+
+"VerifyingCardInformation" = "正在验证卡信息。。";
+
+"IsThePaymentConfirmation" = "正在确认支付。。";
+
+"TheSuccessOfPayment" = "支付成功";
+
+"SecurityVerification" = "安全验证";
+
+"ForYourTransactionSecurityPleaseEnterTheVerificationCode" = "为了您的交易安全,请输入验证码";
+
+"MessageAuthenticationCode" = "短信验证码";
+
+"IsSubmitRequest" = "正在提交请求。。";
+
+
+
+/**************更新***************/
+
+"Later" = "以后再说";//1
+
+"Update" = "更新说明";//1
+
+"NewVersion" = "已发现新版本，请更新";//1
+
+
+
+
+//刷卡器
+"NoMachine" = "无刷卡器";//1
+
+
+
+

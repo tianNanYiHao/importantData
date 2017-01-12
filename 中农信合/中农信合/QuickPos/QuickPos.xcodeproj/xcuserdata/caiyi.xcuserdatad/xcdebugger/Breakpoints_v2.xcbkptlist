@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QuickPos/3rd/PaySDK/Pos/ITron4K.mm"
+            timestampString = "479732805.423381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "420"
+            endingLineNumber = "420"
+            landmarkName = "-onDecodeCompleted:andKsn:andencTracks:andTrack1Length:andTrack2Length:andTrack3Length:andRandomNumber:andCardNumber:andPAN:andExpiryDate:andCardHolderName:andMac:andQTPlayReadBuf:cardType:cardserial:emvDataInfo:cvmData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

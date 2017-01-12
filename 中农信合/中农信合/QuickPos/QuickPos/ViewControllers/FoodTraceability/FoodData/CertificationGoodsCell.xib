@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CertificationGoodsCell" rowHeight="75" id="KGk-i7-Jjw" customClass="CertificationGoodsCell">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="CertificationGoodsCell" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="74"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAT-WS-Gvi">
+                        <rect key="frame" x="56" y="40" width="282" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOa-jO-WoE">
+                        <rect key="frame" x="56" y="19" width="282" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="22" translatesAutoresizingMaskIntoConstraints="NO" id="ds5-ap-wPL">
+                        <rect key="frame" x="8" y="19" width="40" height="40"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JOa-jO-WoE" secondAttribute="bottom" constant="34" id="4cH-nv-qFi"/>
+                    <constraint firstItem="sAT-WS-Gvi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="56" id="KyW-NS-Xca"/>
+                    <constraint firstAttribute="bottom" secondItem="sAT-WS-Gvi" secondAttribute="bottom" constant="13" id="ZOH-Q7-5vm"/>
+                    <constraint firstAttribute="trailing" secondItem="sAT-WS-Gvi" secondAttribute="trailing" constant="16" id="bmF-sm-gBt"/>
+                    <constraint firstItem="JOa-jO-WoE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="p95-IQ-0ZI"/>
+                    <constraint firstItem="JOa-jO-WoE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="56" id="pOe-8F-lJ3"/>
+                    <constraint firstAttribute="trailing" secondItem="JOa-jO-WoE" secondAttribute="trailing" constant="16" id="z0W-zu-RdS"/>
+                    <constraint firstItem="sAT-WS-Gvi" firstAttribute="top" secondItem="JOa-jO-WoE" secondAttribute="bottom" id="zeG-JJ-kHS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="compLab" destination="JOa-jO-WoE" id="jJU-eW-0nI"/>
+                <outlet property="discripLab" destination="sAT-WS-Gvi" id="k0Q-i8-CLz"/>
+                <outlet property="icon" destination="ds5-ap-wPL" id="oW2-MF-KqC"/>
+            </connections>
+            <point key="canvasLocation" x="434" y="278.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="22" width="40" height="40"/>
+    </resources>
+</document>
