@@ -88,13 +88,13 @@
 
 #pragma mark - 创建方法
 -(void)navgationBarDeful{
-    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName];
+    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName style:navCoverViewStyle1];
     [self addSubview:navCoverView];
 }
 
 -(void)navgationBarOnlyGoBack{
     
-    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName];
+    navCoverView =[NavCoverView shareNavCoverView:frameRec title:_titleName style:navCoverViewStyle1];
     
     //leftBtn
     UIImage *leftImage = [UIImage imageNamed:@"back"];
@@ -110,7 +110,7 @@
 }
 
 -(void)navgationBarBackAndNext{
-    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName];
+    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName style:navCoverViewStyle1];
     
     //leftBtn
     UIImage *leftImage = [UIImage imageNamed:_leftBtnImageName];
@@ -139,7 +139,7 @@
 }
 
 -(void)LFFNavgationBarSystenBtn{
-    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName];
+    navCoverView = [NavCoverView shareNavCoverView:frameRec title:_titleName style:navCoverViewStyle1];
     
     //leftBtn
     UIButton *leftBarBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];

@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		28897F331E72533300BB194A /* LFFNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28897F321E72533300BB194A /* LFFNavigationBar.m */; };
+		28897F3A1E7292DF00BB194A /* LFFNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 28897F351E7292DF00BB194A /* LFFNavigationBar.m */; };
+		28897F3B1E7292DF00BB194A /* LFFNavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28897F371E7292DF00BB194A /* LFFNavigationControllerViewController.m */; };
+		28897F3C1E7292DF00BB194A /* LFFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28897F391E7292DF00BB194A /* LFFTabBarController.m */; };
 		28ECEB881E71247200F4CCE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEB871E71247200F4CCE2 /* main.m */; };
 		28ECEB8B1E71247200F4CCE2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEB8A1E71247200F4CCE2 /* AppDelegate.m */; };
 		28ECEB931E71247200F4CCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28ECEB921E71247200F4CCE2 /* Assets.xcassets */; };
 		28ECEB961E71247200F4CCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28ECEB941E71247200F4CCE2 /* LaunchScreen.storyboard */; };
 		28ECEBA11E71247200F4CCE2 /* CustomNavgationBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBA01E71247200F4CCE2 /* CustomNavgationBarTests.m */; };
 		28ECEBAC1E71247200F4CCE2 /* CustomNavgationBarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBAB1E71247200F4CCE2 /* CustomNavgationBarUITests.m */; };
-		28ECEBBB1E7124A300F4CCE2 /* LFFNavigationControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBBA1E7124A300F4CCE2 /* LFFNavigationControllerViewController.m */; };
 		28ECEBBF1E71263800F4CCE2 /* NavCoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBBE1E71263800F4CCE2 /* NavCoverView.m */; };
 		28ECEBC61E712C8600F4CCE2 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 28ECEBC31E712C8600F4CCE2 /* back.png */; };
 		28ECEBC71E712C8600F4CCE2 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28ECEBC41E712C8600F4CCE2 /* back@2x.png */; };
@@ -26,7 +27,6 @@
 		28ECEBE01E71415E00F4CCE2 /* YourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBDF1E71415E00F4CCE2 /* YourViewController.m */; };
 		28ECEBE91E714AD800F4CCE2 /* MSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBE81E714AD800F4CCE2 /* MSecondViewController.m */; };
 		28ECEBEC1E714AF800F4CCE2 /* YSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBEB1E714AF800F4CCE2 /* YSecondViewController.m */; };
-		28ECEBEF1E714E8F00F4CCE2 /* LFFTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ECEBEE1E714E8F00F4CCE2 /* LFFTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		28897F311E72533300BB194A /* LFFNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFNavigationBar.h; sourceTree = "<group>"; };
-		28897F321E72533300BB194A /* LFFNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFNavigationBar.m; sourceTree = "<group>"; };
+		28897F341E7292DF00BB194A /* LFFNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFNavigationBar.h; sourceTree = "<group>"; };
+		28897F351E7292DF00BB194A /* LFFNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFNavigationBar.m; sourceTree = "<group>"; };
+		28897F361E7292DF00BB194A /* LFFNavigationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFNavigationControllerViewController.h; sourceTree = "<group>"; };
+		28897F371E7292DF00BB194A /* LFFNavigationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFNavigationControllerViewController.m; sourceTree = "<group>"; };
+		28897F381E7292DF00BB194A /* LFFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFTabBarController.h; sourceTree = "<group>"; };
+		28897F391E7292DF00BB194A /* LFFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFTabBarController.m; sourceTree = "<group>"; };
 		28ECEB831E71247200F4CCE2 /* CustomNavgationBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomNavgationBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28ECEB871E71247200F4CCE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		28ECEB891E71247200F4CCE2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,8 +66,6 @@
 		28ECEBA71E71247200F4CCE2 /* CustomNavgationBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomNavgationBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28ECEBAB1E71247200F4CCE2 /* CustomNavgationBarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomNavgationBarUITests.m; sourceTree = "<group>"; };
 		28ECEBAD1E71247200F4CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28ECEBB91E7124A300F4CCE2 /* LFFNavigationControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFNavigationControllerViewController.h; sourceTree = "<group>"; };
-		28ECEBBA1E7124A300F4CCE2 /* LFFNavigationControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFNavigationControllerViewController.m; sourceTree = "<group>"; };
 		28ECEBBD1E71263800F4CCE2 /* NavCoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavCoverView.h; sourceTree = "<group>"; };
 		28ECEBBE1E71263800F4CCE2 /* NavCoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavCoverView.m; sourceTree = "<group>"; };
 		28ECEBC31E712C8600F4CCE2 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		28ECEBE81E714AD800F4CCE2 /* MSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSecondViewController.m; sourceTree = "<group>"; };
 		28ECEBEA1E714AF800F4CCE2 /* YSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YSecondViewController.h; sourceTree = "<group>"; };
 		28ECEBEB1E714AF800F4CCE2 /* YSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YSecondViewController.m; sourceTree = "<group>"; };
-		28ECEBED1E714E8F00F4CCE2 /* LFFTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFTabBarController.h; sourceTree = "<group>"; };
-		28ECEBEE1E714E8F00F4CCE2 /* LFFTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,12 +141,6 @@
 				28ECEBD11E71411C00F4CCE2 /* Home */,
 				28ECEB891E71247200F4CCE2 /* AppDelegate.h */,
 				28ECEB8A1E71247200F4CCE2 /* AppDelegate.m */,
-				28ECEBB91E7124A300F4CCE2 /* LFFNavigationControllerViewController.h */,
-				28ECEBBA1E7124A300F4CCE2 /* LFFNavigationControllerViewController.m */,
-				28897F311E72533300BB194A /* LFFNavigationBar.h */,
-				28897F321E72533300BB194A /* LFFNavigationBar.m */,
-				28ECEBED1E714E8F00F4CCE2 /* LFFTabBarController.h */,
-				28ECEBEE1E714E8F00F4CCE2 /* LFFTabBarController.m */,
 				28ECEB921E71247200F4CCE2 /* Assets.xcassets */,
 				28ECEB941E71247200F4CCE2 /* LaunchScreen.storyboard */,
 				28ECEB971E71247200F4CCE2 /* Info.plist */,
@@ -189,6 +183,12 @@
 				28ECEBC51E712C8600F4CCE2 /* back@3x.png */,
 				28ECEBBD1E71263800F4CCE2 /* NavCoverView.h */,
 				28ECEBBE1E71263800F4CCE2 /* NavCoverView.m */,
+				28897F341E7292DF00BB194A /* LFFNavigationBar.h */,
+				28897F351E7292DF00BB194A /* LFFNavigationBar.m */,
+				28897F361E7292DF00BB194A /* LFFNavigationControllerViewController.h */,
+				28897F371E7292DF00BB194A /* LFFNavigationControllerViewController.m */,
+				28897F381E7292DF00BB194A /* LFFTabBarController.h */,
+				28897F391E7292DF00BB194A /* LFFTabBarController.m */,
 			);
 			path = NavCoverView;
 			sourceTree = "<group>";
@@ -366,17 +366,17 @@
 			files = (
 				28ECEBE91E714AD800F4CCE2 /* MSecondViewController.m in Sources */,
 				28ECEBD91E71411C00F4CCE2 /* HSecondViewController.m in Sources */,
-				28ECEBBB1E7124A300F4CCE2 /* LFFNavigationControllerViewController.m in Sources */,
-				28897F331E72533300BB194A /* LFFNavigationBar.m in Sources */,
 				28ECEBDD1E71415100F4CCE2 /* MyViewController.m in Sources */,
-				28ECEBEF1E714E8F00F4CCE2 /* LFFTabBarController.m in Sources */,
 				28ECEB8B1E71247200F4CCE2 /* AppDelegate.m in Sources */,
 				28ECEB881E71247200F4CCE2 /* main.m in Sources */,
+				28897F3C1E7292DF00BB194A /* LFFTabBarController.m in Sources */,
+				28897F3B1E7292DF00BB194A /* LFFNavigationControllerViewController.m in Sources */,
 				28ECEBDA1E71411C00F4CCE2 /* HThirdViewController.m in Sources */,
 				28ECEBBF1E71263800F4CCE2 /* NavCoverView.m in Sources */,
 				28ECEBD81E71411C00F4CCE2 /* HomeViewController.m in Sources */,
 				28ECEBE01E71415E00F4CCE2 /* YourViewController.m in Sources */,
 				28ECEBEC1E714AF800F4CCE2 /* YSecondViewController.m in Sources */,
+				28897F3A1E7292DF00BB194A /* LFFNavigationBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

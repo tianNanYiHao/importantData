@@ -7,28 +7,44 @@
 //
 
 #import "NavCoverView.h"
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+@interface NavCoverView(){
+    
+}
+@end
 
 @implementation NavCoverView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
-+(NavCoverView*)shareNavCoverView:(CGRect)frame title:(NSString*)title{
+
++(NavCoverView*)shareNavCoverView:(CGRect)frame title:(NSString*)title style:(NavCoverViewStyle)style{
     
     NavCoverView *v = [[NavCoverView alloc] init];
     v.frame = frame;
-    
+    NSArray *arr = [NSArray array];
+    if (style == navCoverViewStyle1) {
+        arr = @[(__bridge id)RGBACOLOR(0, 92, 151, 1).CGColor,
+                (__bridge id)RGBACOLOR(54, 55, 149,1).CGColor
+                ];
+    }
+    if (style == navCoverViewStyle2) {
+        arr = @[(__bridge id)RGBACOLOR(102, 204, 102, 1).CGColor,
+                (__bridge id)RGBACOLOR(54, 55, 149,1).CGColor
+                ];
+    }
+    if (style == navCoverViewStyle3) {
+        arr = @[(__bridge id)RGBACOLOR(204, 51, 102, 1).CGColor,
+                (__bridge id)RGBACOLOR(153, 0, 51,1).CGColor
+                ];
+    }
+
     //4.渐变色
     CAGradientLayer *layerRGB = [CAGradientLayer layer];
     layerRGB.frame = v.frame;
     layerRGB.startPoint = CGPointMake(0, 0);
     layerRGB.endPoint = CGPointMake(1, 0);
-    layerRGB.colors = @[(__bridge id)[UIColor colorWithRed:0/255.0 green:92/255.0 blue:151/255.0 alpha:1].CGColor,(__bridge id)[UIColor colorWithRed:54/255.0 green:55/255.0 blue:149/255.0 alpha:1].CGColor];
+    layerRGB.colors = arr;
     [v.layer addSublayer:layerRGB];
     
     
@@ -49,6 +65,8 @@
     
     return v;
 }
+
+
 
 
 @end
