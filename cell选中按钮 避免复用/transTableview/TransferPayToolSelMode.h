@@ -10,14 +10,16 @@
 
 @interface TransferPayToolSelMode : NSObject
 
-@property(nonatomic,assign) BOOL selected;
 
 
 @property(nonatomic,strong) NSString *headImageOther;
 @property(nonatomic,strong) NSString *headImageOwn;
 
-@property (nonatomic,strong) NSString *payToolTitle;
-@property (nonatomic,strong) NSString *paytTooldescribe;
+@property (nonatomic,strong) NSString *inpayToolTitle;
+@property (nonatomic,strong) NSString *inpaytTooldescribe;
+
+@property (nonatomic,strong) NSString *outPayToolTitle;
+@property (nonatomic,strong) NSString *outPayTooldescribe;
 
 @property (nonatomic,assign) NSInteger index;
 

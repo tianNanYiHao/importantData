@@ -10,7 +10,7 @@
 @class TransferPayToolSelMode;
 
 @protocol TransferTableViewCellDelegate <NSObject>
--(void)showRightImageView:(UIButton*)btn;
+-(void)showRightImageView:(UIButton*)btn cellDefulHeight:(CGFloat)cellDefunHeight cellAllHeight:(CGFloat)cellAllHeight;
 @end
 
 
