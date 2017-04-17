@@ -29,6 +29,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 @implementation QuestionAuthToolView
@@ -38,6 +39,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize miBaoTitleLabel;
 @synthesize miBaobtn;
 @synthesize miBaoTQuestionLabel;
@@ -50,6 +52,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }return self;
@@ -66,6 +69,31 @@
 */
 - (CGFloat)miBaoQuestionVerification
 {
+    
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入密保问题答案完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 6)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(8, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+    }
+
     UIView *miBaoTitleVerificationView = [[UIView alloc] init];
     miBaoTitleVerificationView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
     [self addSubview:miBaoTitleVerificationView];
@@ -100,6 +128,11 @@
     miBaoAnswerVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:miBaoAnswerVerificationView];
 
+    
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
+    
     miBaoAnswerVerificationTextField = [[UITextField alloc] init];
     miBaoAnswerVerificationTextField .textColor = textFiledColor;
     miBaoAnswerVerificationTextField.font = [UIFont systemFontOfSize:txtTextSize];
@@ -107,14 +140,14 @@
     [miBaoAnswerVerificationView addSubview:miBaoAnswerVerificationTextField];
 
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat upDownSpace = 10;
     CGFloat commWidth = viewSize.width - leftRightSpace * 2;
+    CGFloat lastLineViewH = 1;
 
     CGSize miBaoTitleLabelSize = [miBaoTQuestionLabel sizeThatFits:CGSizeMake(commWidth, MAXFLOAT)];
 
     CGFloat miBaoTitleVerificationViewOX = 0;
-    CGFloat miBaoTitleVerificationViewOY = 0;
+    CGFloat miBaoTitleVerificationViewOY = 0 + tipViewH;
     CGFloat miBaoTitleVerificationViewW = viewSize.width;
     CGFloat miBaoTitleVerificationViewH = miBaoTitleLabelSize.height + 2 * upDownSpace;
 
@@ -217,7 +250,9 @@
     
     miBaoAnswerVerificationView.frame = CGRectMake(miBaoAnswerVerificationViewOX, miBaoAnswerVerificationViewOY, miBaoAnswerVerificationViewW, miBaoAnswerVerificationViewH);
     
-    return miBaoTitleVerificationViewH + miBaobtnH + miBaobtnLineViewH + miBaoAnswerVerificationViewH;
+    lastLineView.frame = CGRectMake(0, miBaoAnswerVerificationViewOY+miBaoAnswerVerificationViewH, viewSize.width, 1);
+    
+    return miBaoTitleVerificationViewH + miBaobtnH + miBaobtnLineViewH + miBaoAnswerVerificationViewH + tipViewH + lastLineViewH;
 }
 
 

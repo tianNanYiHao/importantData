@@ -28,6 +28,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 @implementation BankCardAuthToolView
@@ -37,6 +38,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize bankNameContentVerificationLabel;
 @synthesize bankCardVerificationTextField;
 
@@ -46,6 +48,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }return self;
@@ -59,6 +62,30 @@
  */
 - (CGFloat)bankCardVerification
 {
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入银行卡号完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 4)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(6, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+    }
+
     UIView *bankNameVerificationView = [[UIView alloc] init];
     bankNameVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:bankNameVerificationView];
@@ -83,6 +110,10 @@
     bankCardVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:bankCardVerificationView];
     
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
+    
     bankCardVerificationTextField = [[UITextField alloc] init];
     bankCardVerificationTextField .textColor = textFiledColor;
     bankCardVerificationTextField.font = [UIFont systemFontOfSize:txtTextSize];
@@ -91,8 +122,8 @@
     
     
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat commWidth = viewSize.width - leftRightSpace * 2;
+    CGFloat lastLineViewH = 1;
     UILabel *bankCardVerificationLabel = nil;
     CGSize bankCardVerificationLabelSize;
     
@@ -104,7 +135,7 @@
     CGFloat bankNameVerificationViewW = commWidth;
     CGFloat bankNameVerificationViewH = bankNameContentVerificationLabelSize.height + 2 * leftRightSpace;
     CGFloat bankNameVerificationViewOX = leftRightSpace;
-    CGFloat bankNameVerificationViewOY = 0;
+    CGFloat bankNameVerificationViewOY = 0 + tipViewH;
     
     bankNameVerificationView.frame = CGRectMake(bankNameVerificationViewOX, bankNameVerificationViewOY, bankNameVerificationViewW, bankNameVerificationViewH);
     
@@ -178,7 +209,9 @@
     
     bankCardVerificationView.frame = CGRectMake(bankCardVerificationViewOX, bankCardVerificationViewOY, bankCardVerificationViewW, bankCardVerificationViewH);
     
-    return bankNameVerificationViewH + bankNameLineViewH + bankCardVerificationViewH;
+    lastLineView.frame = CGRectMake(0, bankCardVerificationViewOY+bankCardVerificationViewH, viewSize.width, 1);
+    
+    return bankNameVerificationViewH + bankNameLineViewH + bankCardVerificationViewH + tipViewH + lastLineViewH;
 }
 
 

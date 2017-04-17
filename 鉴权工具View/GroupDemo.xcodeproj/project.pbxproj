@@ -161,13 +161,13 @@
 		280C731F1E987A8800E8C5BE /* GroupDemo */ = {
 			isa = PBXGroup;
 			children = (
+				280C73261E987A8800E8C5BE /* ViewController.h */,
+				280C73271E987A8800E8C5BE /* ViewController.m */,
 				281084B31E98875D00DA09A9 /* AuthToolsBase */,
 				280C73531E987B5500E8C5BE /* category */,
 				280C73681E987B5500E8C5BE /* groupView */,
 				280C73231E987A8800E8C5BE /* AppDelegate.h */,
 				280C73241E987A8800E8C5BE /* AppDelegate.m */,
-				280C73261E987A8800E8C5BE /* ViewController.h */,
-				280C73271E987A8800E8C5BE /* ViewController.m */,
 				280C73291E987A8800E8C5BE /* Main.storyboard */,
 				280C732C1E987A8800E8C5BE /* Assets.xcassets */,
 				280C732E1E987A8800E8C5BE /* LaunchScreen.storyboard */,

@@ -20,10 +20,25 @@ typedef enum {
 //短信验证
 @property (nonatomic, strong) UITextField *shortMsgVerificationTextField;
 @property (nonatomic, strong) UIButton *shortMsgVerificationBtn;
+
+/**
+ 鉴权工具样式
+ */
 @property (nonatomic) SmsAuthToolViewStyle viewStyle;
 
+/**
+ 鉴权提示文字
+ */
+@property (nonatomic, strong) NSString *tipString;
 
+/**
+ 鉴权是否显示
+ */
+@property (nonatomic, assign) BOOL tipShow;
 
+/**
+ 初始化
+ */
 -(instancetype)init;
 
 /**

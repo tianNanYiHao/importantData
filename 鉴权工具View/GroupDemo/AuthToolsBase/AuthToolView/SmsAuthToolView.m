@@ -30,6 +30,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 
@@ -40,6 +41,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize phoneNumVerificationTextField;
 @synthesize shortMsgVerificationTextField;
 @synthesize shortMsgVerificationBtn;
@@ -49,6 +51,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }return self;
@@ -59,6 +62,32 @@
  */
 - (CGFloat)shortMsgAndPhoneNumVerification
 {
+    
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入短信码完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 3)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(5, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+
+    }
+
     UIView *phoneNumVerificationView = [[UIView alloc] init];
     phoneNumVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:phoneNumVerificationView];
@@ -76,6 +105,10 @@
     UIView *shortMsgVerificationView = [[UIView alloc] init];
     shortMsgVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:shortMsgVerificationView];
+    
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
     
     shortMsgVerificationTextField = [[UITextField alloc] init];
     shortMsgVerificationTextField .textColor = textFiledColor;
@@ -97,8 +130,8 @@
     
     
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat commWidth = viewSize.width - 2 * leftRightSpace;
+    CGFloat lastLineViewH = 1;
     UILabel *phoneNumVerificationLabel = nil;
     CGSize phoneNumVerificationLabelSize;
     
@@ -193,12 +226,12 @@
     
     CGFloat phoneNumVerificationViewW = commWidth;
     CGFloat phoneNumVerificationViewOX = leftRightSpace;
-    CGFloat phoneNumVerificationViewOY = 0;
+    CGFloat phoneNumVerificationViewOY = 0 + tipViewH;
     
     phoneNumVerificationView.frame = CGRectMake(phoneNumVerificationViewOX, phoneNumVerificationViewOY, phoneNumVerificationViewW, phoneNumVerificationViewH);
     
     CGFloat phoneNumLineViewOX = leftRightSpace;
-    CGFloat phoneNumLineViewOY = phoneNumVerificationViewH;
+    CGFloat phoneNumLineViewOY = phoneNumVerificationViewH + tipViewH;
     
     phoneNumLineView.frame = CGRectMake(phoneNumLineViewOX, phoneNumLineViewOY, phoneNumLineViewW, phoneNumLineViewH);
     
@@ -226,8 +259,9 @@
     CGFloat shortMsgVerificationViewOY = phoneNumLineViewOY + phoneNumLineViewH;
     
     shortMsgVerificationView.frame = CGRectMake(shortMsgVerificationViewOX, shortMsgVerificationViewOY, shortMsgVerificationViewW, shortMsgVerificationViewH);
+    lastLineView.frame = CGRectMake(0, shortMsgVerificationViewOY+shortMsgVerificationViewH, viewSize.width, 1);
     
-    return shortMsgVerificationViewH + phoneNumVerificationViewH + phoneNumLineViewH;
+    return shortMsgVerificationViewH + phoneNumVerificationViewH + phoneNumLineViewH + tipViewH + lastLineViewH;
 }
 
 @end

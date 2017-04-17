@@ -28,6 +28,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 @implementation CreditCardAuthToolView
@@ -38,6 +39,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize cvnVerificationTextField;
 @synthesize expiryVerificationTextField;
 
@@ -46,6 +48,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }return self;
@@ -62,6 +65,30 @@
  */
 - (CGFloat)creditCardVerification
 {
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入信用卡信息完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 5)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(7, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+    }
+
     UIView *cvnVerificationView = [[UIView alloc] init];
     cvnVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:cvnVerificationView];
@@ -80,6 +107,10 @@
     expiryVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:expiryVerificationView];
     
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
+    
     expiryVerificationTextField = [[UITextField alloc] init];
     expiryVerificationTextField .textColor = textFiledColor;
     expiryVerificationTextField.font = [UIFont systemFontOfSize:txtTextSize];
@@ -88,8 +119,8 @@
     
     
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat commWidth = viewSize.width - 2 * leftRightSpace;
+    CGFloat lastLineViewH = 1;
     UILabel *cvnVerificationLabel = nil;
     CGSize cvnVerificationLabelSize;
     
@@ -177,12 +208,12 @@
     CGFloat cvnVerificationViewW = commWidth;
     CGFloat cvnVerificationViewH = cvnVerificationTextFieldH + 2 * leftRightSpace;
     CGFloat cvnVerificationViewOX = leftRightSpace;
-    CGFloat cvnVerificationViewOY = 0;
+    CGFloat cvnVerificationViewOY = 0 + tipViewH;
     
     cvnVerificationView.frame = CGRectMake(cvnVerificationViewOX, cvnVerificationViewOY, cvnVerificationViewW, cvnVerificationViewH);
     
     CGFloat cvnLineViewOX = leftRightSpace;
-    CGFloat cvnLineViewOY = cvnVerificationViewH;
+    CGFloat cvnLineViewOY = cvnVerificationViewH + tipViewH;
     
     cvnLineView.frame = CGRectMake(cvnLineViewOX, cvnLineViewOY, cvnLineViewW, cvnLineViewH);
     
@@ -201,7 +232,9 @@
     
     expiryVerificationView.frame = CGRectMake(expiryVerificationViewOX, expiryVerificationViewOY, expiryVerificationViewW, expiryVerificationViewH);
     
-    return expiryVerificationViewH + cvnVerificationViewH + cvnLineViewH;
+    lastLineView.frame = CGRectMake(0, expiryVerificationViewOY+expiryVerificationViewH, viewSize.width, 1);
+    
+    return expiryVerificationViewH + cvnVerificationViewH + cvnLineViewH + tipViewH + lastLineViewH;
 }
 
 @end

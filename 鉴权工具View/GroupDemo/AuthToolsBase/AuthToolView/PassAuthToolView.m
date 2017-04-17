@@ -79,26 +79,30 @@
         UIView *tipView = [[UIView alloc] init];
         tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
         [self addSubview:tipView];
-        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入原登陆密码完成身份验证"];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入密码完成验证"];
         [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
-        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 5)];
-        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(7, 6)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 4)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(4, 4)];
         UILabel *tipLab = [[UILabel alloc] init];
         tipLab.attributedText = tipTitleInfo;
         tipLab.font = [UIFont systemFontOfSize:titleSize];
         [tipView addSubview:tipLab];
         
-        CGFloat tipLabWith = viewSize.width - 2 * leftRightSpace;
+        CGFloat tipLabWith = viewSize.width;
         tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
         tipViewH = tipLabSize.height + 2 * space;
-        tipView.frame = CGRectMake(leftRightSpace, 0, tipLabWith, tipViewH);
-        tipLab.frame = CGRectMake(0, 10, tipLabWith, tipLabSize.height);
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
     }
     
     
     UIView *loginPwdVerificationView = [[UIView alloc] init];
     loginPwdVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:loginPwdVerificationView];
+    
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
     
     loginPwdVerificationTextField = [[UITextField alloc] init];
     loginPwdVerificationTextField .textColor = textFiledColor;
@@ -116,6 +120,7 @@
     
     //设置控件的位置和大小
     CGFloat commWidth = viewSize.width - leftRightSpace * 2;
+    CGFloat lastLineViewH = 1;
     UILabel *loginPwdVerificationLabel = nil;
     CGSize loginPwdVerificationLabelSize;
     
@@ -176,8 +181,9 @@
     CGFloat loginPwdVerificationViewOY = 0 + tipViewH;
     
     loginPwdVerificationView.frame = CGRectMake(loginPwdVerificationViewOX, loginPwdVerificationViewOY, loginPwdVerificationViewW, loginPwdVerificationViewH);
+    lastLineView.frame = CGRectMake(0, loginPwdVerificationViewOY+loginPwdVerificationViewH, viewSize.width, 1);
     
-    return loginPwdVerificationViewH + tipViewH;
+    return loginPwdVerificationViewH + tipViewH + lastLineViewH;
 }
 
 @end

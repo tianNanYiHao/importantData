@@ -28,6 +28,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 @implementation IdentityAuthToolView
@@ -37,6 +38,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize realNameVerificationTextField;
 @synthesize IDCardVerificationTextField;
 
@@ -45,6 +47,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }return self;
@@ -58,6 +61,30 @@
  */
 - (CGFloat)realNameAndIDCardVerification
 {
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入身份证号完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 4)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(6, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+    }
+
     UIView *realNameVerificationView = [[UIView alloc] init];
     realNameVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:realNameVerificationView];
@@ -76,6 +103,10 @@
     IDCardVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:IDCardVerificationView];
     
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
+    
     IDCardVerificationTextField = [[UITextField alloc] init];
     IDCardVerificationTextField .textColor = textFiledColor;
     IDCardVerificationTextField.font = [UIFont systemFontOfSize:txtTextSize];
@@ -84,8 +115,8 @@
     
     
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat commWidth = viewSize.width - 2 * leftRightSpace;
+    CGFloat lastLineViewH = 1;
     UILabel *realNameVerificationLabel = nil;
     CGSize realNameVerificationLabelSize;
     
@@ -173,12 +204,12 @@
     CGFloat realNameVerificationViewW = commWidth;
     CGFloat realNameVerificationViewH = realNameVerificationTextFieldH + 2 * leftRightSpace;
     CGFloat realNameVerificationViewOX = leftRightSpace;
-    CGFloat realNameVerificationViewOY = 0;
+    CGFloat realNameVerificationViewOY = 0 + tipViewH;
     
     realNameVerificationView.frame = CGRectMake(realNameVerificationViewOX, realNameVerificationViewOY, realNameVerificationViewW, realNameVerificationViewH);
     
     CGFloat realNameLineViewOX = leftRightSpace;
-    CGFloat realNameLineViewOY = realNameVerificationViewH;
+    CGFloat realNameLineViewOY = realNameVerificationViewH + tipViewH;
     
     realNameLineView.frame = CGRectMake(realNameLineViewOX, realNameLineViewOY, realNameLineViewW, realNameLineViewH);
     
@@ -197,7 +228,9 @@
     
     IDCardVerificationView.frame = CGRectMake(IDCardVerificationViewOX, IDCardVerificationViewOY, IDCardVerificationViewW, IDCardVerificationViewH);
     
-    return IDCardVerificationViewH + realNameVerificationViewH + realNameLineViewH;
+    lastLineView.frame = CGRectMake(0, IDCardVerificationViewOY+IDCardVerificationViewH, viewSize.width, 1);
+    
+    return IDCardVerificationViewH + realNameVerificationViewH + realNameLineViewH + tipViewH + lastLineViewH;
 }
 
 @end

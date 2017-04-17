@@ -146,11 +146,25 @@
     scrView.contentSize = CGSizeMake(viewSize.width, viewSize.height*2);
     [self.view addSubview:scrView];
     
-    
+    //1.初始化
     AuthToolsUtil *authView = [[AuthToolsUtil alloc] init];
-    authView.backgroundColor = [UIColor redColor];
-    CGFloat authViewH =  [authView addAuthToolsInfo:@[@"",@"loginpass",@""]];
+    
+    //2.根据UI显示需求  设置是否显示tip提示
+    authView.passAuthToolView.tipShow = YES;
+    authView.smsAtuhTollView.tipShow = YES;
+    authView.imageCodeAuthToolView.tipShow = YES;
+    authView.bankCardAuthToolView.tipShow = YES;
+    authView.questionAuthToolView.tipShow = YES;
+    authView.identityAuthToolView.tipShow = YES;
+    authView.cardCheckCodeAuthToolView.tipShow = YES;
+    authView.creditCardAuthToolView.tipShow = YES;
+
+    //3.设置数据/frame
+    authView.backgroundColor = [UIColor whiteColor];
+    CGFloat authViewH = [authView addAuthToolsInfo:@[@"loginpass",@"question",@"identity",@"cardCheckCode",@"sms",@"img",@"bankCard", @"creditCard"]];
     authView.frame = CGRectMake(0, 100, viewSize.width, authViewH);
+    
+    //4 添加
     [scrView addSubview:authView];
 
 }

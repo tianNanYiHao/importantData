@@ -18,9 +18,25 @@ typedef enum {
 @property (nonatomic, strong) UILabel *bankNameContentVerificationLabel;
 @property (nonatomic, strong) UITextField *bankCardVerificationTextField;
 
+/**
+ 鉴权工具样式
+ */
 @property (nonatomic) BankCardAuthToolViewStyle viewStyle;
 
+/**
+ 鉴权提示文字
+ */
+@property (nonatomic, strong) NSString *tipString;
 
+/**
+ 鉴权是否显示
+ */
+@property (nonatomic, assign) BOOL tipShow;
+
+
+/**
+ 初始化
+ */
 -(instancetype)init;
 
 

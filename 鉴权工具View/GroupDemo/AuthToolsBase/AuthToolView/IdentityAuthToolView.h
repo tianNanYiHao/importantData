@@ -16,8 +16,27 @@ typedef enum {
 //身份证验证
 @property (nonatomic, strong) UITextField *realNameVerificationTextField;
 @property (nonatomic, strong) UITextField *IDCardVerificationTextField;
+
+/**
+ 鉴权工具样式
+ */
 @property (nonatomic) IdentityAuthToolViewStyle viewStyle;
 
+
+/**
+ 鉴权提示文字
+ */
+@property (nonatomic, strong) NSString *tipString;
+
+/**
+ 鉴权是否显示
+ */
+@property (nonatomic, assign) BOOL tipShow;
+
+
+/**
+ 初始化
+ */
 -(instancetype)init;
 
 

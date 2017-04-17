@@ -20,8 +20,24 @@ typedef enum {
 @property (nonatomic, strong) UITextField *pictureVerificationTextField;
 @property (nonatomic, strong) UIButton *pictureVerificationBtn;
 
+/**
+ 鉴权工具样式
+ */
 @property (nonatomic) ImageCodeAuthToolViewStyle viewStyle;
+/**
+ 鉴权提示文字
+ */
+@property (nonatomic, strong) NSString *tipString;
 
+/**
+ 鉴权是否显示
+ */
+@property (nonatomic, assign) BOOL tipShow;
+
+
+/**
+ 初始化
+ */
 -(instancetype)init;
 
 

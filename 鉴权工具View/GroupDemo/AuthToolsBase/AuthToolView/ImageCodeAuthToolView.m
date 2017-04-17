@@ -29,6 +29,7 @@
 @property (nonatomic,assign)  CGFloat txtTextSize;
 @property (nonatomic,assign)  CGFloat labelTextSize;
 @property (nonatomic,assign)  CGFloat btnTextSize;
+@property (nonatomic,assign)  CGFloat titleSize;
 @end
 
 
@@ -39,6 +40,7 @@
 @synthesize txtTextSize;
 @synthesize labelTextSize;
 @synthesize btnTextSize;
+@synthesize titleSize;
 @synthesize pictureVerificationTextField;
 @synthesize pictureVerificationBtn;
 
@@ -50,6 +52,7 @@
         viewSize = [UIScreen mainScreen].bounds.size;
         leftRightSpace = 15;
         txtTextSize = 13;
+        titleSize = 12;
         labelTextSize = 13;
         btnTextSize = 15;
     }
@@ -64,9 +67,37 @@
  */
 - (CGFloat)pictureVerification
 {
+    CGFloat space = 10.0;
+    CGSize tipLabSize = CGSizeZero;
+    CGFloat tipViewH = 0;
+    //TipView
+    if (_tipShow) {
+        UIView *tipView = [[UIView alloc] init];
+        tipView.backgroundColor = [UIColor colorWithRed:(242/255.0) green:(242/255.0) blue:(242/255.0) alpha:1.0];
+        [self addSubview:tipView];
+        NSMutableAttributedString *tipTitleInfo = [[NSMutableAttributedString alloc] initWithString:@"输入图片验证码完成验证"];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(0 , 2)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:(230/255.0) green:(2/255.0) blue:(2/255.0) alpha:1.0] range:NSMakeRange(2, 5)];
+        [tipTitleInfo addAttribute:NSForegroundColorAttributeName value:titleColor range:NSMakeRange(7, 4)];
+        UILabel *tipLab = [[UILabel alloc] init];
+        tipLab.attributedText = tipTitleInfo;
+        tipLab.font = [UIFont systemFontOfSize:titleSize];
+        [tipView addSubview:tipLab];
+        
+        CGFloat tipLabWith = viewSize.width;
+        tipLabSize = [tipLab sizeThatFits:CGSizeMake(tipLabWith, MAXFLOAT)];
+        tipViewH = tipLabSize.height + 2 * space;
+        tipView.frame = CGRectMake(0, 0, tipLabWith, tipViewH);
+        tipLab.frame = CGRectMake(leftRightSpace, 10, tipLabWith, tipLabSize.height);
+    }
+
     UIView *pictureVerificationView = [[UIView alloc] init];
     pictureVerificationView.backgroundColor = [UIColor clearColor];
     [self addSubview:pictureVerificationView];
+    
+    UIView *lastLineView = [[UIView alloc] init];
+    lastLineView.backgroundColor = landscapeLineViewColor;
+    [self addSubview:lastLineView];
     
     pictureVerificationTextField = [[UITextField alloc] init];
     pictureVerificationTextField .textColor = textFiledColor;
@@ -79,8 +110,8 @@
     [pictureVerificationView addSubview:pictureVerificationBtn];
     
     //设置控件的位置和大小
-    CGFloat space = 10.0;
     CGFloat commWidth = viewSize.width - leftRightSpace * 2;
+    CGFloat lastLineViewH = 1;
     UILabel *pictureVerificationLabel = nil;
     CGSize pictureVerificationLabelSize;
     
@@ -138,11 +169,13 @@
     
     CGFloat pictureVerificationViewW = commWidth;
     CGFloat pictureVerificationViewOX = leftRightSpace;
-    CGFloat pictureVerificationViewOY = 0;
+    CGFloat pictureVerificationViewOY = 0 + tipViewH;
     
     pictureVerificationView.frame = CGRectMake(pictureVerificationViewOX, pictureVerificationViewOY, pictureVerificationViewW, pictureVerificationViewH);
     
-    return pictureVerificationViewH;
+     lastLineView.frame = CGRectMake(0, pictureVerificationViewOY+pictureVerificationViewH, viewSize.width, 1);
+    
+    return pictureVerificationViewH + tipViewH + lastLineViewH;
 }
 
 

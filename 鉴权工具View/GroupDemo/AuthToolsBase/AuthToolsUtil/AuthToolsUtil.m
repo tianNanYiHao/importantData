@@ -36,15 +36,6 @@
 }
 @property (nonatomic,assign) CGFloat currentY;
 
-@property (nonatomic,strong) PassAuthToolView *passAuthToolView;
-@property (nonatomic,strong) SmsAuthToolView *smsAtuhTollView;
-@property (nonatomic,strong) ImageCodeAuthToolView *imageCodeAuthToolView;
-@property (nonatomic,strong) BankCardAuthToolView *bankCardAuthToolView;
-@property (nonatomic,strong) QuestionAuthToolView *questionAuthToolView;
-@property (nonatomic,strong) IdentityAuthToolView *identityAuthToolView;
-@property (nonatomic,strong) CardCheckCodeAuthToolView *cardCheckCodeAuthToolView;
-@property (nonatomic,strong) CreditCardAuthToolView *creditCardAuthToolView;
-
 
 
 
@@ -69,9 +60,6 @@
     if (!_passAuthToolView) {
         _passAuthToolView = [[PassAuthToolView alloc] init];
         _passAuthToolView.viewstyle = PassAuthToolViewStyleYes;
-        CGFloat passAuthToolHH = [_passAuthToolView loginPwdVerification];
-        _passAuthToolView.frame = CGRectMake(0, self.currentY,ViewSize.width , passAuthToolHH);
-        passAuthToolH =  passAuthToolHH;
     }
     return _passAuthToolView;
 }
@@ -81,10 +69,8 @@
     if (!_smsAtuhTollView) {
         _smsAtuhTollView = [[SmsAuthToolView alloc] init];
         _smsAtuhTollView.viewStyle = SmsAuthToolViewStyleYes;
-        CGFloat smsAuthToolHH =  [_smsAtuhTollView shortMsgAndPhoneNumVerification];
-        _smsAtuhTollView.frame = CGRectMake(0, self.currentY, ViewSize.width, smsAuthToolHH);
-        smsAuthToolH = smsAuthToolHH;
-    }return _smsAtuhTollView;
+    }
+    return _smsAtuhTollView;
 }
 
 //imageCode
@@ -92,9 +78,6 @@
     if (!_imageCodeAuthToolView) {
         _imageCodeAuthToolView = [[ImageCodeAuthToolView alloc] init];
         _imageCodeAuthToolView.viewStyle = ImageCodeAuthToolViewStyleYes;
-        CGFloat imageCodeAuthToolHH = [_imageCodeAuthToolView pictureVerification];
-        _imageCodeAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, imageCodeAuthToolHH);
-        imageCodeAuthToolH = imageCodeAuthToolHH;
     }
     return _imageCodeAuthToolView;
 }
@@ -104,9 +87,6 @@
     if (!_bankCardAuthToolView) {
         _bankCardAuthToolView = [[BankCardAuthToolView alloc] init];
         _bankCardAuthToolView.viewStyle = BankCardAuthToolViewStyleYes;
-        CGFloat bankCardAuthToolHH = [_bankCardAuthToolView bankCardVerification];
-        _bankCardAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, bankCardAuthToolHH);
-        bankCardAuthToolH = bankCardAuthToolHH;
     }return _bankCardAuthToolView;
 }
 
@@ -115,9 +95,6 @@
     if (!_questionAuthToolView) {
         _questionAuthToolView = [[QuestionAuthToolView alloc] init];
         _questionAuthToolView.viewStyle = QuestionAuthToolViewStyleYes;
-        CGFloat questionAuthToolHH = [_questionAuthToolView miBaoQuestionVerification];
-        _questionAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width,questionAuthToolHH);
-        questionAuthToolH = questionAuthToolHH;
     }return _questionAuthToolView;
 }
 
@@ -127,21 +104,15 @@
     if (!_identityAuthToolView) {
         _identityAuthToolView = [[IdentityAuthToolView alloc] init];
         _identityAuthToolView.viewStyle = IdentityAuthToolViewStyleYes;
-        CGFloat identityAuthToolHH = [_identityAuthToolView realNameAndIDCardVerification];
-        _identityAuthToolView.frame = CGRectMake(0,  self.currentY, ViewSize.width, identityAuthToolHH);
-        identityAuthToolH = identityAuthToolHH;
     }return _identityAuthToolView;
 }
 
 
 //cardCheckCode
 -(CardCheckCodeAuthToolView*)cardCheckCodeAuthToolView{
-    if (!_creditCardAuthToolView) {
+    if (!_cardCheckCodeAuthToolView) {
         _cardCheckCodeAuthToolView = [[CardCheckCodeAuthToolView alloc] init];
         _cardCheckCodeAuthToolView.viewStyle = CardCheckCodeAuthToolViewStyleYes;
-        CGFloat cardCheckCodeAuthToolHH = [_cardCheckCodeAuthToolView sandCardVerification];
-        _cardCheckCodeAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, cardCheckCodeAuthToolHH);
-        cardCheckCodeAuthToolH = cardCheckCodeAuthToolHH;
     }return _cardCheckCodeAuthToolView;
 }
 
@@ -151,9 +122,6 @@
     if (!_creditCardAuthToolView) {
         _creditCardAuthToolView = [[CreditCardAuthToolView alloc] init];
         _creditCardAuthToolView.viewStyle = CreditCardAuthToolViewStyleYes;
-        CGFloat creditCardAuthToolHH = [_creditCardAuthToolView creditCardVerification];
-        _creditCardAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, creditCardAuthToolHH);
-        creditCardAuthToolH = creditCardAuthToolHH;
     }return _creditCardAuthToolView;
 }
 
@@ -177,33 +145,65 @@
         NSString *type = authToolsArray[i];
         
         if ([@"loginpass" isEqualToString:type]) {
+            CGFloat passAuthToolHH = [self.passAuthToolView loginPwdVerification];
+            _passAuthToolView.frame = CGRectMake(0, self.currentY,ViewSize.width , passAuthToolHH);
+            passAuthToolH =  passAuthToolHH;
             [self addSubview:self.passAuthToolView];
         }
         if ([@"gesture" isEqualToString:type]) {
+            CGFloat passAuthToolHH = [self.passAuthToolView loginPwdVerification];
+            _passAuthToolView.frame = CGRectMake(0, self.currentY,ViewSize.width , passAuthToolHH);
+            passAuthToolH =  passAuthToolHH;
             [self addSubview:self.passAuthToolView];
         }
         if ([@"accpass" isEqualToString:type]) {
+            CGFloat passAuthToolHH = [self.passAuthToolView loginPwdVerification];
+            _passAuthToolView.frame = CGRectMake(0, self.currentY,ViewSize.width , passAuthToolHH);
+            passAuthToolH =  passAuthToolHH;
             [self addSubview:self.passAuthToolView];
         }
         if ([@"sms" isEqualToString:type]) {
+            CGFloat smsAuthToolHH =  [self.smsAtuhTollView shortMsgAndPhoneNumVerification];
+            _smsAtuhTollView.frame = CGRectMake(0, self.currentY, ViewSize.width, smsAuthToolHH);
+            smsAuthToolH = smsAuthToolHH;
+
             [self addSubview:self.smsAtuhTollView];
         }
         if ([@"img" isEqualToString:type]) {
+            CGFloat imageCodeAuthToolHH = [self.imageCodeAuthToolView pictureVerification];
+            _imageCodeAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, imageCodeAuthToolHH);
+            imageCodeAuthToolH = imageCodeAuthToolHH;
             [self addSubview:self.imageCodeAuthToolView];
         }
         if ([@"bankCard" isEqualToString:type]) {
+            CGFloat bankCardAuthToolHH = [self.bankCardAuthToolView bankCardVerification];
+            _bankCardAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, bankCardAuthToolHH);
+            bankCardAuthToolH = bankCardAuthToolHH;
             [self addSubview:self.bankCardAuthToolView];
         }
         if ([@"question" isEqualToString:type]) {
+            CGFloat questionAuthToolHH = [self.questionAuthToolView miBaoQuestionVerification];
+            _questionAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width,questionAuthToolHH);
+            questionAuthToolH = questionAuthToolHH;
+
             [self addSubview:self.questionAuthToolView];
         }
         if ([@"identity" isEqualToString:type]) {
+            CGFloat identityAuthToolHH = [self.identityAuthToolView realNameAndIDCardVerification];
+            _identityAuthToolView.frame = CGRectMake(0,  self.currentY, ViewSize.width, identityAuthToolHH);
+            identityAuthToolH = identityAuthToolHH;
             [self addSubview:self.identityAuthToolView];
         }
         if ([@"cardCheckCode" isEqualToString:type]) {
+            CGFloat cardCheckCodeAuthToolHH = [self.cardCheckCodeAuthToolView sandCardVerification];
+            _cardCheckCodeAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, cardCheckCodeAuthToolHH);
+            cardCheckCodeAuthToolH = cardCheckCodeAuthToolHH;
             [self addSubview:self.cardCheckCodeAuthToolView];
         }
         if ([@"creditCard" isEqualToString:type]) {
+            CGFloat creditCardAuthToolHH = [self.creditCardAuthToolView creditCardVerification];
+            _creditCardAuthToolView.frame = CGRectMake(0, self.currentY, ViewSize.width, creditCardAuthToolHH);
+            creditCardAuthToolH = creditCardAuthToolHH;
             [self addSubview:self.creditCardAuthToolView];
         }
     
