@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SandMQTTClientHelper.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+    [[SandMQTTClientHelper shareSandMQTTClientInstance] subscribeToTopicWithClientID:@"1234" sandMqttNewsBlock:^(NSString *dataStr) {
+        
+        NSLog(@"==== -- ==== %@",dataStr);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:dataStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
+        
+        [alert show];
+    }];
+    
+    
+    
+
+    
     return YES;
 }
 

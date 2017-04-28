@@ -15,6 +15,8 @@
 		28435FD81EB1CEF100250F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28435FD61EB1CEF100250F24 /* LaunchScreen.storyboard */; };
 		28435FE31EB1CEF100250F24 /* MQTTClientDEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FE21EB1CEF100250F24 /* MQTTClientDEMOTests.m */; };
 		28435FEE1EB1CEF100250F24 /* MQTTClientDEMOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FED1EB1CEF100250F24 /* MQTTClientDEMOUITests.m */; };
+		284360AD1EB30F3200250F24 /* SunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 284360AC1EB30F3200250F24 /* SunViewController.m */; };
+		284360B11EB317D400250F24 /* SandMQTTClientHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 284360B01EB317D400250F24 /* SandMQTTClientHelper.m */; };
 		67ECAB7B24307BEF96F970B5 /* libPods-MQTTClientDEMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF83CD3C294FCB15C4CB472 /* libPods-MQTTClientDEMO.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +54,10 @@
 		28435FE91EB1CEF100250F24 /* MQTTClientDEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQTTClientDEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28435FED1EB1CEF100250F24 /* MQTTClientDEMOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTClientDEMOUITests.m; sourceTree = "<group>"; };
 		28435FEF1EB1CEF100250F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		284360AB1EB30F3200250F24 /* SunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SunViewController.h; sourceTree = "<group>"; };
+		284360AC1EB30F3200250F24 /* SunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SunViewController.m; sourceTree = "<group>"; };
+		284360AF1EB317D400250F24 /* SandMQTTClientHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandMQTTClientHelper.h; sourceTree = "<group>"; };
+		284360B01EB317D400250F24 /* SandMQTTClientHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandMQTTClientHelper.m; sourceTree = "<group>"; };
 		3FF804323021944370BEF4F4 /* Pods-MQTTClientDEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTClientDEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO.release.xcconfig"; sourceTree = "<group>"; };
 		4CF83CD3C294FCB15C4CB472 /* libPods-MQTTClientDEMO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MQTTClientDEMO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31AF7406E971D58B435B631 /* Pods-MQTTClientDEMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTClientDEMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,10 +114,13 @@
 		28435FC71EB1CEF100250F24 /* MQTTClientDEMO */ = {
 			isa = PBXGroup;
 			children = (
+				284360AE1EB3179F00250F24 /* SandMQTTClient */,
 				28435FCB1EB1CEF100250F24 /* AppDelegate.h */,
 				28435FCC1EB1CEF100250F24 /* AppDelegate.m */,
 				28435FCE1EB1CEF100250F24 /* ViewController.h */,
 				28435FCF1EB1CEF100250F24 /* ViewController.m */,
+				284360AB1EB30F3200250F24 /* SunViewController.h */,
+				284360AC1EB30F3200250F24 /* SunViewController.m */,
 				28435FD11EB1CEF100250F24 /* Main.storyboard */,
 				28435FD41EB1CEF100250F24 /* Assets.xcassets */,
 				28435FD61EB1CEF100250F24 /* LaunchScreen.storyboard */,
@@ -145,6 +154,15 @@
 				28435FEF1EB1CEF100250F24 /* Info.plist */,
 			);
 			path = MQTTClientDEMOUITests;
+			sourceTree = "<group>";
+		};
+		284360AE1EB3179F00250F24 /* SandMQTTClient */ = {
+			isa = PBXGroup;
+			children = (
+				284360AF1EB317D400250F24 /* SandMQTTClientHelper.h */,
+				284360B01EB317D400250F24 /* SandMQTTClientHelper.m */,
+			);
+			path = SandMQTTClient;
 			sourceTree = "<group>";
 		};
 		9670589450C161663CE01E2F /* Pods */ = {
@@ -349,9 +367,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284360B11EB317D400250F24 /* SandMQTTClientHelper.m in Sources */,
 				28435FD01EB1CEF100250F24 /* ViewController.m in Sources */,
 				28435FCD1EB1CEF100250F24 /* AppDelegate.m in Sources */,
 				28435FCA1EB1CEF100250F24 /* main.m in Sources */,
+				284360AD1EB30F3200250F24 /* SunViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

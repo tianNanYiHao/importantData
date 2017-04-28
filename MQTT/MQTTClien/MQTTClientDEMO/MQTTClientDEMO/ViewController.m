@@ -7,6 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "SunViewController.h"
+#import "SandMQTTClientHelper.h"
+
+
+
 #import "MQTTClient.h"
 
 #define kMQTTServerHost @"172.28.250.63"
@@ -16,68 +21,61 @@
 
 
 #define kMQTTServerTopic1 @"SANDBAO/0003/USER/4000001077" //4000001077 userID
-#define kMQTTServerTopic2 @"SANDBAO/0003/BROADCAST"
+#define kMQTTServerTopic2 @"SANDBAO/0003/#"
 
 
 @interface ViewController ()<MQTTSessionDelegate,MQTTTransportDelegate>
-
+{
+    MQTTSession *sessioN;
+    SunViewController *sunvc;
+}
+@property (weak, nonatomic) IBOutlet UITextField *topicTextfiled;
 @end
 
 @implementation ViewController
+
+//MQTT断开连接
+- (IBAction)MQTTDisconnect:(id)sender {
+    [[SandMQTTClientHelper shareSandMQTTClientInstance] sandMqttDisConnect];
+    
+}
+//MQTT重新连接
+- (IBAction)MQTTConnect:(id)sender {
+    [[SandMQTTClientHelper shareSandMQTTClientInstance] sandMqttConnect];
+}
+//MQTT关闭
+- (IBAction)MQTTClose:(id)sender {
+    [[SandMQTTClientHelper shareSandMQTTClientInstance] sandMqttClosed];
+}
+
+//MQTT取消定于某个主题
+- (IBAction)unsubscritionTopic:(id)sender {
+    _topicTextfiled.text = kMQTTServerTopic2;
+    [sessioN unsubscribeTopic:kMQTTServerTopic2];
+}
+
+//跳转
+- (IBAction)pushVC:(id)sender {
+    sunvc = [[SunViewController alloc] init];
+    [self.navigationController pushViewController:sunvc animated:YES];
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    //1.设置传输类型
-    MQTTCFSocketTransport *transport = [[MQTTCFSocketTransport alloc] init];
-    transport.host = kMQTTServerHost;
-    transport.port = kMQTTServerPort;
-    
-    //2.创建一个任务
-    MQTTSession *session = [[MQTTSession alloc] init];
-    //设置当前任务的传输类型
-    session.transport = transport;
-    //设置当前任务的代理
-    session.delegate = self;
-    //设置当前任务的账户/密码
-    session.userName = kMQTTServerName;
-    session.password = kMQTTServerPasswd;
-    //设置当前任务的clienID
-    session.clientId = @"";
-    //设置当前任务的超时时间
-    BOOL success = [session connectAndWaitTimeout:10];
+    self.title = @"爸爸";
+    self.view.backgroundColor = [UIColor whiteColor];
+
     
     
     
-    
-    //订阅一个主题Topic
-    if (success) {
-        [session subscribeTopic:kMQTTServerTopic2];
-    }
-    
-    
-    
+
+
     
 }
-
-#pragma mark - MQTTSessionDelegate代理
-//接受消息
--(void)newMessage:(MQTTSession *)session data:(NSData *)data onTopic:(NSString *)topic qos:(MQTTQosLevel)qos retained:(BOOL)retained mid:(unsigned int)mid{
-    
-    NSLog(@" === session = %@",session);
-    NSLog(@" === data = %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-    NSLog(@" === topic = %@",topic);
-    NSLog(@" === qos = %d",qos);
-    NSLog(@" === retained = %d",retained);
-    NSLog(@" === mid = %u",mid);
-    
-    
-    
-    
-}
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
