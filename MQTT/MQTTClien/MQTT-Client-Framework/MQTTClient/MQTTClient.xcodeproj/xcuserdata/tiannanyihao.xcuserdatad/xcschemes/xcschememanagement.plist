@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Doxygen Docs.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>MQTTClientOSXTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>MQTTClientTVTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>MQTTClientTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>MQTTFramework Mac.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>MQTTFramework iOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>MQTTFramework tvOS.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>MQTTiOSTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8404875D1C51212600569C79</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>840716311BBEF13A00FBB3CB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8425D7001BBE8D3D005AD733</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>846191391883E56800101409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84B739AA1A66EDFC00B103F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE9EF5C41C0628B1009EF667</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6D08FA31E535B6800CD2566</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F6D08FD71E535E9900CD2566</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
