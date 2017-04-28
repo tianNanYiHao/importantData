@@ -1,0 +1,7 @@
+platform :ios, ‘7.0’
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+
+target 'MQTTClientDEMO' do
+  pod 'MQTTClient'
+  pod 'AFNetworking', '~> 2.6'
+end

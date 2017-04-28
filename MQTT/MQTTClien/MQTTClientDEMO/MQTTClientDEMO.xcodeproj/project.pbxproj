@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28435FCA1EB1CEF100250F24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FC91EB1CEF100250F24 /* main.m */; };
+		28435FCD1EB1CEF100250F24 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FCC1EB1CEF100250F24 /* AppDelegate.m */; };
+		28435FD01EB1CEF100250F24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FCF1EB1CEF100250F24 /* ViewController.m */; };
+		28435FD31EB1CEF100250F24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28435FD11EB1CEF100250F24 /* Main.storyboard */; };
+		28435FD51EB1CEF100250F24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28435FD41EB1CEF100250F24 /* Assets.xcassets */; };
+		28435FD81EB1CEF100250F24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28435FD61EB1CEF100250F24 /* LaunchScreen.storyboard */; };
+		28435FE31EB1CEF100250F24 /* MQTTClientDEMOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FE21EB1CEF100250F24 /* MQTTClientDEMOTests.m */; };
+		28435FEE1EB1CEF100250F24 /* MQTTClientDEMOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28435FED1EB1CEF100250F24 /* MQTTClientDEMOUITests.m */; };
+		67ECAB7B24307BEF96F970B5 /* libPods-MQTTClientDEMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF83CD3C294FCB15C4CB472 /* libPods-MQTTClientDEMO.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28435FDF1EB1CEF100250F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28435FBD1EB1CEF100250F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28435FC41EB1CEF100250F24;
+			remoteInfo = MQTTClientDEMO;
+		};
+		28435FEA1EB1CEF100250F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28435FBD1EB1CEF100250F24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28435FC41EB1CEF100250F24;
+			remoteInfo = MQTTClientDEMO;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28435FC51EB1CEF100250F24 /* MQTTClientDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQTTClientDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28435FC91EB1CEF100250F24 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28435FCB1EB1CEF100250F24 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28435FCC1EB1CEF100250F24 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28435FCE1EB1CEF100250F24 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		28435FCF1EB1CEF100250F24 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28435FD21EB1CEF100250F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28435FD41EB1CEF100250F24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28435FD71EB1CEF100250F24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28435FD91EB1CEF100250F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28435FDE1EB1CEF100250F24 /* MQTTClientDEMOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQTTClientDEMOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28435FE21EB1CEF100250F24 /* MQTTClientDEMOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTClientDEMOTests.m; sourceTree = "<group>"; };
+		28435FE41EB1CEF100250F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28435FE91EB1CEF100250F24 /* MQTTClientDEMOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQTTClientDEMOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28435FED1EB1CEF100250F24 /* MQTTClientDEMOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MQTTClientDEMOUITests.m; sourceTree = "<group>"; };
+		28435FEF1EB1CEF100250F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF804323021944370BEF4F4 /* Pods-MQTTClientDEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTClientDEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO.release.xcconfig"; sourceTree = "<group>"; };
+		4CF83CD3C294FCB15C4CB472 /* libPods-MQTTClientDEMO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MQTTClientDEMO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31AF7406E971D58B435B631 /* Pods-MQTTClientDEMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQTTClientDEMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28435FC21EB1CEF100250F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67ECAB7B24307BEF96F970B5 /* libPods-MQTTClientDEMO.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FDB1EB1CEF100250F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FE61EB1CEF100250F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28435FBC1EB1CEF100250F24 = {
+			isa = PBXGroup;
+			children = (
+				28435FC71EB1CEF100250F24 /* MQTTClientDEMO */,
+				28435FE11EB1CEF100250F24 /* MQTTClientDEMOTests */,
+				28435FEC1EB1CEF100250F24 /* MQTTClientDEMOUITests */,
+				28435FC61EB1CEF100250F24 /* Products */,
+				9670589450C161663CE01E2F /* Pods */,
+				A4C7CDC03FE2260C7F0E2141 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		28435FC61EB1CEF100250F24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28435FC51EB1CEF100250F24 /* MQTTClientDEMO.app */,
+				28435FDE1EB1CEF100250F24 /* MQTTClientDEMOTests.xctest */,
+				28435FE91EB1CEF100250F24 /* MQTTClientDEMOUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28435FC71EB1CEF100250F24 /* MQTTClientDEMO */ = {
+			isa = PBXGroup;
+			children = (
+				28435FCB1EB1CEF100250F24 /* AppDelegate.h */,
+				28435FCC1EB1CEF100250F24 /* AppDelegate.m */,
+				28435FCE1EB1CEF100250F24 /* ViewController.h */,
+				28435FCF1EB1CEF100250F24 /* ViewController.m */,
+				28435FD11EB1CEF100250F24 /* Main.storyboard */,
+				28435FD41EB1CEF100250F24 /* Assets.xcassets */,
+				28435FD61EB1CEF100250F24 /* LaunchScreen.storyboard */,
+				28435FD91EB1CEF100250F24 /* Info.plist */,
+				28435FC81EB1CEF100250F24 /* Supporting Files */,
+			);
+			path = MQTTClientDEMO;
+			sourceTree = "<group>";
+		};
+		28435FC81EB1CEF100250F24 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28435FC91EB1CEF100250F24 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28435FE11EB1CEF100250F24 /* MQTTClientDEMOTests */ = {
+			isa = PBXGroup;
+			children = (
+				28435FE21EB1CEF100250F24 /* MQTTClientDEMOTests.m */,
+				28435FE41EB1CEF100250F24 /* Info.plist */,
+			);
+			path = MQTTClientDEMOTests;
+			sourceTree = "<group>";
+		};
+		28435FEC1EB1CEF100250F24 /* MQTTClientDEMOUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28435FED1EB1CEF100250F24 /* MQTTClientDEMOUITests.m */,
+				28435FEF1EB1CEF100250F24 /* Info.plist */,
+			);
+			path = MQTTClientDEMOUITests;
+			sourceTree = "<group>";
+		};
+		9670589450C161663CE01E2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C31AF7406E971D58B435B631 /* Pods-MQTTClientDEMO.debug.xcconfig */,
+				3FF804323021944370BEF4F4 /* Pods-MQTTClientDEMO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4C7CDC03FE2260C7F0E2141 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CF83CD3C294FCB15C4CB472 /* libPods-MQTTClientDEMO.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28435FC41EB1CEF100250F24 /* MQTTClientDEMO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28435FF21EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMO" */;
+			buildPhases = (
+				E7A59FB9AB2AE8883A3806C3 /* [CP] Check Pods Manifest.lock */,
+				28435FC11EB1CEF100250F24 /* Sources */,
+				28435FC21EB1CEF100250F24 /* Frameworks */,
+				28435FC31EB1CEF100250F24 /* Resources */,
+				FBBBA91FAB212D52AB10E3C5 /* [CP] Embed Pods Frameworks */,
+				36BE506E590D77E9DB2A02F6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MQTTClientDEMO;
+			productName = MQTTClientDEMO;
+			productReference = 28435FC51EB1CEF100250F24 /* MQTTClientDEMO.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28435FDD1EB1CEF100250F24 /* MQTTClientDEMOTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28435FF51EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMOTests" */;
+			buildPhases = (
+				28435FDA1EB1CEF100250F24 /* Sources */,
+				28435FDB1EB1CEF100250F24 /* Frameworks */,
+				28435FDC1EB1CEF100250F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28435FE01EB1CEF100250F24 /* PBXTargetDependency */,
+			);
+			name = MQTTClientDEMOTests;
+			productName = MQTTClientDEMOTests;
+			productReference = 28435FDE1EB1CEF100250F24 /* MQTTClientDEMOTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28435FE81EB1CEF100250F24 /* MQTTClientDEMOUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28435FF81EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMOUITests" */;
+			buildPhases = (
+				28435FE51EB1CEF100250F24 /* Sources */,
+				28435FE61EB1CEF100250F24 /* Frameworks */,
+				28435FE71EB1CEF100250F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28435FEB1EB1CEF100250F24 /* PBXTargetDependency */,
+			);
+			name = MQTTClientDEMOUITests;
+			productName = MQTTClientDEMOUITests;
+			productReference = 28435FE91EB1CEF100250F24 /* MQTTClientDEMOUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28435FBD1EB1CEF100250F24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = tianNanYiHao;
+				TargetAttributes = {
+					28435FC41EB1CEF100250F24 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 5W6GX84DS4;
+						ProvisioningStyle = Automatic;
+					};
+					28435FDD1EB1CEF100250F24 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28435FC41EB1CEF100250F24;
+					};
+					28435FE81EB1CEF100250F24 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28435FC41EB1CEF100250F24;
+					};
+				};
+			};
+			buildConfigurationList = 28435FC01EB1CEF100250F24 /* Build configuration list for PBXProject "MQTTClientDEMO" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28435FBC1EB1CEF100250F24;
+			productRefGroup = 28435FC61EB1CEF100250F24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28435FC41EB1CEF100250F24 /* MQTTClientDEMO */,
+				28435FDD1EB1CEF100250F24 /* MQTTClientDEMOTests */,
+				28435FE81EB1CEF100250F24 /* MQTTClientDEMOUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28435FC31EB1CEF100250F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28435FD81EB1CEF100250F24 /* LaunchScreen.storyboard in Resources */,
+				28435FD51EB1CEF100250F24 /* Assets.xcassets in Resources */,
+				28435FD31EB1CEF100250F24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FDC1EB1CEF100250F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FE71EB1CEF100250F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		36BE506E590D77E9DB2A02F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7A59FB9AB2AE8883A3806C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBBBA91FAB212D52AB10E3C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MQTTClientDEMO/Pods-MQTTClientDEMO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28435FC11EB1CEF100250F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28435FD01EB1CEF100250F24 /* ViewController.m in Sources */,
+				28435FCD1EB1CEF100250F24 /* AppDelegate.m in Sources */,
+				28435FCA1EB1CEF100250F24 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FDA1EB1CEF100250F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28435FE31EB1CEF100250F24 /* MQTTClientDEMOTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28435FE51EB1CEF100250F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28435FEE1EB1CEF100250F24 /* MQTTClientDEMOUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28435FE01EB1CEF100250F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28435FC41EB1CEF100250F24 /* MQTTClientDEMO */;
+			targetProxy = 28435FDF1EB1CEF100250F24 /* PBXContainerItemProxy */;
+		};
+		28435FEB1EB1CEF100250F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28435FC41EB1CEF100250F24 /* MQTTClientDEMO */;
+			targetProxy = 28435FEA1EB1CEF100250F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28435FD11EB1CEF100250F24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28435FD21EB1CEF100250F24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28435FD61EB1CEF100250F24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28435FD71EB1CEF100250F24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28435FF01EB1CEF100250F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		28435FF11EB1CEF100250F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28435FF31EB1CEF100250F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C31AF7406E971D58B435B631 /* Pods-MQTTClientDEMO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W6GX84DS4;
+				INFOPLIST_FILE = MQTTClientDEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		28435FF41EB1CEF100250F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FF804323021944370BEF4F4 /* Pods-MQTTClientDEMO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5W6GX84DS4;
+				INFOPLIST_FILE = MQTTClientDEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		28435FF61EB1CEF100250F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MQTTClientDEMOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MQTTClientDEMO.app/MQTTClientDEMO";
+			};
+			name = Debug;
+		};
+		28435FF71EB1CEF100250F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MQTTClientDEMOTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMOTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MQTTClientDEMO.app/MQTTClientDEMO";
+			};
+			name = Release;
+		};
+		28435FF91EB1CEF100250F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MQTTClientDEMOUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MQTTClientDEMO;
+			};
+			name = Debug;
+		};
+		28435FFA1EB1CEF100250F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MQTTClientDEMOUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMOUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MQTTClientDEMO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28435FC01EB1CEF100250F24 /* Build configuration list for PBXProject "MQTTClientDEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28435FF01EB1CEF100250F24 /* Debug */,
+				28435FF11EB1CEF100250F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28435FF21EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28435FF31EB1CEF100250F24 /* Debug */,
+				28435FF41EB1CEF100250F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28435FF51EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMOTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28435FF61EB1CEF100250F24 /* Debug */,
+				28435FF71EB1CEF100250F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28435FF81EB1CEF100250F24 /* Build configuration list for PBXNativeTarget "MQTTClientDEMOUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28435FF91EB1CEF100250F24 /* Debug */,
+				28435FFA1EB1CEF100250F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28435FBD1EB1CEF100250F24 /* Project object */;
+}
