@@ -19,22 +19,7 @@
     // Do any additional setup after loading the view.
     self.title = @"儿子";
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [[SandMQTTClientHelper shareSandMQTTClientInstance] subscribeToTopicWithClientID:@"4000001077" sandMqttNewsBlock:^(NSString *dataStr) {
-        
-        NSLog(@"==== -- ==== %@",dataStr);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:dataStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
-        
-        [alert show];
-    }];
-    
-    
-    
-    [[SandMQTTClientHelper shareSandMQTTClientInstance] subscribeToTopicUserID:@"4000001077" clientID:@"4000001077" sandMqttNewsBlock:^(NSString *dataStr) {
-        NSLog(@"==== -- ==== %@",dataStr);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:dataStr delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
-        
-        [alert show];
-    }];
+
 }
 
 - (void)didReceiveMemoryWarning {
