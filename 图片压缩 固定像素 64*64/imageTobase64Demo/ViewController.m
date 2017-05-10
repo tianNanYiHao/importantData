@@ -40,26 +40,16 @@
 
 - (void)getImageFromIpc
 {
-    // 1.判断相册是否可以打开
-    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) return;
-    // 2. 创建图片选择控制器
-    UIImagePickerController *ipc = [[UIImagePickerController alloc] init];
-    /**
-     typedef NS_ENUM(NSInteger, UIImagePickerControllerSourceType) {
-     UIImagePickerControllerSourceTypePhotoLibrary, // 相册
-     UIImagePickerControllerSourceTypeCamera, // 用相机拍摄获取
-     UIImagePickerControllerSourceTypeSavedPhotosAlbum // 相簿
-     }
-     */
-    // 3. 设置打开照片相册类型(显示所有相簿)
-    ipc.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    // ipc.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
-    // 照相机
-    // ipc.sourceType = UIImagePickerControllerSourceTypeCamera;
-    // 4.设置代理
-    ipc.delegate = self;
-    // 5.modal出这个控制器
-    [self presentViewController:ipc animated:YES completion:nil];
+
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera; //打开相机
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary; //打开相册
+        picker.delegate = self;
+        //设置选择后的图片可被编辑
+        picker.allowsEditing = YES;
+    
+        [self presentViewController:picker animated:YES completion:nil];
+
 }
 
 #pragma mark -- <UIImagePickerControllerDelegate>--
