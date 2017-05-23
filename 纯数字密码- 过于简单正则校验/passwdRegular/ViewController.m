@@ -26,7 +26,8 @@
     if (a == NO) {
         NSLog(@"xxxxxxx");
     }
-    
+    //http://backbase.iteye.com/blog/686267
+
     
     
 }
