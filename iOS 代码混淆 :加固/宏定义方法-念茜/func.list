@@ -38,7 +38,6 @@ buttonAction
 changePwdShowState
 listenNotifier
 textFiledEditChanged
-textFiledEditChanged
 changeBtnBackGround
 allInputFields
 textFieldDidBeginEditing
