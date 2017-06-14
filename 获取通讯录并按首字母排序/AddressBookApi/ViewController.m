@@ -120,7 +120,14 @@ NSString *const PinyinGroupCharKey = @"PinyinGroupCharKey";
     tableview.dataSource = self;
     tableview.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     tableview.sectionIndexColor = [UIColor redColor];
-    [self.view addSubview:tableview];
+    
+    
+    
+    //UI 必须主线程刷新
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.view addSubview:tableview];
+    });
+    
     // 主线程刷新数据
     [self performSelectorOnMainThread:@selector(reloadTable) withObject:nil waitUntilDone:YES];
 
