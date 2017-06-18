@@ -1,0 +1,6 @@
+platform :ios, ‘7.0’
+#use_frameworks!个别需要用到它，比如reactiveCocoa
+
+target 'MBPHUDProgressLFFDemo' do
+  pod 'MBProgressHUD', '~> 1.0.0'
+end
