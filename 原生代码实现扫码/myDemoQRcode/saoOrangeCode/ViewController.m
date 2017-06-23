@@ -42,6 +42,9 @@
     NSLog(@"码类型:%@",obj.type);
     
     
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:obj.stringValue]];
+    
+    
 }
 
 
