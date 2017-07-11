@@ -20,7 +20,7 @@ CGFloat const SGQRCodeScanningLineAnimation = 0.05;
 
 /** 从相册里得到的二维码信息 */
 NSString *const SGQRCodeInformationFromeAibum = @"SGQRCodeInformationFromeAibum";
-
+ 
 /** 扫描得到的二维码信息 */
 NSString *const SGQRCodeInformationFromeScanning = @"SGQRCodeInformationFromeScanning";
 
