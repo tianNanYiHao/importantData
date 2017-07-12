@@ -36,6 +36,13 @@
 
 - (IBAction)show:(id)sender {
     
+    //动画复位
+    [circleAnimatioView strokeEnd:0 animation:NO duration:0];
+    
+    
+    
+    
+    
     [circleAnimatioView strokeEnd:0.75 animation:YES duration:1.5];
     
 }

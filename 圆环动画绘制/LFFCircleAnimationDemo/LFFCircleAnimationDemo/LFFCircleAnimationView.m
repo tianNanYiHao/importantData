@@ -83,11 +83,21 @@
         keyanimation.duration = Duration;
         
         //30为人眼看得到的帧数
-        keyanimation.values = [YXEasing calculateFrameFromValue:circleLayer.strokeEnd toValue:value func:CircularEaseOut frameCount:Duration*30];
+        keyanimation.values = [YXEasing calculateFrameFromValue:circleLayer.strokeEnd toValue:value func:CubicEaseInOut frameCount:Duration*30];
         circleLayer.strokeEnd = value;
         [circleLayer addAnimation:keyanimation forKey:nil];
         
+    }else{
+        // 关闭动画
+        //设置变化动画过程是否显示，默认为YES不显示
+        [CATransaction setDisableActions:YES];
+        
+        circleLayer.strokeEnd = value;
+        
+        [CATransaction setDisableActions:NO];
     }
+    
+    
 }
 
 - (void)strokeStart:(CGFloat)value animation:(BOOL)animation duration:(CGFloat)duration{
