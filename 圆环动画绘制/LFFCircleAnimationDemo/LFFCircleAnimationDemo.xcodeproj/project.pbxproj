@@ -19,6 +19,7 @@
 		281821B91F15FBEC00DAC518 /* Easing.c in Sources */ = {isa = PBXBuildFile; fileRef = 281821B41F15FBEC00DAC518 /* Easing.c */; };
 		281821BA1F15FBEC00DAC518 /* YXEasing.m in Sources */ = {isa = PBXBuildFile; fileRef = 281821B71F15FBEC00DAC518 /* YXEasing.m */; };
 		281821BD1F15FC0D00DAC518 /* LFFCircleAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 281821BC1F15FC0D00DAC518 /* LFFCircleAnimationView.m */; };
+		281821C61F1621A700DAC518 /* LFFRotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 281821C51F1621A700DAC518 /* LFFRotateView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		281821B71F15FBEC00DAC518 /* YXEasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXEasing.m; sourceTree = "<group>"; };
 		281821BB1F15FC0D00DAC518 /* LFFCircleAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFCircleAnimationView.h; sourceTree = "<group>"; };
 		281821BC1F15FC0D00DAC518 /* LFFCircleAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFCircleAnimationView.m; sourceTree = "<group>"; };
+		281821C41F1621A700DAC518 /* LFFRotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFFRotateView.h; sourceTree = "<group>"; };
+		281821C51F1621A700DAC518 /* LFFRotateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFFRotateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				281821BB1F15FC0D00DAC518 /* LFFCircleAnimationView.h */,
 				281821BC1F15FC0D00DAC518 /* LFFCircleAnimationView.m */,
+				281821C41F1621A700DAC518 /* LFFRotateView.h */,
+				281821C51F1621A700DAC518 /* LFFRotateView.m */,
 				281821B01F15FBEC00DAC518 /* SetRect */,
 				281821B31F15FBEC00DAC518 /* YXEasing */,
 				281821801F15FB5100DAC518 /* AppDelegate.h */,
@@ -316,6 +321,7 @@
 				281821B91F15FBEC00DAC518 /* Easing.c in Sources */,
 				281821BA1F15FBEC00DAC518 /* YXEasing.m in Sources */,
 				281821851F15FB5100DAC518 /* ViewController.m in Sources */,
+				281821C61F1621A700DAC518 /* LFFRotateView.m in Sources */,
 				281821B81F15FBEC00DAC518 /* UIView+SetRect.m in Sources */,
 				281821821F15FB5100DAC518 /* AppDelegate.m in Sources */,
 				2818217F1F15FB5100DAC518 /* main.m in Sources */,
@@ -562,6 +568,7 @@
 				281821A91F15FB5100DAC518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		281821AA1F15FB5100DAC518 /* Build configuration list for PBXNativeTarget "LFFCircleAnimationDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +577,7 @@
 				281821AC1F15FB5100DAC518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		281821AD1F15FB5100DAC518 /* Build configuration list for PBXNativeTarget "LFFCircleAnimationDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -578,6 +586,7 @@
 				281821AF1F15FB5100DAC518 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
