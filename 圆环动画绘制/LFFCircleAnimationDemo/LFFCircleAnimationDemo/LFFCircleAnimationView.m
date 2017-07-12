@@ -116,7 +116,7 @@
         //设置变化动画过程是否显示，默认为YES不显示
         [CATransaction setDisableActions:YES];
         
-        circleLayer.strokeEnd = value;
+        circleLayer.strokeStart = value;
         
         [CATransaction setDisableActions:NO];
     }
