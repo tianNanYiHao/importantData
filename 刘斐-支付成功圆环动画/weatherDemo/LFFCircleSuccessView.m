@@ -231,7 +231,7 @@
     
     ///路径不关闭 则不会连成形状
     //[pathThree closePath];
-    [pathThree stroke];
+//    [pathThree stroke];
     
     successLineLayer.path = pathThree.CGPath;
     successLineLayer.fillColor = [UIColor clearColor].CGColor;
