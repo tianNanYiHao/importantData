@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		280D9ABC1F260E0700C062FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9ABB1F260E0700C062FB /* main.m */; };
+		280D9ABF1F260E0700C062FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9ABE1F260E0700C062FB /* AppDelegate.m */; };
+		280D9AC21F260E0700C062FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9AC11F260E0700C062FB /* ViewController.m */; };
+		280D9AC51F260E0700C062FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280D9AC31F260E0700C062FB /* Main.storyboard */; };
+		280D9AC71F260E0700C062FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280D9AC61F260E0700C062FB /* Assets.xcassets */; };
+		280D9ACA1F260E0700C062FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280D9AC81F260E0700C062FB /* LaunchScreen.storyboard */; };
+		280D9AD51F260E0700C062FB /* FixMiniButtenClickMiniTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9AD41F260E0700C062FB /* FixMiniButtenClickMiniTests.m */; };
+		280D9AE01F260E0800C062FB /* FixMiniButtenClickMiniUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9ADF1F260E0800C062FB /* FixMiniButtenClickMiniUITests.m */; };
+		280D9AEF1F260E1D00C062FB /* UIButton+FixMiniClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9AED1F260E1D00C062FB /* UIButton+FixMiniClick.m */; };
+		280D9AF21F260F7000C062FB /* UIButton+CS_FixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 280D9AF11F260F7000C062FB /* UIButton+CS_FixMultiClick.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		280D9AD11F260E0700C062FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280D9AAF1F260E0700C062FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280D9AB61F260E0700C062FB;
+			remoteInfo = FixMiniButtenClickMini;
+		};
+		280D9ADC1F260E0800C062FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 280D9AAF1F260E0700C062FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 280D9AB61F260E0700C062FB;
+			remoteInfo = FixMiniButtenClickMini;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		280D9AB71F260E0700C062FB /* FixMiniButtenClickMini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixMiniButtenClickMini.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		280D9ABB1F260E0700C062FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		280D9ABD1F260E0700C062FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		280D9ABE1F260E0700C062FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		280D9AC01F260E0700C062FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		280D9AC11F260E0700C062FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		280D9AC41F260E0700C062FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		280D9AC61F260E0700C062FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		280D9AC91F260E0700C062FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		280D9ACB1F260E0700C062FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280D9AD01F260E0700C062FB /* FixMiniButtenClickMiniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixMiniButtenClickMiniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280D9AD41F260E0700C062FB /* FixMiniButtenClickMiniTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixMiniButtenClickMiniTests.m; sourceTree = "<group>"; };
+		280D9AD61F260E0700C062FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280D9ADB1F260E0800C062FB /* FixMiniButtenClickMiniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FixMiniButtenClickMiniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		280D9ADF1F260E0800C062FB /* FixMiniButtenClickMiniUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FixMiniButtenClickMiniUITests.m; sourceTree = "<group>"; };
+		280D9AE11F260E0800C062FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280D9AED1F260E1D00C062FB /* UIButton+FixMiniClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+FixMiniClick.m"; sourceTree = "<group>"; };
+		280D9AEE1F260E1D00C062FB /* UIButton+FixMiniClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+FixMiniClick.h"; sourceTree = "<group>"; };
+		280D9AF01F260F7000C062FB /* UIButton+CS_FixMultiClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CS_FixMultiClick.h"; sourceTree = "<group>"; };
+		280D9AF11F260F7000C062FB /* UIButton+CS_FixMultiClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CS_FixMultiClick.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		280D9AB41F260E0700C062FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9ACD1F260E0700C062FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9AD81F260E0800C062FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		280D9AAE1F260E0700C062FB = {
+			isa = PBXGroup;
+			children = (
+				280D9AB91F260E0700C062FB /* FixMiniButtenClickMini */,
+				280D9AD31F260E0700C062FB /* FixMiniButtenClickMiniTests */,
+				280D9ADE1F260E0800C062FB /* FixMiniButtenClickMiniUITests */,
+				280D9AB81F260E0700C062FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		280D9AB81F260E0700C062FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				280D9AB71F260E0700C062FB /* FixMiniButtenClickMini.app */,
+				280D9AD01F260E0700C062FB /* FixMiniButtenClickMiniTests.xctest */,
+				280D9ADB1F260E0800C062FB /* FixMiniButtenClickMiniUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		280D9AB91F260E0700C062FB /* FixMiniButtenClickMini */ = {
+			isa = PBXGroup;
+			children = (
+				280D9AEE1F260E1D00C062FB /* UIButton+FixMiniClick.h */,
+				280D9AED1F260E1D00C062FB /* UIButton+FixMiniClick.m */,
+				280D9AF01F260F7000C062FB /* UIButton+CS_FixMultiClick.h */,
+				280D9AF11F260F7000C062FB /* UIButton+CS_FixMultiClick.m */,
+				280D9ABD1F260E0700C062FB /* AppDelegate.h */,
+				280D9ABE1F260E0700C062FB /* AppDelegate.m */,
+				280D9AC01F260E0700C062FB /* ViewController.h */,
+				280D9AC11F260E0700C062FB /* ViewController.m */,
+				280D9AC31F260E0700C062FB /* Main.storyboard */,
+				280D9AC61F260E0700C062FB /* Assets.xcassets */,
+				280D9AC81F260E0700C062FB /* LaunchScreen.storyboard */,
+				280D9ACB1F260E0700C062FB /* Info.plist */,
+				280D9ABA1F260E0700C062FB /* Supporting Files */,
+			);
+			path = FixMiniButtenClickMini;
+			sourceTree = "<group>";
+		};
+		280D9ABA1F260E0700C062FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				280D9ABB1F260E0700C062FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		280D9AD31F260E0700C062FB /* FixMiniButtenClickMiniTests */ = {
+			isa = PBXGroup;
+			children = (
+				280D9AD41F260E0700C062FB /* FixMiniButtenClickMiniTests.m */,
+				280D9AD61F260E0700C062FB /* Info.plist */,
+			);
+			path = FixMiniButtenClickMiniTests;
+			sourceTree = "<group>";
+		};
+		280D9ADE1F260E0800C062FB /* FixMiniButtenClickMiniUITests */ = {
+			isa = PBXGroup;
+			children = (
+				280D9ADF1F260E0800C062FB /* FixMiniButtenClickMiniUITests.m */,
+				280D9AE11F260E0800C062FB /* Info.plist */,
+			);
+			path = FixMiniButtenClickMiniUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		280D9AB61F260E0700C062FB /* FixMiniButtenClickMini */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280D9AE41F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMini" */;
+			buildPhases = (
+				280D9AB31F260E0700C062FB /* Sources */,
+				280D9AB41F260E0700C062FB /* Frameworks */,
+				280D9AB51F260E0700C062FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FixMiniButtenClickMini;
+			productName = FixMiniButtenClickMini;
+			productReference = 280D9AB71F260E0700C062FB /* FixMiniButtenClickMini.app */;
+			productType = "com.apple.product-type.application";
+		};
+		280D9ACF1F260E0700C062FB /* FixMiniButtenClickMiniTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280D9AE71F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMiniTests" */;
+			buildPhases = (
+				280D9ACC1F260E0700C062FB /* Sources */,
+				280D9ACD1F260E0700C062FB /* Frameworks */,
+				280D9ACE1F260E0700C062FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280D9AD21F260E0700C062FB /* PBXTargetDependency */,
+			);
+			name = FixMiniButtenClickMiniTests;
+			productName = FixMiniButtenClickMiniTests;
+			productReference = 280D9AD01F260E0700C062FB /* FixMiniButtenClickMiniTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		280D9ADA1F260E0800C062FB /* FixMiniButtenClickMiniUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 280D9AEA1F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMiniUITests" */;
+			buildPhases = (
+				280D9AD71F260E0800C062FB /* Sources */,
+				280D9AD81F260E0800C062FB /* Frameworks */,
+				280D9AD91F260E0800C062FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				280D9ADD1F260E0800C062FB /* PBXTargetDependency */,
+			);
+			name = FixMiniButtenClickMiniUITests;
+			productName = FixMiniButtenClickMiniUITests;
+			productReference = 280D9ADB1F260E0800C062FB /* FixMiniButtenClickMiniUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		280D9AAF1F260E0700C062FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tianNanYiHao;
+				TargetAttributes = {
+					280D9AB61F260E0700C062FB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Manual;
+					};
+					280D9ACF1F260E0700C062FB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 280D9AB61F260E0700C062FB;
+					};
+					280D9ADA1F260E0800C062FB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 280D9AB61F260E0700C062FB;
+					};
+				};
+			};
+			buildConfigurationList = 280D9AB21F260E0700C062FB /* Build configuration list for PBXProject "FixMiniButtenClickMini" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 280D9AAE1F260E0700C062FB;
+			productRefGroup = 280D9AB81F260E0700C062FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				280D9AB61F260E0700C062FB /* FixMiniButtenClickMini */,
+				280D9ACF1F260E0700C062FB /* FixMiniButtenClickMiniTests */,
+				280D9ADA1F260E0800C062FB /* FixMiniButtenClickMiniUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		280D9AB51F260E0700C062FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D9ACA1F260E0700C062FB /* LaunchScreen.storyboard in Resources */,
+				280D9AC71F260E0700C062FB /* Assets.xcassets in Resources */,
+				280D9AC51F260E0700C062FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9ACE1F260E0700C062FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9AD91F260E0800C062FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		280D9AB31F260E0700C062FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D9AC21F260E0700C062FB /* ViewController.m in Sources */,
+				280D9AF21F260F7000C062FB /* UIButton+CS_FixMultiClick.m in Sources */,
+				280D9AEF1F260E1D00C062FB /* UIButton+FixMiniClick.m in Sources */,
+				280D9ABF1F260E0700C062FB /* AppDelegate.m in Sources */,
+				280D9ABC1F260E0700C062FB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9ACC1F260E0700C062FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D9AD51F260E0700C062FB /* FixMiniButtenClickMiniTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		280D9AD71F260E0800C062FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280D9AE01F260E0800C062FB /* FixMiniButtenClickMiniUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		280D9AD21F260E0700C062FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280D9AB61F260E0700C062FB /* FixMiniButtenClickMini */;
+			targetProxy = 280D9AD11F260E0700C062FB /* PBXContainerItemProxy */;
+		};
+		280D9ADD1F260E0800C062FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 280D9AB61F260E0700C062FB /* FixMiniButtenClickMini */;
+			targetProxy = 280D9ADC1F260E0800C062FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		280D9AC31F260E0700C062FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280D9AC41F260E0700C062FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		280D9AC81F260E0700C062FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				280D9AC91F260E0700C062FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		280D9AE21F260E0800C062FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		280D9AE31F260E0800C062FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		280D9AE51F260E0800C062FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMini/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMini;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73efab6a-7320-4923-a8c9-adbce51b0540";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Debug;
+		};
+		280D9AE61F260E0800C062FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMini/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMini;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "73efab6a-7320-4923-a8c9-adbce51b0540";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Release;
+		};
+		280D9AE81F260E0800C062FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMiniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMiniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixMiniButtenClickMini.app/FixMiniButtenClickMini";
+			};
+			name = Debug;
+		};
+		280D9AE91F260E0800C062FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMiniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMiniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FixMiniButtenClickMini.app/FixMiniButtenClickMini";
+			};
+			name = Release;
+		};
+		280D9AEB1F260E0800C062FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMiniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMiniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FixMiniButtenClickMini;
+			};
+			name = Debug;
+		};
+		280D9AEC1F260E0800C062FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = FixMiniButtenClickMiniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.FixMiniButtenClickMiniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FixMiniButtenClickMini;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		280D9AB21F260E0700C062FB /* Build configuration list for PBXProject "FixMiniButtenClickMini" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D9AE21F260E0800C062FB /* Debug */,
+				280D9AE31F260E0800C062FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		280D9AE41F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMini" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D9AE51F260E0800C062FB /* Debug */,
+				280D9AE61F260E0800C062FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		280D9AE71F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMiniTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D9AE81F260E0800C062FB /* Debug */,
+				280D9AE91F260E0800C062FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		280D9AEA1F260E0800C062FB /* Build configuration list for PBXNativeTarget "FixMiniButtenClickMiniUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				280D9AEB1F260E0800C062FB /* Debug */,
+				280D9AEC1F260E0800C062FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 280D9AAF1F260E0700C062FB /* Project object */;
+}
