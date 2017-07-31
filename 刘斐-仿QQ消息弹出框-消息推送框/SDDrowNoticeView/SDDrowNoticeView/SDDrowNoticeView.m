@@ -7,7 +7,7 @@
 //
 
 #import "SDDrowNoticeView.h"
-
+#import <AudioToolbox/AudioToolbox.h>
 
 
 #define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
@@ -107,6 +107,8 @@
         CGPoint center = self.center;
         center.y += selfHeight;
         self.center = center;
+        SystemSoundID soundId = 1312;
+        AudioServicesPlaySystemSound(soundId);
     } completion:^(BOOL finished) {
         //延迟执行,避免过早删除
         [self performSelector:@selector(overs) withObject:nil afterDelay:1.5f];
