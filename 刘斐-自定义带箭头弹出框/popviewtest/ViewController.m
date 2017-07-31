@@ -53,7 +53,7 @@
     
     SDPopview *v = [[SDPopview alloc] initWithBounds:CGRectMake(100, 100, 120, config.defaultRowHeight*arr.count) titleInfo:arr config:config];
     v.delegate = self;
-    [v showFrom:_btn alignStyle:SDPopViewStyleCenter];
+    [v showFrom:_btn alignStyle:SDPopViewStyleLeft];
     
     
     
