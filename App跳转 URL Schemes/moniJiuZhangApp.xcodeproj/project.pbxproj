@@ -11,10 +11,12 @@
 		280CA77F1F1356DC0016C8F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CA77E1F1356DC0016C8F3 /* AppDelegate.m */; };
 		280CA7821F1356DC0016C8F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CA7811F1356DC0016C8F3 /* ViewController.m */; };
 		280CA7851F1356DC0016C8F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280CA7831F1356DC0016C8F3 /* Main.storyboard */; };
-		280CA7871F1356DC0016C8F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280CA7861F1356DC0016C8F3 /* Assets.xcassets */; };
-		280CA78A1F1356DC0016C8F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280CA7881F1356DC0016C8F3 /* LaunchScreen.storyboard */; };
 		280CA7951F1356DC0016C8F3 /* moniJiuZhangAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CA7941F1356DC0016C8F3 /* moniJiuZhangAppTests.m */; };
 		280CA7A01F1356DC0016C8F3 /* moniJiuZhangAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 280CA79F1F1356DC0016C8F3 /* moniJiuZhangAppUITests.m */; };
+		283F259E1F1C4FFC000A73E1 /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 283F259C1F1C4FFC000A73E1 /* BViewController.m */; };
+		283F259F1F1C4FFC000A73E1 /* BViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 283F259D1F1C4FFC000A73E1 /* BViewController.xib */; };
+		283F25A71F1C9A82000A73E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 283F25A61F1C9A82000A73E1 /* Assets.xcassets */; };
+		289B1B451F300F9E00312DD8 /* SandbaoSpsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 289B1B441F300F9E00312DD8 /* SandbaoSpsSDK.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +44,6 @@
 		280CA7801F1356DC0016C8F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		280CA7811F1356DC0016C8F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		280CA7841F1356DC0016C8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		280CA7861F1356DC0016C8F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		280CA7891F1356DC0016C8F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280CA78B1F1356DC0016C8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		280CA7901F1356DC0016C8F3 /* moniJiuZhangAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moniJiuZhangAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280CA7941F1356DC0016C8F3 /* moniJiuZhangAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moniJiuZhangAppTests.m; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		280CA79B1F1356DC0016C8F3 /* moniJiuZhangAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = moniJiuZhangAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		280CA79F1F1356DC0016C8F3 /* moniJiuZhangAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moniJiuZhangAppUITests.m; sourceTree = "<group>"; };
 		280CA7A11F1356DC0016C8F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283F259B1F1C4FFC000A73E1 /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		283F259C1F1C4FFC000A73E1 /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		283F259D1F1C4FFC000A73E1 /* BViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BViewController.xib; sourceTree = "<group>"; };
+		283F25A61F1C9A82000A73E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		289B1B431F300F9E00312DD8 /* SandbaoSpsSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandbaoSpsSDK.h; sourceTree = "<group>"; };
+		289B1B441F300F9E00312DD8 /* SandbaoSpsSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandbaoSpsSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +107,17 @@
 		280CA7791F1356DC0016C8F3 /* moniJiuZhangApp */ = {
 			isa = PBXGroup;
 			children = (
+				289B1B431F300F9E00312DD8 /* SandbaoSpsSDK.h */,
+				289B1B441F300F9E00312DD8 /* SandbaoSpsSDK.m */,
 				280CA77D1F1356DC0016C8F3 /* AppDelegate.h */,
 				280CA77E1F1356DC0016C8F3 /* AppDelegate.m */,
 				280CA7801F1356DC0016C8F3 /* ViewController.h */,
 				280CA7811F1356DC0016C8F3 /* ViewController.m */,
+				283F259B1F1C4FFC000A73E1 /* BViewController.h */,
+				283F259C1F1C4FFC000A73E1 /* BViewController.m */,
+				283F259D1F1C4FFC000A73E1 /* BViewController.xib */,
 				280CA7831F1356DC0016C8F3 /* Main.storyboard */,
-				280CA7861F1356DC0016C8F3 /* Assets.xcassets */,
-				280CA7881F1356DC0016C8F3 /* LaunchScreen.storyboard */,
+				283F25A61F1C9A82000A73E1 /* Assets.xcassets */,
 				280CA78B1F1356DC0016C8F3 /* Info.plist */,
 				280CA77A1F1356DC0016C8F3 /* Supporting Files */,
 			);
@@ -249,8 +259,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280CA78A1F1356DC0016C8F3 /* LaunchScreen.storyboard in Resources */,
-				280CA7871F1356DC0016C8F3 /* Assets.xcassets in Resources */,
+				283F259F1F1C4FFC000A73E1 /* BViewController.xib in Resources */,
+				283F25A71F1C9A82000A73E1 /* Assets.xcassets in Resources */,
 				280CA7851F1356DC0016C8F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				289B1B451F300F9E00312DD8 /* SandbaoSpsSDK.m in Sources */,
 				280CA7821F1356DC0016C8F3 /* ViewController.m in Sources */,
+				283F259E1F1C4FFC000A73E1 /* BViewController.m in Sources */,
 				280CA77F1F1356DC0016C8F3 /* AppDelegate.m in Sources */,
 				280CA77C1F1356DC0016C8F3 /* main.m in Sources */,
 			);
@@ -320,14 +332,6 @@
 				280CA7841F1356DC0016C8F3 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		280CA7881F1356DC0016C8F3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				280CA7891F1356DC0016C8F3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -427,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				INFOPLIST_FILE = moniJiuZhangApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -442,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				INFOPLIST_FILE = moniJiuZhangApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -522,6 +528,7 @@
 				280CA7A61F1356DC0016C8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		280CA7A71F1356DC0016C8F3 /* Build configuration list for PBXNativeTarget "moniJiuZhangAppTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				280CA7A91F1356DC0016C8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		280CA7AA1F1356DC0016C8F3 /* Build configuration list for PBXNativeTarget "moniJiuZhangAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +546,7 @@
 				280CA7AC1F1356DC0016C8F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

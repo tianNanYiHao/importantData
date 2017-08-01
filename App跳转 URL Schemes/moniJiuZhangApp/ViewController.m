@@ -7,9 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "BViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *tnLab;
+@property (weak, nonatomic) IBOutlet UITextField *tnlab;
 
 @end
 
@@ -22,22 +23,19 @@
     self.title = @"这就当做是久璋App吧🙃";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+    _tnlab.text = @"198077812017071944000010";
     
     
 }
 - (IBAction)jumpBtn:(id)sender {
-    //跳转杉德宝
-    NSString *urlStr = @"com.sand.sandbao://TN:2094032421?moniJiuZhangApp";
-    NSURL *url = [NSURL URLWithString:urlStr];
-    
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
+
     
     
     
+    BViewController *v = [[BViewController alloc] init];
+    v.tn = [NSString stringWithFormat:@"%@",_tnlab.text];
     
+    [self.navigationController pushViewController:v animated:YES];
 }
 
 
