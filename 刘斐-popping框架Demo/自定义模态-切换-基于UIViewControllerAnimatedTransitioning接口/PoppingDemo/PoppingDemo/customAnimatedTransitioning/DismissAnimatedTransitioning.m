@@ -20,7 +20,7 @@
     //一.各视图获取
     //获取且出的VC
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    toVC.view.tintAdjustmentMode = UIViewTintAdjustmentModeDimmed;
+    toVC.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
     toVC.view.userInteractionEnabled = YES;
     
     //获取切入的VC
