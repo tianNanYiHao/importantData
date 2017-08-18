@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2823F5EA1F14DB7300BFAE1B /* RainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2823F5E91F14DB7300BFAE1B /* RainView.m */; };
+		2833E7721F0E0B080050D315 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7711F0E0B080050D315 /* main.m */; };
+		2833E7751F0E0B080050D315 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7741F0E0B080050D315 /* AppDelegate.m */; };
+		2833E7781F0E0B080050D315 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7771F0E0B080050D315 /* ViewController.m */; };
+		2833E77B1F0E0B080050D315 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2833E7791F0E0B080050D315 /* Main.storyboard */; };
+		2833E77D1F0E0B080050D315 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2833E77C1F0E0B080050D315 /* Assets.xcassets */; };
+		2833E7801F0E0B080050D315 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2833E77E1F0E0B080050D315 /* LaunchScreen.storyboard */; };
+		2833E78B1F0E0B090050D315 /* snowEmitterDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E78A1F0E0B090050D315 /* snowEmitterDemoTests.m */; };
+		2833E7961F0E0B090050D315 /* snowEmitterDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7951F0E0B090050D315 /* snowEmitterDemoUITests.m */; };
+		2833E7A71F0E0B9D0050D315 /* SnowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7A61F0E0B9D0050D315 /* SnowView.m */; };
+		2833E7AA1F0E0C440050D315 /* EmitterLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2833E7A91F0E0C440050D315 /* EmitterLayerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2833E7871F0E0B090050D315 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2833E7651F0E0B080050D315 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2833E76C1F0E0B080050D315;
+			remoteInfo = snowEmitterDemo;
+		};
+		2833E7921F0E0B090050D315 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2833E7651F0E0B080050D315 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2833E76C1F0E0B080050D315;
+			remoteInfo = snowEmitterDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2823F5E81F14DB7300BFAE1B /* RainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RainView.h; sourceTree = "<group>"; };
+		2823F5E91F14DB7300BFAE1B /* RainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RainView.m; sourceTree = "<group>"; };
+		2833E76D1F0E0B080050D315 /* snowEmitterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = snowEmitterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2833E7711F0E0B080050D315 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2833E7731F0E0B080050D315 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2833E7741F0E0B080050D315 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2833E7761F0E0B080050D315 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2833E7771F0E0B080050D315 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2833E77A1F0E0B080050D315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2833E77C1F0E0B080050D315 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2833E77F1F0E0B080050D315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2833E7811F0E0B080050D315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2833E7861F0E0B090050D315 /* snowEmitterDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snowEmitterDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2833E78A1F0E0B090050D315 /* snowEmitterDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = snowEmitterDemoTests.m; sourceTree = "<group>"; };
+		2833E78C1F0E0B090050D315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2833E7911F0E0B090050D315 /* snowEmitterDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = snowEmitterDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2833E7951F0E0B090050D315 /* snowEmitterDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = snowEmitterDemoUITests.m; sourceTree = "<group>"; };
+		2833E7971F0E0B090050D315 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2833E7A51F0E0B9D0050D315 /* SnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
+		2833E7A61F0E0B9D0050D315 /* SnowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowView.m; sourceTree = "<group>"; };
+		2833E7A81F0E0C440050D315 /* EmitterLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmitterLayerView.h; sourceTree = "<group>"; };
+		2833E7A91F0E0C440050D315 /* EmitterLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmitterLayerView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2833E76A1F0E0B080050D315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E7831F0E0B090050D315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E78E1F0E0B090050D315 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2833E7641F0E0B080050D315 = {
+			isa = PBXGroup;
+			children = (
+				2833E76F1F0E0B080050D315 /* snowEmitterDemo */,
+				2833E7891F0E0B090050D315 /* snowEmitterDemoTests */,
+				2833E7941F0E0B090050D315 /* snowEmitterDemoUITests */,
+				2833E76E1F0E0B080050D315 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2833E76E1F0E0B080050D315 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2833E76D1F0E0B080050D315 /* snowEmitterDemo.app */,
+				2833E7861F0E0B090050D315 /* snowEmitterDemoTests.xctest */,
+				2833E7911F0E0B090050D315 /* snowEmitterDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2833E76F1F0E0B080050D315 /* snowEmitterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2833E7A81F0E0C440050D315 /* EmitterLayerView.h */,
+				2833E7A91F0E0C440050D315 /* EmitterLayerView.m */,
+				2833E7A51F0E0B9D0050D315 /* SnowView.h */,
+				2833E7A61F0E0B9D0050D315 /* SnowView.m */,
+				2823F5E81F14DB7300BFAE1B /* RainView.h */,
+				2823F5E91F14DB7300BFAE1B /* RainView.m */,
+				2833E7731F0E0B080050D315 /* AppDelegate.h */,
+				2833E7741F0E0B080050D315 /* AppDelegate.m */,
+				2833E7761F0E0B080050D315 /* ViewController.h */,
+				2833E7771F0E0B080050D315 /* ViewController.m */,
+				2833E7791F0E0B080050D315 /* Main.storyboard */,
+				2833E77C1F0E0B080050D315 /* Assets.xcassets */,
+				2833E77E1F0E0B080050D315 /* LaunchScreen.storyboard */,
+				2833E7811F0E0B080050D315 /* Info.plist */,
+				2833E7701F0E0B080050D315 /* Supporting Files */,
+			);
+			path = snowEmitterDemo;
+			sourceTree = "<group>";
+		};
+		2833E7701F0E0B080050D315 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2833E7711F0E0B080050D315 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2833E7891F0E0B090050D315 /* snowEmitterDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				2833E78A1F0E0B090050D315 /* snowEmitterDemoTests.m */,
+				2833E78C1F0E0B090050D315 /* Info.plist */,
+			);
+			path = snowEmitterDemoTests;
+			sourceTree = "<group>";
+		};
+		2833E7941F0E0B090050D315 /* snowEmitterDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2833E7951F0E0B090050D315 /* snowEmitterDemoUITests.m */,
+				2833E7971F0E0B090050D315 /* Info.plist */,
+			);
+			path = snowEmitterDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2833E76C1F0E0B080050D315 /* snowEmitterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2833E79A1F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemo" */;
+			buildPhases = (
+				2833E7691F0E0B080050D315 /* Sources */,
+				2833E76A1F0E0B080050D315 /* Frameworks */,
+				2833E76B1F0E0B080050D315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = snowEmitterDemo;
+			productName = snowEmitterDemo;
+			productReference = 2833E76D1F0E0B080050D315 /* snowEmitterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2833E7851F0E0B090050D315 /* snowEmitterDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2833E79D1F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemoTests" */;
+			buildPhases = (
+				2833E7821F0E0B090050D315 /* Sources */,
+				2833E7831F0E0B090050D315 /* Frameworks */,
+				2833E7841F0E0B090050D315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2833E7881F0E0B090050D315 /* PBXTargetDependency */,
+			);
+			name = snowEmitterDemoTests;
+			productName = snowEmitterDemoTests;
+			productReference = 2833E7861F0E0B090050D315 /* snowEmitterDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2833E7901F0E0B090050D315 /* snowEmitterDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2833E7A01F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemoUITests" */;
+			buildPhases = (
+				2833E78D1F0E0B090050D315 /* Sources */,
+				2833E78E1F0E0B090050D315 /* Frameworks */,
+				2833E78F1F0E0B090050D315 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2833E7931F0E0B090050D315 /* PBXTargetDependency */,
+			);
+			name = snowEmitterDemoUITests;
+			productName = snowEmitterDemoUITests;
+			productReference = 2833E7911F0E0B090050D315 /* snowEmitterDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2833E7651F0E0B080050D315 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tianNanYiHao;
+				TargetAttributes = {
+					2833E76C1F0E0B080050D315 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Manual;
+					};
+					2833E7851F0E0B090050D315 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2833E76C1F0E0B080050D315;
+					};
+					2833E7901F0E0B090050D315 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2833E76C1F0E0B080050D315;
+					};
+				};
+			};
+			buildConfigurationList = 2833E7681F0E0B080050D315 /* Build configuration list for PBXProject "snowEmitterDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2833E7641F0E0B080050D315;
+			productRefGroup = 2833E76E1F0E0B080050D315 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2833E76C1F0E0B080050D315 /* snowEmitterDemo */,
+				2833E7851F0E0B090050D315 /* snowEmitterDemoTests */,
+				2833E7901F0E0B090050D315 /* snowEmitterDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2833E76B1F0E0B080050D315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833E7801F0E0B080050D315 /* LaunchScreen.storyboard in Resources */,
+				2833E77D1F0E0B080050D315 /* Assets.xcassets in Resources */,
+				2833E77B1F0E0B080050D315 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E7841F0E0B090050D315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E78F1F0E0B090050D315 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2833E7691F0E0B080050D315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833E7AA1F0E0C440050D315 /* EmitterLayerView.m in Sources */,
+				2833E7781F0E0B080050D315 /* ViewController.m in Sources */,
+				2823F5EA1F14DB7300BFAE1B /* RainView.m in Sources */,
+				2833E7751F0E0B080050D315 /* AppDelegate.m in Sources */,
+				2833E7721F0E0B080050D315 /* main.m in Sources */,
+				2833E7A71F0E0B9D0050D315 /* SnowView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E7821F0E0B090050D315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833E78B1F0E0B090050D315 /* snowEmitterDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2833E78D1F0E0B090050D315 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2833E7961F0E0B090050D315 /* snowEmitterDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2833E7881F0E0B090050D315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2833E76C1F0E0B080050D315 /* snowEmitterDemo */;
+			targetProxy = 2833E7871F0E0B090050D315 /* PBXContainerItemProxy */;
+		};
+		2833E7931F0E0B090050D315 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2833E76C1F0E0B080050D315 /* snowEmitterDemo */;
+			targetProxy = 2833E7921F0E0B090050D315 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2833E7791F0E0B080050D315 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2833E77A1F0E0B080050D315 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2833E77E1F0E0B080050D315 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2833E77F1F0E0B080050D315 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2833E7981F0E0B090050D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2833E7991F0E0B090050D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2833E79B1F0E0B090050D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "74f0cffc-837c-4c2d-80ca-daaf26e2933b";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Debug;
+		};
+		2833E79C1F0E0B090050D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "74f0cffc-837c-4c2d-80ca-daaf26e2933b";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Release;
+		};
+		2833E79E1F0E0B090050D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/snowEmitterDemo.app/snowEmitterDemo";
+			};
+			name = Debug;
+		};
+		2833E79F1F0E0B090050D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/snowEmitterDemo.app/snowEmitterDemo";
+			};
+			name = Release;
+		};
+		2833E7A11F0E0B090050D315 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = snowEmitterDemo;
+			};
+			name = Debug;
+		};
+		2833E7A21F0E0B090050D315 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = snowEmitterDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.snowEmitterDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = snowEmitterDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2833E7681F0E0B080050D315 /* Build configuration list for PBXProject "snowEmitterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2833E7981F0E0B090050D315 /* Debug */,
+				2833E7991F0E0B090050D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2833E79A1F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2833E79B1F0E0B090050D315 /* Debug */,
+				2833E79C1F0E0B090050D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2833E79D1F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2833E79E1F0E0B090050D315 /* Debug */,
+				2833E79F1F0E0B090050D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2833E7A01F0E0B090050D315 /* Build configuration list for PBXNativeTarget "snowEmitterDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2833E7A11F0E0B090050D315 /* Debug */,
+				2833E7A21F0E0B090050D315 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2833E7651F0E0B080050D315 /* Project object */;
+}
