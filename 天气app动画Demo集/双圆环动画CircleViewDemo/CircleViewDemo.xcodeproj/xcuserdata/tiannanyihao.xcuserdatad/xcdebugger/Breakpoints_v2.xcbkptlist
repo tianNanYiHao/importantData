@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleViewDemo/CircleView.m"
+            timestampString = "521703916.168494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-strokeEnd:animated:duration:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CircleView strokeEnd:animated:duration:]"
+                  moduleName = "CircleViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiannanyihao/Desktop/%E5%A4%A9%E6%B0%94app%E5%8A%A8%E7%94%BBDemo%E9%9B%86/CircleViewDemo/CircleViewDemo/CircleView.m"
+                  timestampString = "524113095.742288"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CircleView strokeEnd:animated:duration:]"
+                  moduleName = "CircleViewDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tiannanyihao/Desktop/%E5%A4%A9%E6%B0%94app%E5%8A%A8%E7%94%BBDemo%E9%9B%86/CircleViewDemo/CircleViewDemo/CircleView.m"
+                  timestampString = "524113095.745012"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "576">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircleViewDemo/CircleView.m"
+            timestampString = "521709613.140337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "-strokeStart:animated:duration:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
