@@ -296,7 +296,7 @@
         [circleAngleLayer addAnimation:rotaAnimation forKey:@"CircleAngleRotate"];
         
         //延时执行弧度圆收尾动画 (successTime 确保弧度圆旋转位置不偏差)
-        [self performSelector:@selector(circleAngleEndAnimation) withObject:nil afterDelay:successTime];
+//        [self performSelector:@selector(circleAngleEndAnimation) withObject:nil afterDelay:successTime];
     }
 
 }

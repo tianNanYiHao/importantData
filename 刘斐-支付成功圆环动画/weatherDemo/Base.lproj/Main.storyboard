@@ -32,12 +32,26 @@
                                     <action selector="rotateClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mMq-Rx-y8O"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wl7-GB-RGD">
+                                <rect key="frame" x="66" y="590" width="243" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.15940592419999999" blue="0.073203232940000001" alpha="0.60000002379999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="成功吧">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="successClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SWT-fk-jAx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZYt-YC-tSz" secondAttribute="bottom" constant="100" id="3a2-5L-VrC"/>
                             <constraint firstItem="ZYt-YC-tSz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="8xW-6f-5XM"/>
+                            <constraint firstItem="Wl7-GB-RGD" firstAttribute="top" secondItem="ZYt-YC-tSz" secondAttribute="bottom" constant="23" id="DJc-Ot-jMM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZYt-YC-tSz" secondAttribute="trailing" constant="50" id="c8a-rd-72G"/>
+                            <constraint firstItem="Wl7-GB-RGD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="66" id="jRq-YD-QF2"/>
+                            <constraint firstAttribute="trailing" secondItem="Wl7-GB-RGD" secondAttribute="trailing" constant="66" id="vff-X3-a8x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Wl7-GB-RGD" secondAttribute="bottom" constant="47" id="w2B-kL-z5W"/>
                         </constraints>
                     </view>
                 </viewController>

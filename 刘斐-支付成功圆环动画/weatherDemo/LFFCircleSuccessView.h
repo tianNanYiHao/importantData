@@ -72,5 +72,11 @@
 - (void)animationAgainStart;
 
 
+/**
+ 成功动画
+ */
+- (void)circleAngleEndAnimation;
+
+
 
 @end

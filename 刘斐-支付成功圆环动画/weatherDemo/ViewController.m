@@ -55,6 +55,11 @@
 
 
 }
+//
+- (IBAction)successClick:(id)sender {
+    
+    [circleSuccessView circleAngleEndAnimation];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
