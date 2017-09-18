@@ -71,13 +71,13 @@
     CGFloat midTitleLabW = ScreenW - 2*btnW;
     CGSize sizeAttributes = [midTitleLab.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:titleFont]}];
     CGFloat midTitleLabH = sizeAttributes.height;
-    CGFloat headTitleViewH = midTitleLabH + 2*leftAndRightSpace;
+    CGFloat headTitleViewH = midTitleLabH + 2*SIDE_LEFT_RIGHT;
     
     headTitleView.frame = CGRectMake(0, 0, ScreenW, headTitleViewH);
     leftBtn.frame = CGRectMake(0, 0, btnW, headTitleViewH);
-    midTitleLab.frame = CGRectMake(btnW, leftAndRightSpace, midTitleLabW, midTitleLabH);
+    midTitleLab.frame = CGRectMake(btnW, SIDE_LEFT_RIGHT, midTitleLabW, midTitleLabH);
     rightBtn.frame = CGRectMake(btnW+midTitleLabW,0,btnW,headTitleViewH);
-    lineView.frame = CGRectMake(0, headTitleViewH-lineH, ScreenW, lineH);
+    lineView.frame = CGRectMake(0, headTitleViewH-LineBorder, ScreenW, LineBorder);
     
 
 }

@@ -37,10 +37,22 @@
     
     
 
+    
+    
+    //1.常规模式
     payView = [SDPayView getPayView];
     payView.delegate = self;
     [self.view addSubview:payView];
-
+    
+    //2.仅支付密码键盘模式
+    /*
+     
+    payView = [SDPayView getPayView];
+    payView.delegate = self;
+    payView.style = SDPayViewOnlyPwd;
+    [self.view addSubview:payView];
+     
+     */
     
     
 }
@@ -103,18 +115,30 @@
 
 #pragma - mark SDPayViewDelegate
 
+- (void)payViewSelectPayToolDic:(NSMutableDictionary *)selectPayToolDict{
+    NSLog(@"所选择的支付工具 打印: %@",selectPayToolDict);
+    //*****根据所选择的支付工具,刷新页面/替换支付工具值等操作*********
+    
+}
+
 - (void)payViewPwd:(NSString *)pwdStr paySuccessView:(SDPaySuccessAnimationView *)successView{
     
     NSLog(@"您输入的支付密码为:%@",pwdStr);
     //过五秒
     
-    //支付动画开始
+    //1.支付动画开始
     [successView animationStart];
     
-    //支付成功
-    [successView animationSuccess];
+    if (YES) {
+        //支付成功
+        [successView animationSuccess];
+    }
+    else{
+        //支付失败
+        [payView hidPayTool];
+    }
     
-    //支付失败
+    
     
 }
 

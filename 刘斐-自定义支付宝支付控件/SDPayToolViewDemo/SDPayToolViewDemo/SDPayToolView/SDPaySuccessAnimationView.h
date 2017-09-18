@@ -10,6 +10,7 @@
 
 @interface SDPaySuccessAnimationView : UIView
 
+
 /**
  圆环线条的粗细
  */

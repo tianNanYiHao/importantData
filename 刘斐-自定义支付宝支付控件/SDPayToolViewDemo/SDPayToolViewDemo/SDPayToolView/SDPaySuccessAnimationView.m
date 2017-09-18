@@ -25,6 +25,8 @@
 
 
 #import "SDPaySuccessAnimationView.h"
+#import "SDPayConfig.h"
+
 //角度转弧度
 #define radian(degress) ((M_PI * (degress))/180.f)
 
@@ -276,9 +278,9 @@
 
 
 //弧度圆-rotate旋转动画
-- (void)circeleAngleLayerRotateAnimation:(BOOL)animation duration:(CGFloat)durationTime strokeStart:(CGFloat)stroleStart strokeEnd:(CGFloat)stroleEnd{
+- (void)circeleAngleLayerRotateAnimation:(BOOL)animation duration:(CGFloat)durationtime strokeStart:(CGFloat)stroleStart strokeEnd:(CGFloat)stroleEnd{
     
-    successTime = 2*durationTime;
+    successTime = 2*durationtime;
     
     //圆弧旋转动画
     if (animation) {
@@ -287,7 +289,7 @@
         circleAngleLayer.strokeEnd = stroleEnd;
         
         CABasicAnimation *rotaAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-        rotaAnimation.duration = durationTime;
+        rotaAnimation.duration = durationtime;
         rotaAnimation.fromValue = @(radian(0));
         rotaAnimation.toValue = @(radian(360*successTime));
         rotaAnimation.repeatCount = MAXFLOAT;
@@ -309,7 +311,7 @@
     [self circleAngleLayerStrokeStart:1 animation:YES duration:0.3];
     
 }
-- (void)circleAngleLayerStrokeStart:(CGFloat)value animation:(BOOL)animation duration:(CGFloat)durationTime{
+- (void)circleAngleLayerStrokeStart:(CGFloat)value animation:(BOOL)animation duration:(CGFloat)durationtime{
     //过滤错误的值(0~1)
     if (value >= 1) {
         value = 1;
@@ -319,8 +321,8 @@
     if (animation) {
         
         CAKeyframeAnimation *strokeStartAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeStart"];
-        strokeStartAnimation.duration = durationTime;
-//        strokeStartAnimation.values = [YXEasing calculateFrameFromValue:circleAngleLayer.strokeStart toValue:value func:ExponentialEaseIn frameCount:30 * durationTime];
+        strokeStartAnimation.duration = durationtime;
+//        strokeStartAnimation.values = [YXEasing calculateFrameFromValue:circleAngleLayer.strokeStart toValue:value func:ExponentialEaseIn frameCount:30 * durationtime];
         circleAngleLayer.strokeStart = value;
         [circleAngleLayer addAnimation:strokeStartAnimation forKey:@"CircleAngleStart"];
         
@@ -359,16 +361,19 @@
 - (void)successLineLayerAnimation{
     [self successLineLayerStrokeStart:1 duration:1.5f];
 }
-- (void)successLineLayerStrokeStart:(CGFloat)value duration:(CGFloat)durationTime{
+- (void)successLineLayerStrokeStart:(CGFloat)value duration:(CGFloat)durationtime{
     
     CAKeyframeAnimation *strokeStartAnimation = [CAKeyframeAnimation animationWithKeyPath:@"strokeEnd"];
-    strokeStartAnimation.duration = durationTime;
-//    strokeStartAnimation.values = [YXEasing calculateFrameFromValue:successLineLayer.strokeEnd toValue:value func:QuinticEaseOut frameCount:30 * durationTime];
+    strokeStartAnimation.duration = durationtime;
+//    strokeStartAnimation.values = [YXEasing calculateFrameFromValue:successLineLayer.strokeEnd toValue:value func:QuinticEaseOut frameCount:30 * durationtime];
     successLineLayer.strokeEnd = value;
     [successLineLayer addAnimation:strokeStartAnimation forKey:@"SuccessLineAnimation"];
-
     
+    [self performSelector:@selector(postNitifaction) withObject:self afterDelay:durationTime*2];
 }
 
+- (void)postNitifaction{
+    [[NSNotificationCenter defaultCenter] postNotificationName:PaySuccessAnimationNotifaction object:nil];
+}
 
 @end

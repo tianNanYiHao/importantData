@@ -135,46 +135,46 @@
         
         //StepThree -UI设置Frame
         //(setFrame)设置控件的位置和大小
-        CGFloat upDownSpace = space;
-        CGFloat labelWidth = ScreenW - 2 * leftAndRightSpace - iconImageSize.width - leftAndRightSpace - stateImage.size.width - space;
+        CGFloat upDownSpace = SIDE_SPACE;
+        CGFloat labelWidth = ScreenW - 2 * SIDE_LEFT_RIGHT - iconImageSize.width - SIDE_LEFT_RIGHT - stateImage.size.width - SIDE_SPACE;
         CGSize bankNameLabelSize = [bankNameLabel sizeThatFits:CGSizeMake(labelWidth, MAXFLOAT)];
         CGFloat bankNameLabelHeight = bankNameLabelSize.height;
         CGSize bankLimitLabelSize = [bankLimitLabel sizeThatFits:CGSizeMake(labelWidth, MAXFLOAT)];
         CGFloat bankLimitLabelHeight = bankLimitLabelSize.height;
         
-        itemBtnHeight = bankNameLabelHeight + space + bankLimitLabelHeight + 2 * upDownSpace + lineH;
+        itemBtnHeight = bankNameLabelHeight + SIDE_SPACE + bankLimitLabelHeight + 2 * upDownSpace + LineBorder;
         //itemBtn
         itemBtn.frame = CGRectMake(0, i*itemBtnHeight, ScreenW, itemBtnHeight);
         
         
         //iconImage
-        CGFloat iconImageViewOX = leftAndRightSpace;
+        CGFloat iconImageViewOX = SIDE_LEFT_RIGHT;
         CGFloat iconImageViewHeight = iconImageSize.height;
         CGFloat iconImageViewOY = (itemBtnHeight - iconImageViewHeight) / 2;
         CGFloat iconImageViewWidth = iconImageSize.width;
         iconImageView.frame = CGRectMake(iconImageViewOX, iconImageViewOY, iconImageViewWidth, iconImageViewHeight);
         
         //lable1
-        CGFloat bankNameLabelOX = iconImageViewOX + iconImageViewWidth + leftAndRightSpace;
+        CGFloat bankNameLabelOX = iconImageViewOX + iconImageViewWidth + SIDE_LEFT_RIGHT;
         CGFloat bankNameLabelOY = upDownSpace;
         CGFloat bankNameLabelWidth = labelWidth;
         bankNameLabel.frame = CGRectMake(bankNameLabelOX, bankNameLabelOY, bankNameLabelWidth, bankNameLabelHeight);
         
         //lable2
-        CGFloat bankLimitLabelOX = iconImageViewOX + iconImageViewWidth + leftAndRightSpace;
-        CGFloat bankLimitLabelOY = bankNameLabelOY + bankNameLabelHeight + space;
+        CGFloat bankLimitLabelOX = iconImageViewOX + iconImageViewWidth + SIDE_LEFT_RIGHT;
+        CGFloat bankLimitLabelOY = bankNameLabelOY + bankNameLabelHeight + SIDE_SPACE;
         CGFloat bankLimitLabelWidth = labelWidth;
         bankLimitLabel.frame = CGRectMake(bankLimitLabelOX, bankLimitLabelOY, bankLimitLabelWidth, bankLimitLabelHeight);
         
         //stateImageview
-        CGFloat stateImageViewOX = bankLimitLabelOX + bankLimitLabelWidth + leftAndRightSpace;
+        CGFloat stateImageViewOX = bankLimitLabelOX + bankLimitLabelWidth + SIDE_LEFT_RIGHT;
         CGFloat stateImageViewHeight = stateImage.size.height;
         CGFloat stateImageViewOY = (itemBtnHeight - stateImageViewHeight) / 2;
         CGFloat stateImageViewWidth = stateImage.size.width;
         stateImageView.frame = CGRectMake(stateImageViewOX, stateImageViewOY, stateImageViewWidth, stateImageViewHeight);
         
         //line
-        line.frame = CGRectMake(leftAndRightSpace, itemBtnHeight-lineH, ScreenW-leftAndRightSpace, lineH);
+        line.frame = CGRectMake(SIDE_LEFT_RIGHT, itemBtnHeight-LineBorder, ScreenW-SIDE_LEFT_RIGHT, LineBorder);
         
         
         //StepFour - 设置例外
@@ -184,13 +184,13 @@
             itemBtn.tag = PAY_TOOL_LIST_ADDCARDBTN_TAG;
             bankNameLabel.text = [NSString stringWithFormat:@"%@",title];
             
-            CGFloat labelWidth = ScreenW - 2 * leftAndRightSpace - stateImage.size.width - space;
+            CGFloat labelWidth = ScreenW - 2 * SIDE_LEFT_RIGHT - stateImage.size.width - SIDE_SPACE;
             CGSize  bankNameLabelSize = [bankNameLabel sizeThatFits:CGSizeMake(labelWidth, MAXFLOAT)];
             CGFloat bankNameLabelHeight = bankNameLabelSize.height;
             
-            CGFloat bankNameLabelOX = leftAndRightSpace + iconImageViewWidth + leftAndRightSpace;
+            CGFloat bankNameLabelOX = SIDE_LEFT_RIGHT + iconImageViewWidth + SIDE_LEFT_RIGHT;
             CGFloat bankNameLabelOY = (itemBtnHeight - bankNameLabelHeight) / 2;
-            CGFloat bankNameLabelWidth = labelWidth - leftAndRightSpace*2;
+            CGFloat bankNameLabelWidth = labelWidth - SIDE_LEFT_RIGHT*2;
             bankNameLabel.frame = CGRectMake(bankNameLabelOX, bankNameLabelOY, bankNameLabelWidth, bankNameLabelHeight);
             
             bankLimitLabel.frame = CGRectZero;

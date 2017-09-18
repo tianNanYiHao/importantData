@@ -41,10 +41,10 @@
 }
 
 - (void)createUI{
-    CGFloat lineViewMaxY = CGRectGetMaxY(self.lineView.frame)+lineH;
+    CGFloat lineViewMaxY = CGRectGetMaxY(self.lineView.frame)+LineBorder;
     CGFloat pwdTextFieldBorderWidth = 0.8f;
     CGFloat allPwdTextFieldBorderWidth = pwdTextFieldBorderWidth * 5;
-    CGFloat pwdTextFieldWidth = (ScreenW - 2*leftAndRightSpace - allPwdTextFieldBorderWidth)/6;
+    CGFloat pwdTextFieldWidth = (ScreenW - 2*SIDE_LEFT_RIGHT - allPwdTextFieldBorderWidth)/6;
     CGFloat pwdTextFieldHeight = pwdTextFieldWidth;
     CGFloat allPwdTextFieldWidth = pwdTextFieldWidth * 6;
     CGFloat pwdTextFieldBackgroundViewW = allPwdTextFieldWidth + allPwdTextFieldBorderWidth;
@@ -55,9 +55,9 @@
     [self addSubview:payPwdPayBaseView];
     
     //  密码输入框
-    CGFloat pwdTextFieldOY = 2*leftAndRightSpace;
+    CGFloat pwdTextFieldOY = 2*SIDE_LEFT_RIGHT;
     //背景框
-    UIView *pwdTextFieldBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(leftAndRightSpace, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight)];
+    UIView *pwdTextFieldBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight)];
     pwdTextFieldBackgroundView.backgroundColor = pwdBackGroundColor;
     pwdTextFieldBackgroundView.layer.borderColor = pwdBorderColor.CGColor;
     pwdTextFieldBackgroundView.layer.borderWidth = 0.7f;
@@ -74,7 +74,7 @@
     pwdTextFieldOne.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldOne.textColor= pwdTextFieldTextColor;
     [pwdTextFieldOne setSecureTextEntry:YES];
-    pwdTextFieldOne.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldOne.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldOne.layer.borderWidth= pwdTextFieldBorderWidth;
     [pwdTextFieldOne setEnabled:NO];
     pwdTextFieldOne.backgroundColor = [UIColor whiteColor];
@@ -86,7 +86,7 @@
     pwdTextFieldTwo.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldTwo.textColor= pwdTextFieldTextColor;
     [pwdTextFieldTwo setSecureTextEntry:YES];
-    pwdTextFieldTwo.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldTwo.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldTwo.layer.borderWidth= pwdTextFieldBorderWidth;
     [pwdTextFieldTwo setEnabled:NO];
     pwdTextFieldTwo.backgroundColor = [UIColor whiteColor];
@@ -98,7 +98,7 @@
     pwdTextFieldThree.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldThree.textColor= pwdTextFieldTextColor;
     [pwdTextFieldThree setSecureTextEntry:YES];
-    pwdTextFieldThree.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldThree.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldThree.layer.borderWidth=pwdTextFieldBorderWidth;
     [pwdTextFieldThree setEnabled:NO];
     pwdTextFieldThree.backgroundColor = [UIColor whiteColor];
@@ -109,7 +109,7 @@
     pwdTextFieldFour.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldFour.textColor= pwdTextFieldTextColor;
     [pwdTextFieldFour setSecureTextEntry:YES];
-    pwdTextFieldFour.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldFour.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldFour.layer.borderWidth=pwdTextFieldBorderWidth;
     pwdTextFieldFour.backgroundColor = [UIColor whiteColor];
     pwdTextFieldFour.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -120,7 +120,7 @@
     pwdTextFieldFive.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldFive.textColor= pwdTextFieldTextColor;
     [pwdTextFieldFive setSecureTextEntry:YES];
-    pwdTextFieldFive.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldFive.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldFive.layer.borderWidth=pwdTextFieldBorderWidth;
     pwdTextFieldFive.backgroundColor = [UIColor whiteColor];
     pwdTextFieldFive.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -131,7 +131,7 @@
     pwdTextFieldSix.textAlignment= NSTextAlignmentCenter;
     pwdTextFieldSix.textColor= pwdTextFieldTextColor;
     [pwdTextFieldSix setSecureTextEntry:YES];
-    pwdTextFieldSix.font= [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    pwdTextFieldSix.font= [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     pwdTextFieldSix.layer.borderWidth=pwdTextFieldBorderWidth;
     pwdTextFieldSix.backgroundColor = [UIColor whiteColor];
     pwdTextFieldSix.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -142,7 +142,7 @@
     //  忘记密码
     UIButton *forgetPayPwdBtn = [[UIButton alloc] init];
     [forgetPayPwdBtn setTitle:@"忘记密码？" forState: UIControlStateNormal];
-    forgetPayPwdBtn.titleLabel.font = [UIFont systemFontOfSize:pwdTextFieldTextSize];
+    forgetPayPwdBtn.titleLabel.font = [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     [forgetPayPwdBtn setTitleColor:forgetPwdTextColor forState:UIControlStateNormal];
     forgetPayPwdBtn.titleLabel.textAlignment = NSTextAlignmentRight;
     [forgetPayPwdBtn addTarget:self action:@selector(forgetPwd:) forControlEvents:UIControlEventTouchUpInside];
@@ -150,17 +150,17 @@
 
     
     
-    CGSize forgetPayPwdBtnSize = [forgetPayPwdBtn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:pwdTextFieldTextSize]}];
+    CGSize forgetPayPwdBtnSize = [forgetPayPwdBtn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:pwdTextFieldTextSizeFont]}];
     CGFloat forgetPayPwdBtnWidth = forgetPayPwdBtnSize.width;
-    CGFloat forgetPayPwdBtnOX = ScreenW - forgetPayPwdBtnWidth - leftAndRightSpace;
-    CGFloat forgetPayPwdBtnOY = pwdTextFieldOY + pwdTextFieldHeight + space;
+    CGFloat forgetPayPwdBtnOX = ScreenW - forgetPayPwdBtnWidth - SIDE_LEFT_RIGHT;
+    CGFloat forgetPayPwdBtnOY = pwdTextFieldOY + pwdTextFieldHeight + SIDE_SPACE;
     CGFloat forgetPayPwdBtnHeight = forgetPayPwdBtnSize.height;
     
     forgetPayPwdBtn.frame = CGRectMake(forgetPayPwdBtnOX, forgetPayPwdBtnOY, forgetPayPwdBtnWidth, forgetPayPwdBtnHeight);
     
-    pwdTextFieldBackgroundView.frame = CGRectMake(leftAndRightSpace, leftAndRightSpace*2, pwdTextFieldBackgroundViewW, pwdTextFieldHeight);
+    pwdTextFieldBackgroundView.frame = CGRectMake(SIDE_LEFT_RIGHT, SIDE_LEFT_RIGHT*2, pwdTextFieldBackgroundViewW, pwdTextFieldHeight);
     
-    CGFloat payPwdViewHeight = forgetPayPwdBtnOY + forgetPayPwdBtnHeight + leftAndRightSpace;
+    CGFloat payPwdViewHeight = forgetPayPwdBtnOY + forgetPayPwdBtnHeight + SIDE_LEFT_RIGHT;
     
     payPwdPayBaseView.frame = CGRectMake(0, lineViewMaxY, ScreenW, payPwdViewHeight);
     
@@ -169,7 +169,7 @@
     //
     CGFloat successAnimViewW = ScreenW/3;
     CGFloat successAnimViewOX = ScreenW/3;
-    CGFloat successAnimViewOY = CGRectGetMaxY(payPwdPayBaseView.frame)+leftAndRightSpace;
+    CGFloat successAnimViewOY = CGRectGetMaxY(payPwdPayBaseView.frame)+SIDE_LEFT_RIGHT;
     
     successAnimationView = [SDPaySuccessAnimationView createCircleSuccessView:CGRectMake(successAnimViewOX, successAnimViewOY, successAnimViewW, successAnimViewW)];
     successAnimationView.circleLineWidth = 8.f;

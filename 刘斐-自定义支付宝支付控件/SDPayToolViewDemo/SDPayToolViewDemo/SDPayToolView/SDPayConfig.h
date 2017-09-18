@@ -41,7 +41,7 @@
 #define paylisttitleDesFont 12.0f
 #define moneyLabFont   36.f
 #define payBtnFont     20.f
-#define pwdTextFieldTextSize 17.f
+#define pwdTextFieldTextSizeFont 17.f
 
 #define keyBoardBtnCleanFont 18.f
 #define keyBoardBtnFontNormal 27.f
@@ -64,8 +64,10 @@
 #define SDPayToolListViewWillLoadFrame  CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
 #define SDPayToolListViewDidLoadFrame   CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
 
-#define SDPayToolPwdViewWillLoadFrame       CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
-#define SDPayPwdVewDidLoadFrame         CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewRightWillLoadFrame       CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewDownWillLoadFrame        CGRectMake(ViewBaseOX, ViewBaseH, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewDidLoadFrame             CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+
 
 #define SDPayKeyBoardWillLoadFrame      CGRectMake(0, superViewSize.height, ScreenW,keyBordViewHeight)
 #define SDPayKeyBoardDidLoadFrame       CGRectMake(0, superViewSize.height-keyBordViewHeight, ScreenW,keyBordViewHeight)
@@ -77,10 +79,10 @@
 #define ViewBaseOX  0.f
 #define ViewBaseOY  ScreenH - ViewBaseH
 
-#define leftAndRightSpace 15.0f
-#define space          10.f
-#define commWidth      ScreenW - 2*leftAndRightSpace
-#define lineH          0.5f
+#define SIDE_LEFT_RIGHT 15.0f
+#define SIDE_SPACE          10.f
+#define SIDE_COMMWIDTH      ScreenW - 2*SIDE_LEFT_RIGHT
+#define LineBorder          0.5f
 
 #define PAYTOOL_PAYPASS @"PAYLTOOL_LIST_PAYPASS"
 #define PAYTOOL_ACCPASS @"PAYLTOOL_LIST_ACCPASS"
@@ -95,3 +97,8 @@
 //图片size
 #define ImgSizeH(imgName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imgName]].size.height
 #define ImgSizeW(imgName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imgName]].size.width
+
+//通知名
+#define PaySuccessAnimationNotifaction @"paySuccessAnimationNotifacation"
+
+

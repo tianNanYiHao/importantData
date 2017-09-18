@@ -159,26 +159,26 @@
     CGSize payOrderLabSize = [payOrderLab.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:payOrderInfoLabFont]}];
     
 
-    CGFloat moneyLabOY = leftAndRightSpace;
-    CGFloat payOrderLabOY = leftAndRightSpace;
+    CGFloat moneyLabOY = SIDE_LEFT_RIGHT;
+    CGFloat payOrderLabOY = SIDE_LEFT_RIGHT;
     CGFloat paymoneyViewH = moneyLabSize.height + moneyLabOY *2;
     
     CGFloat payOrderLabW  = payOrderLabSize.width;
     CGFloat payOrderLabH  = payOrderLabSize.height;
     
     
-    CGFloat payOrderDesLabOX = leftAndRightSpace + payOrderLabW;
+    CGFloat payOrderDesLabOX = SIDE_LEFT_RIGHT + payOrderLabW;
     CGFloat payOrderDesLabOY = payOrderLabOY;
-    CGFloat payOrderDesLabW = commWidth - payOrderLabW;
+    CGFloat payOrderDesLabW = SIDE_COMMWIDTH - payOrderLabW;
     CGFloat payOrderDesLabH = payOrderLabH;
     
-    CGFloat lineOneOY = payOrderLabOY + payOrderLabH + leftAndRightSpace;
+    CGFloat lineOneOY = payOrderLabOY + payOrderLabH + SIDE_LEFT_RIGHT;
     
-    CGFloat payWayLabOY = lineOneOY + lineH +leftAndRightSpace;
+    CGFloat payWayLabOY = lineOneOY + LineBorder +SIDE_LEFT_RIGHT;
     CGFloat payWayLabW = payOrderLabW;
     CGFloat payWayLabH = payOrderLabH;
     
-    CGFloat payDesViewH   = (payOrderLabH + 2*leftAndRightSpace)*2;
+    CGFloat payDesViewH   = (payOrderLabH + 2*SIDE_LEFT_RIGHT)*2;
 
     CGFloat payInfoViewH  = paymoneyViewH + payDesViewH;
     CGFloat payInfoViewOY = CGRectGetMaxY(self.lineView.frame);
@@ -186,9 +186,9 @@
     CGFloat payWaychooseimgW = payWaychooseimg.size.width;
     CGFloat payWaychooseimgH = payWaychooseimg.size.height;
     
-    CGFloat payWayChooseBtnOY = lineOneOY + lineH;
-    CGFloat payWayChooseBtnW = commWidth - payOrderLabSize.width;
-    CGFloat payWayChooseBtnH = payOrderLabH+2*leftAndRightSpace;
+    CGFloat payWayChooseBtnOY = lineOneOY + LineBorder;
+    CGFloat payWayChooseBtnW = SIDE_COMMWIDTH - payOrderLabSize.width;
+    CGFloat payWayChooseBtnH = payOrderLabH+2*SIDE_LEFT_RIGHT;
     
     CGFloat payWayChooseLabW = payWayChooseBtnW - payWaychooseimgW;
     CGFloat payWayChooseLabH = payOrderLabH;
@@ -203,20 +203,20 @@
     
     moneyLab.frame = CGRectMake(0, moneyLabOY, ScreenW, moneyLabSize.height);
     
-    payOrderLab.frame = CGRectMake(leftAndRightSpace, payOrderLabOY, payWayLabW, payWayLabH);
+    payOrderLab.frame = CGRectMake(SIDE_LEFT_RIGHT, payOrderLabOY, payWayLabW, payWayLabH);
     payOrderDesLab.frame = CGRectMake( payOrderDesLabOX, payOrderDesLabOY, payOrderDesLabW, payOrderDesLabH);
     
-    lineOne.frame = CGRectMake(leftAndRightSpace, lineOneOY, commWidth+leftAndRightSpace, lineH);
+    lineOne.frame = CGRectMake(SIDE_LEFT_RIGHT, lineOneOY, SIDE_COMMWIDTH+SIDE_LEFT_RIGHT, LineBorder);
     
-    payWayLab.frame = CGRectMake(leftAndRightSpace, payWayLabOY, payOrderLabW, payOrderLabH);
+    payWayLab.frame = CGRectMake(SIDE_LEFT_RIGHT, payWayLabOY, payOrderLabW, payOrderLabH);
     
-    payWayChooseBtn.frame = CGRectMake(leftAndRightSpace + payOrderLabW,payWayChooseBtnOY, payWayChooseBtnW, payWayChooseBtnH);
-    payWayChooseLab.frame = CGRectMake(0, leftAndRightSpace, payWayChooseLabW, payWayChooseLabH);
+    payWayChooseBtn.frame = CGRectMake(SIDE_LEFT_RIGHT + payOrderLabW,payWayChooseBtnOY, payWayChooseBtnW, payWayChooseBtnH);
+    payWayChooseLab.frame = CGRectMake(0, SIDE_LEFT_RIGHT, payWayChooseLabW, payWayChooseLabH);
     
-    payWayChooseImgView.frame = CGRectMake(payWayChooseImgViewOX, leftAndRightSpace, payWayChooseImgViewW, payWayChooseImgViewH);
-    lineTwo.frame = CGRectMake(leftAndRightSpace, CGRectGetMaxY(payWayLab.frame)+leftAndRightSpace, commWidth+leftAndRightSpace, lineH);
+    payWayChooseImgView.frame = CGRectMake(payWayChooseImgViewOX, SIDE_LEFT_RIGHT, payWayChooseImgViewW, payWayChooseImgViewH);
+    lineTwo.frame = CGRectMake(SIDE_LEFT_RIGHT, CGRectGetMaxY(payWayLab.frame)+SIDE_LEFT_RIGHT, SIDE_COMMWIDTH+SIDE_LEFT_RIGHT, LineBorder);
     
-    payBtn.frame = CGRectMake(leftAndRightSpace, self.bounds.size.height - leftAndRightSpace*3 - leftAndRightSpace, commWidth, leftAndRightSpace*3);
+    payBtn.frame = CGRectMake(SIDE_LEFT_RIGHT, self.bounds.size.height - SIDE_LEFT_RIGHT*3 - SIDE_LEFT_RIGHT, SIDE_COMMWIDTH, SIDE_LEFT_RIGHT*3);
     
 }
 

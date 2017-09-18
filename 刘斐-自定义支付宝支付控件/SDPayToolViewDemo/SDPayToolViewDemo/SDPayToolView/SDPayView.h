@@ -9,7 +9,22 @@
 #import <UIKit/UIKit.h>
 #import "SDPayConfig.h"
 #import "SDPaySuccessAnimationView.h"
+
+typedef enum {
+    SDPayViewNomal = 0,
+    SDPayViewOnlyPwd
+}SDPayViewStyle;
+
+
+
 @protocol SDPayViewDelegate <NSObject>
+
+/**
+ 返回所选的支付工具
+
+ @param selectPayToolDict 列表所选择的支付工具
+ */
+- (void)payViewSelectPayToolDic:(NSMutableDictionary*)selectPayToolDict;
 
 /**
  返回支付密码
@@ -44,6 +59,12 @@
 
 @property (nonatomic, assign)id<SDPayViewDelegate>delegate;
 
+/**
+ 支付工具模式- 默认模式/仅密码键盘模式
+ */
+@property (nonatomic, assign) SDPayViewStyle style;
+
+
 
 /**
  类方法-构造:杉德支付工具实例
@@ -70,6 +91,9 @@
 - (void)showPayTool;
 
 
-
+/**
+ 隐藏支付工具
+ */
+- (void)hidPayTool;
 
 @end

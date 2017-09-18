@@ -41,8 +41,6 @@
     _maskBackGroundView.backgroundColor = [UIColor blackColor];
     _maskBackGroundView.userInteractionEnabled = YES;
     _maskBackGroundView.alpha = 0.f;
-    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(maskBackGroundViewhidden)];
-    [_maskBackGroundView addGestureRecognizer:tapRecognizer];
     [self addSubview:_maskBackGroundView];
     
 }
@@ -77,15 +75,33 @@
  添加支付密码view
  */
 - (void)addPayToolPwdView{
-    _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewWillLoadFrame];
-    _payToolPwdView.delegate = self;
-    if (selectpayToolDic) {
-        _payToolPwdView.selectpayToolDic = selectpayToolDic;
-    }else{
-        _payToolPwdView.selectpayToolDic = [_payListArray firstObject];
+    //常规模式
+    if (_style == SDPayViewNomal) {
+        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewRightWillLoadFrame];
+        _payToolPwdView.delegate = self;
+        if (selectpayToolDic) {
+            _payToolPwdView.selectpayToolDic = selectpayToolDic;
+        }else{
+            _payToolPwdView.selectpayToolDic = [_payListArray firstObject];
+        }
+        _payToolPwdView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_payToolPwdView];
     }
-    _payToolPwdView.backgroundColor = [UIColor whiteColor];
-    [self addSubview:_payToolPwdView];
+    //仅密码键盘模式
+    if (_style == SDPayViewOnlyPwd) {
+        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewDownWillLoadFrame];
+        _payToolPwdView.delegate = self;
+        if (selectpayToolDic) {
+            _payToolPwdView.selectpayToolDic = selectpayToolDic;
+        }else{
+            _payToolPwdView.selectpayToolDic = [_payListArray firstObject];
+        }
+        _payToolPwdView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:_payToolPwdView];
+
+    }
+    
+    
 }
 
 
@@ -104,26 +120,49 @@
         self.userInteractionEnabled = YES;
         self.frame = [UIScreen mainScreen].bounds;
         self.hidden = YES;
+        self.style = SDPayViewNomal;
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hiddenOverDelay) name:PaySuccessAnimationNotifaction object:nil];
     }return self;
+}
+
+- (void)setStyle:(SDPayViewStyle)style{
+    _style = style;
 }
 
 #pragma - mark 统一配置支付信息
 - (void)setPayInfo:(NSArray*)payArray moneyStr:(NSString*)moneyStr orderTypeStr:(NSString*)orderTypeStr{
-    _payListArray = payArray;
-    _moneyStr = moneyStr;
-    _orderTypeStr = orderTypeStr;
-    payToolListIndex = 0;
+    
+    if (_style == SDPayViewNomal) {
+        _payListArray = payArray;
+        _moneyStr = moneyStr;
+        _orderTypeStr = orderTypeStr;
+        payToolListIndex = 0;
+    }
 }
 
 #pragma - mark 显示支付工具- **************          (按需加载,仅先加载-支付订单信息:payToolOrderView)
 - (void)showPayTool{
-    [self addMaskBackGroundView];
-    [self addPayToolOrderView];
-    [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:YES];
-    [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
+    
+    if (_style == SDPayViewNomal) {
+        [self addMaskBackGroundView];
+        [self addPayToolOrderView];
+        [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:YES];
+        [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
+    }
+    if (_style == SDPayViewOnlyPwd) {
+        [self addMaskBackGroundView];
+        [self addPayToolPwdView];
+        [self.payToolPwdView addSDPayKeyBoardView];
+        [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:YES];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDidLoadFrame showState:YES];
+    }
+    
+   
 }
-
-
+// 外部隐藏调用方法
+- (void)hidPayTool{
+    [self hiddenOverDelay];
+}
 
 
 #pragma - mark 隐藏支付工具
@@ -131,19 +170,26 @@
  延迟关闭-(各子视图未归位时调用-有延迟)
  */
 - (void)hiddenOverDelay{
-    //各子视图归位
-    //订单信息视图归位(订单信息视图归位时显示在视图)
-    [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
     
-    //支付工具列表视图归位 - 且删除
-    [SDPayAnimtion payToolListViewAnimation:self.payToolListView frame:SDPayToolListViewWillLoadFrame showState:NO];
+    if (_style == SDPayViewNomal) {
+        //各子视图归位
+        //订单信息视图归位(订单信息视图归位时显示在视图)
+        [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
+        
+        //支付工具列表视图归位 - 且删除
+        [SDPayAnimtion payToolListViewAnimation:self.payToolListView frame:SDPayToolListViewWillLoadFrame showState:NO];
+        
+        //支付密码视图归位 - 且删除
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewRightWillLoadFrame showState:NO];
+        
+        //执行隐藏
+        [self performSelector:@selector(hiddenOverNow) withObject:self afterDelay:durationTime*1.2f];
+    }
     
-    //支付密码视图归位 - 且删除
-    [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewWillLoadFrame showState:NO];
-    
-    //执行隐藏
-    [self performSelector:@selector(hiddenOverNow) withObject:self afterDelay:durationTime*1.2f];
-    
+    if (_style == SDPayViewOnlyPwd) {
+        [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:NO];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDownWillLoadFrame showState:NO];
+    }
 }
 
 /**
@@ -154,10 +200,8 @@
     [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewWillLoadFrame showState:NO];
     
 }
-#pragma  - mark 手势-隐藏支付工具
-- (void)maskBackGroundViewhidden{
-    [self hiddenOverDelay];
-}
+
+
 
 
 #pragma - mark =================各子视图代理集=================
@@ -175,7 +219,7 @@
     [self addPayToolPwdView];
     [self.payToolPwdView addSDPayKeyBoardView];
     [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewRightTranslationFrame showState:YES];
-    [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayPwdVewDidLoadFrame showState:YES];
+    [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDidLoadFrame showState:YES];
 }
 - (void)payToolOrderViewJumpToClosePayView{
     [self hiddenOverNow];
@@ -190,6 +234,10 @@
     selectpayToolDic = selectPayToolDict;
     self.payToolOrderView.payToolDic = selectPayToolDict;
     payToolListIndex = index;
+    if ([_delegate respondsToSelector:@selector(payViewSelectPayToolDic:)]) {
+        [_delegate payViewSelectPayToolDic:[NSMutableDictionary dictionaryWithDictionary:selectPayToolDict]];
+    }
+    
 }
 - (void)payToolListViewAddPayToolCardWithpayType:(NSString *)payType{
     if ([_delegate respondsToSelector:@selector(payViewAddPayToolCard:)]) {
@@ -200,8 +248,15 @@
 
 #pragma - mark SDPayToolPwdViewDelegate
 - (void)payToolPwdViewjumpBackToPayToolOrderView{
-    [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
-    [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolListViewWillLoadFrame showState:NO];
+    if (_style == SDPayViewNomal) {
+        [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolListViewWillLoadFrame showState:NO];
+    }
+    if (_style == SDPayViewOnlyPwd) {
+        [self hiddenOverDelay];
+    }
+    
+   
 }
 - (void)payToolPwdForgetReturnPwdType:(NSString *)type{
     if ([_delegate respondsToSelector:@selector(payViewForgetPwd:)]) {
