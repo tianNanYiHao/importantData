@@ -40,6 +40,13 @@
 
 
 /**
+ 是否仅支付密码View展示
+ */
+@property (nonatomic, assign)BOOL isOnlyPayToolPwdViewStyle;
+
+
+
+/**
  需要输入支付密码的支付工具对象
  */
 @property (nonatomic, strong) NSDictionary *selectpayToolDic;

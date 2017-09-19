@@ -10,6 +10,7 @@
 #import "SDPayConfig.h"
 #import "SDPaySuccessAnimationView.h"
 
+
 typedef enum {
     SDPayViewNomal = 0,
     SDPayViewOnlyPwd
@@ -58,6 +59,7 @@ typedef enum {
 @interface SDPayView : UIView
 
 @property (nonatomic, assign)id<SDPayViewDelegate>delegate;
+
 
 /**
  支付工具模式- 默认模式/仅密码键盘模式

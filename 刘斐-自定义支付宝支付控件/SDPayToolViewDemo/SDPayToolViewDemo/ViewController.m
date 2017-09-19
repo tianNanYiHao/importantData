@@ -45,14 +45,12 @@
     [self.view addSubview:payView];
     
     //2.仅支付密码键盘模式
-    /*
+//    payView = [SDPayView getPayView];
+//    payView.delegate = self;
+//    payView.style = SDPayViewOnlyPwd;
+//    [self.view addSubview:payView];
      
-    payView = [SDPayView getPayView];
-    payView.delegate = self;
-    payView.style = SDPayViewOnlyPwd;
-    [self.view addSubview:payView];
      
-     */
     
     
 }

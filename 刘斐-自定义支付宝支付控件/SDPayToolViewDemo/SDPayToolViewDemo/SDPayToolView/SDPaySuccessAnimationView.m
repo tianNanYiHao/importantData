@@ -30,7 +30,6 @@
 //角度转弧度
 #define radian(degress) ((M_PI * (degress))/180.f)
 
-#define RRBA(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 @interface SDPaySuccessAnimationView(){
     
@@ -136,8 +135,8 @@
     //默认色彩
     if (_circleLineColor == nil || _circleBackGroundColor == nil || _lineSuccessColor == nil) {
         _circleBackGroundColor = [UIColor darkGrayColor];
-        _circleLineColor = RRBA(42, 167, 220, 1);
-        _lineSuccessColor = RRBA(29, 204, 140, 1);
+        _circleLineColor = Rgba(42, 167, 220);
+        _lineSuccessColor = Rgba(29, 204, 140);
     }
     
     //1.
@@ -169,7 +168,7 @@
     circleAngleLayer.fillColor = [UIColor clearColor].CGColor;
     circleAngleLayer.strokeColor = _circleLineColor.CGColor;
     circleAngleLayer.lineWidth = _circleLineWidth;
-    circleAngleLayer.lineCap = kCALineCapButt;
+    circleAngleLayer.lineCap = kCALineCapRound;
     circleAngleLayer.strokeEnd = 0;
 
 }
@@ -249,7 +248,7 @@
 
 
 #pragma mark - 清除所有Layer
-- (void)clearAllLayer{
+- (void)animationStopClean{
     //删除
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
    

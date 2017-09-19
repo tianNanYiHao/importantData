@@ -90,6 +90,7 @@
     //仅密码键盘模式
     if (_style == SDPayViewOnlyPwd) {
         _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewDownWillLoadFrame];
+        _payToolPwdView.isOnlyPayToolPwdViewStyle = YES;
         _payToolPwdView.delegate = self;
         if (selectpayToolDic) {
             _payToolPwdView.selectpayToolDic = selectpayToolDic;
@@ -137,6 +138,9 @@
         _moneyStr = moneyStr;
         _orderTypeStr = orderTypeStr;
         payToolListIndex = 0;
+    }
+    if (_style == SDPayViewOnlyPwd) {
+        _payListArray = payArray;
     }
 }
 

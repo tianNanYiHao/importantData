@@ -63,7 +63,7 @@
 /**
  清除所有
  */
-- (void)clearAllLayer;
+- (void)animationStopClean;
 
 
 

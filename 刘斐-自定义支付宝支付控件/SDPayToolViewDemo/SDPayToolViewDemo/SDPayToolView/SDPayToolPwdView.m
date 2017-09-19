@@ -40,6 +40,11 @@
     [self.leftBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)setIsOnlyPayToolPwdViewStyle:(BOOL)isOnlyPayToolPwdViewStyle{
+    
+    [self.leftBtn setImage:[UIImage imageNamed:@"payClosed"] forState:UIControlStateNormal];
+}
+
 - (void)createUI{
     CGFloat lineViewMaxY = CGRectGetMaxY(self.lineView.frame)+LineBorder;
     CGFloat pwdTextFieldBorderWidth = 0.8f;
@@ -172,7 +177,7 @@
     CGFloat successAnimViewOY = CGRectGetMaxY(payPwdPayBaseView.frame)+SIDE_LEFT_RIGHT;
     
     successAnimationView = [SDPaySuccessAnimationView createCircleSuccessView:CGRectMake(successAnimViewOX, successAnimViewOY, successAnimViewW, successAnimViewW)];
-    successAnimationView.circleLineWidth = 8.f;
+    successAnimationView.circleLineWidth = 9.f;
     successAnimationView.circleBackGroundColor = [UIColor whiteColor];
     successAnimationView.circleLineColor = paySuccessAnimationViewCricleColor;
     successAnimationView.lineSuccessColor = paySuccessAnimationViewCricleColor;
@@ -184,7 +189,12 @@
 //根据支付类型决定标题展示
 - (void)setSelectpayToolDic:(NSDictionary *)selectpayToolDic{
     _selectpayToolDic = selectpayToolDic;
-    type = [[[_selectpayToolDic objectForKey:@"authTools"] firstObject] objectForKey:@"type"];
+    NSDictionary *payToolsDic = [[_selectpayToolDic objectForKey:@"authTools"] firstObject];
+    if (payToolsDic != nil) {
+        type = [payToolsDic objectForKey:@"type"];
+    }else{
+        type = [_selectpayToolDic objectForKey:@"type"];
+    }
     if ([type isEqualToString:@"paypass"]) {
         self.midTitleLab.text = @"请输入支付密码";
     }else if ([type isEqualToString:@"accpass"]){

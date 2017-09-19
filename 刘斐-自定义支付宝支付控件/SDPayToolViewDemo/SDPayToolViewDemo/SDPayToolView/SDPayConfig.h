@@ -65,7 +65,7 @@
 #define SDPayToolListViewDidLoadFrame   CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
 
 #define SDPayToolPwdViewRightWillLoadFrame       CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
-#define SDPayToolPwdViewDownWillLoadFrame        CGRectMake(ViewBaseOX, ViewBaseH, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewDownWillLoadFrame        CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
 #define SDPayToolPwdViewDidLoadFrame             CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
 
 
