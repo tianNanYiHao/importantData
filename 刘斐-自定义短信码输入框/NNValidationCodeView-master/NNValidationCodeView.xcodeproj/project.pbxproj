@@ -16,6 +16,7 @@
 		00F668991F1C8F79003F55F2 /* NNValidationCodeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F668981F1C8F79003F55F2 /* NNValidationCodeViewTests.m */; };
 		00F668A41F1C8F79003F55F2 /* NNValidationCodeViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F668A31F1C8F79003F55F2 /* NNValidationCodeViewUITests.m */; };
 		00F668B41F1C8FAE003F55F2 /* NNValidationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F668B31F1C8FAE003F55F2 /* NNValidationCodeView.m */; };
+		281747A01F9783D9007D4D3A /* NNTextfiled.m in Sources */ = {isa = PBXBuildFile; fileRef = 2817479F1F9783D9007D4D3A /* NNTextfiled.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		00F668A51F1C8F79003F55F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00F668B21F1C8FAE003F55F2 /* NNValidationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNValidationCodeView.h; sourceTree = "<group>"; };
 		00F668B31F1C8FAE003F55F2 /* NNValidationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNValidationCodeView.m; sourceTree = "<group>"; };
+		2817479E1F9783D9007D4D3A /* NNTextfiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNTextfiled.h; sourceTree = "<group>"; };
+		2817479F1F9783D9007D4D3A /* NNTextfiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNTextfiled.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 			children = (
 				00F668B21F1C8FAE003F55F2 /* NNValidationCodeView.h */,
 				00F668B31F1C8FAE003F55F2 /* NNValidationCodeView.m */,
+				2817479E1F9783D9007D4D3A /* NNTextfiled.h */,
+				2817479F1F9783D9007D4D3A /* NNTextfiled.m */,
 			);
 			path = NNValidationCodeView;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				00F668861F1C8F79003F55F2 /* ViewController.m in Sources */,
 				00F668831F1C8F79003F55F2 /* AppDelegate.m in Sources */,
 				00F668B41F1C8FAE003F55F2 /* NNValidationCodeView.m in Sources */,
+				281747A01F9783D9007D4D3A /* NNTextfiled.m in Sources */,
 				00F668801F1C8F79003F55F2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

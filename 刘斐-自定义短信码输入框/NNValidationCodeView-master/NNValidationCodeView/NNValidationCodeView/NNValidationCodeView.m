@@ -7,6 +7,7 @@
 //
 
 #import "NNValidationCodeView.h"
+#import "NNTextfiled.h"
 #define NNCodeViewHeight self.frame.size.height
 
 @interface NNValidationCodeView()<UITextFieldDelegate>
@@ -18,7 +19,7 @@
 /// label 之间的距离
 @property (nonatomic, assign) CGFloat labelDistance;
 /// 输入文本框
-@property (nonatomic, strong) UITextField *codeTextField;
+@property (nonatomic, strong) NNTextfiled *codeTextField;
 
 @end
 
