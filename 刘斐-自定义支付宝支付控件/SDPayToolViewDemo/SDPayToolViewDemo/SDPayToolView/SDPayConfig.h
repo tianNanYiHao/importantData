@@ -57,16 +57,18 @@
 #define maskViewShowAlpha 0.35f
 #define maksViewHidAlpha  0.f
 
-#define SDPayToolOrderViewWillLoadFrame CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
-#define SDPayToolOrderViewDidLoadFrame  CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolOrderViewWillLoadFrame           CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
+#define SDPayToolOrderViewDidLoadFrame            CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
 #define SDPayToolOrderViewRightTranslationFrame   CGRectMake(-ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolOrderViewRightDidDisapper        CGRectMake(-ScreenW, ScreenH, ScreenW, ViewBaseH)
 
-#define SDPayToolListViewWillLoadFrame  CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
-#define SDPayToolListViewDidLoadFrame   CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolListViewWillLoadFrame            CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolListViewDidLoadFrame             CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolListViewDidDisapper              CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
 
-#define SDPayToolPwdViewRightWillLoadFrame       CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
-#define SDPayToolPwdViewDownWillLoadFrame        CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
-#define SDPayToolPwdViewDidLoadFrame             CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewWillLoadFrame             CGRectMake(ScreenW, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewDidLoadFrame              CGRectMake(ViewBaseOX, ViewBaseOY, ScreenW, ViewBaseH)
+#define SDPayToolPwdViewDidDisapper               CGRectMake(ViewBaseOX, ScreenH, ScreenW, ViewBaseH)
 
 
 #define SDPayKeyBoardWillLoadFrame      CGRectMake(0, superViewSize.height, ScreenW,keyBordViewHeight)

@@ -221,7 +221,9 @@
 {
     if ([_delegate respondsToSelector:@selector(payToolPwdForgetReturnPwdType:)]) {
         //1.页面回退
-        [self goBack];
+        if ([_delegate respondsToSelector:@selector(payToolPwdViewjumpBackToPayToolOrderView)]) {
+            [_delegate payToolPwdViewjumpBackToPayToolOrderView];
+        }
         
         //2.代理回调
         if ([type isEqualToString:@"accpass"]) {
@@ -232,17 +234,6 @@
         }
     }
 }
-
-/**
- goBack
- */
-- (void)goBack{
-    
-    if ([_delegate respondsToSelector:@selector(payToolPwdViewjumpBackToPayToolOrderView)]) {
-        [_delegate payToolPwdViewjumpBackToPayToolOrderView];
-    }
-}
-
 
 #pragma - mark payKeyBoardViewdelegate ==================键盘事件代理=================
 - (void)payKeyBoardCurrentTitle:(UIButton *)btn{

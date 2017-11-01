@@ -77,7 +77,7 @@
 - (void)addPayToolPwdView{
     //常规模式
     if (_style == SDPayViewNomal) {
-        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewRightWillLoadFrame];
+        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewWillLoadFrame];
         _payToolPwdView.delegate = self;
         if (selectpayToolDic) {
             _payToolPwdView.selectpayToolDic = selectpayToolDic;
@@ -89,7 +89,7 @@
     }
     //仅密码键盘模式
     if (_style == SDPayViewOnlyPwd) {
-        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewDownWillLoadFrame];
+        _payToolPwdView = [[SDPayToolPwdView alloc] initWithFrame:SDPayToolPwdViewDidDisapper];
         _payToolPwdView.isOnlyPayToolPwdViewStyle = YES;
         _payToolPwdView.delegate = self;
         if (selectpayToolDic) {
@@ -122,7 +122,8 @@
         self.frame = [UIScreen mainScreen].bounds;
         self.hidden = YES;
         self.style = SDPayViewNomal;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hiddenOverDelay) name:PaySuccessAnimationNotifaction object:nil];
+        // 注册 - 接受成功支付消息后 隐藏整个支付工具View
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(paySuccessHiddenPayToolView) name:PaySuccessAnimationNotifaction object:nil];
     }return self;
 }
 
@@ -184,7 +185,7 @@
         [SDPayAnimtion payToolListViewAnimation:self.payToolListView frame:SDPayToolListViewWillLoadFrame showState:NO];
         
         //支付密码视图归位 - 且删除
-        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewRightWillLoadFrame showState:NO];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewWillLoadFrame showState:NO];
         
         //执行隐藏
         [self performSelector:@selector(hiddenOverNow) withObject:self afterDelay:durationTime*1.2f];
@@ -192,7 +193,7 @@
     
     if (_style == SDPayViewOnlyPwd) {
         [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:NO];
-        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDownWillLoadFrame showState:NO];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDidDisapper showState:NO];
     }
 }
 
@@ -206,13 +207,27 @@
 }
 
 
+/**
+ paySuccessHiddenPayView : 支付成功后接受到通知,关闭整个支付工具View
+ */
+- (void)paySuccessHiddenPayToolView{
+    //1. 订单页删除
+    [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewRightDidDisapper showState:NO];
+    //2. 列表页删除
+    [SDPayAnimtion payToolListViewAnimation:self.payToolListView frame:SDPayToolListViewDidDisapper showState:NO];
+    //3. 密码页删除
+    [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDidDisapper showState:NO];
+    //4. 透明背景删除
+    [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:NO];
+    
+}
 
 
 #pragma - mark =================各子视图代理集=================
 /*
  各个子视图每次加载,自己的代理回调负责对自己的删除
  */
-#pragma - mark SDPayToolOrderViewDelegate
+#pragma - mark - SDPayToolOrderViewDelegate
 - (void)payToolOrderViewJumpToSDPayToolListView{
     [self addPayToolListView];
     [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewRightTranslationFrame showState:YES];
@@ -229,7 +244,7 @@
     [self hiddenOverNow];
 }
 
-#pragma - mark SDPayToolListViewDelegate
+#pragma - mark - SDPayToolListViewDelegate
 - (void)payToolListViewJumpBackToPayToolOrderView{
     [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
     [SDPayAnimtion payToolListViewAnimation:self.payToolListView frame:SDPayToolListViewWillLoadFrame showState:NO];
@@ -250,18 +265,17 @@
 }
 
 
-#pragma - mark SDPayToolPwdViewDelegate
+#pragma - mark - SDPayToolPwdViewDelegate
 - (void)payToolPwdViewjumpBackToPayToolOrderView{
     if (_style == SDPayViewNomal) {
         [SDPayAnimtion payToolOrderViewAnimation:self.payToolOrderView frame:SDPayToolOrderViewDidLoadFrame showState:YES];
-        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolListViewWillLoadFrame showState:NO];
+        [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewWillLoadFrame showState:NO];
     }
     if (_style == SDPayViewOnlyPwd) {
         [self hiddenOverDelay];
     }
-    
-   
 }
+
 - (void)payToolPwdForgetReturnPwdType:(NSString *)type{
     if ([_delegate respondsToSelector:@selector(payViewForgetPwd:)]) {
         [_delegate payViewForgetPwd:type];
@@ -269,6 +283,7 @@
 }
 - (void)payToolPwd:(NSString *)pwdStr paySuccessView:(SDPaySuccessAnimationView *)successView{
     if ([_delegate respondsToSelector:@selector(payViewPwd:paySuccessView:)]) {
+        
         [_delegate payViewPwd:pwdStr paySuccessView:successView];
     }
 }

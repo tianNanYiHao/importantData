@@ -49,7 +49,7 @@
 //    payView.delegate = self;
 //    payView.style = SDPayViewOnlyPwd;
 //    [self.view addSubview:payView];
-     
+    
      
     
     
