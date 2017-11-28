@@ -15,6 +15,7 @@
 		281729951FCCFD6D0084E633 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281729931FCCFD6D0084E633 /* LaunchScreen.storyboard */; };
 		281729A01FCCFD6D0084E633 /* coreLocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2817299F1FCCFD6D0084E633 /* coreLocationTests.m */; };
 		281729AB1FCCFD6D0084E633 /* coreLocationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 281729AA1FCCFD6D0084E633 /* coreLocationUITests.m */; };
+		28D28F171FCD453A00B3F00B /* SDLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D28F161FCD453A00B3F00B /* SDLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		281729A61FCCFD6D0084E633 /* coreLocationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = coreLocationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		281729AA1FCCFD6D0084E633 /* coreLocationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coreLocationUITests.m; sourceTree = "<group>"; };
 		281729AC1FCCFD6D0084E633 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D28F151FCD453A00B3F00B /* SDLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLocationManager.h; sourceTree = "<group>"; };
+		28D28F161FCD453A00B3F00B /* SDLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				281729891FCCFD6D0084E633 /* AppDelegate.m */,
 				2817298B1FCCFD6D0084E633 /* ViewController.h */,
 				2817298C1FCCFD6D0084E633 /* ViewController.m */,
+				28D28F151FCD453A00B3F00B /* SDLocationManager.h */,
+				28D28F161FCD453A00B3F00B /* SDLocationManager.m */,
 				2817298E1FCCFD6D0084E633 /* Main.storyboard */,
 				281729911FCCFD6D0084E633 /* Assets.xcassets */,
 				281729931FCCFD6D0084E633 /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				2817298D1FCCFD6D0084E633 /* ViewController.m in Sources */,
 				2817298A1FCCFD6D0084E633 /* AppDelegate.m in Sources */,
 				281729871FCCFD6D0084E633 /* main.m in Sources */,
+				28D28F171FCD453A00B3F00B /* SDLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +528,7 @@
 				281729B11FCCFD6D0084E633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		281729B21FCCFD6D0084E633 /* Build configuration list for PBXNativeTarget "coreLocationTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +537,7 @@
 				281729B41FCCFD6D0084E633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		281729B51FCCFD6D0084E633 /* Build configuration list for PBXNativeTarget "coreLocationUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +546,7 @@
 				281729B71FCCFD6D0084E633 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
