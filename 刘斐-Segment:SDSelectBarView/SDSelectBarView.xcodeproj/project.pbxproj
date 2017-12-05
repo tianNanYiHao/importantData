@@ -1,0 +1,551 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		287585C41FD5638700DACC8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585C31FD5638700DACC8E /* main.m */; };
+		287585C71FD5638700DACC8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585C61FD5638700DACC8E /* AppDelegate.m */; };
+		287585CA1FD5638700DACC8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585C91FD5638700DACC8E /* ViewController.m */; };
+		287585CD1FD5638700DACC8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287585CB1FD5638700DACC8E /* Main.storyboard */; };
+		287585CF1FD5638700DACC8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 287585CE1FD5638700DACC8E /* Assets.xcassets */; };
+		287585D21FD5638700DACC8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 287585D01FD5638700DACC8E /* LaunchScreen.storyboard */; };
+		287585DD1FD5638800DACC8E /* SDSelectBarViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585DC1FD5638800DACC8E /* SDSelectBarViewTests.m */; };
+		287585E81FD5638800DACC8E /* SDSelectBarViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585E71FD5638800DACC8E /* SDSelectBarViewUITests.m */; };
+		287585F71FD563AD00DACC8E /* SDSelectBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 287585F61FD563AD00DACC8E /* SDSelectBarView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		287585D91FD5638800DACC8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 287585B71FD5638700DACC8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 287585BE1FD5638700DACC8E;
+			remoteInfo = SDSelectBarView;
+		};
+		287585E41FD5638800DACC8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 287585B71FD5638700DACC8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 287585BE1FD5638700DACC8E;
+			remoteInfo = SDSelectBarView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		287585BF1FD5638700DACC8E /* SDSelectBarView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDSelectBarView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		287585C31FD5638700DACC8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		287585C51FD5638700DACC8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		287585C61FD5638700DACC8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		287585C81FD5638700DACC8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		287585C91FD5638700DACC8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		287585CC1FD5638700DACC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		287585CE1FD5638700DACC8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		287585D11FD5638700DACC8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		287585D31FD5638700DACC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287585D81FD5638800DACC8E /* SDSelectBarViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDSelectBarViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		287585DC1FD5638800DACC8E /* SDSelectBarViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSelectBarViewTests.m; sourceTree = "<group>"; };
+		287585DE1FD5638800DACC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287585E31FD5638800DACC8E /* SDSelectBarViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDSelectBarViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		287585E71FD5638800DACC8E /* SDSelectBarViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDSelectBarViewUITests.m; sourceTree = "<group>"; };
+		287585E91FD5638800DACC8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		287585F51FD563AD00DACC8E /* SDSelectBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDSelectBarView.h; sourceTree = "<group>"; };
+		287585F61FD563AD00DACC8E /* SDSelectBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDSelectBarView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		287585BC1FD5638700DACC8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585D51FD5638800DACC8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585E01FD5638800DACC8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		287585B61FD5638700DACC8E = {
+			isa = PBXGroup;
+			children = (
+				287585C11FD5638700DACC8E /* SDSelectBarView */,
+				287585DB1FD5638800DACC8E /* SDSelectBarViewTests */,
+				287585E61FD5638800DACC8E /* SDSelectBarViewUITests */,
+				287585C01FD5638700DACC8E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		287585C01FD5638700DACC8E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				287585BF1FD5638700DACC8E /* SDSelectBarView.app */,
+				287585D81FD5638800DACC8E /* SDSelectBarViewTests.xctest */,
+				287585E31FD5638800DACC8E /* SDSelectBarViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		287585C11FD5638700DACC8E /* SDSelectBarView */ = {
+			isa = PBXGroup;
+			children = (
+				287585C51FD5638700DACC8E /* AppDelegate.h */,
+				287585C61FD5638700DACC8E /* AppDelegate.m */,
+				287585C81FD5638700DACC8E /* ViewController.h */,
+				287585C91FD5638700DACC8E /* ViewController.m */,
+				287585CB1FD5638700DACC8E /* Main.storyboard */,
+				287585F51FD563AD00DACC8E /* SDSelectBarView.h */,
+				287585F61FD563AD00DACC8E /* SDSelectBarView.m */,
+				287585CE1FD5638700DACC8E /* Assets.xcassets */,
+				287585D01FD5638700DACC8E /* LaunchScreen.storyboard */,
+				287585D31FD5638700DACC8E /* Info.plist */,
+				287585C21FD5638700DACC8E /* Supporting Files */,
+			);
+			path = SDSelectBarView;
+			sourceTree = "<group>";
+		};
+		287585C21FD5638700DACC8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				287585C31FD5638700DACC8E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		287585DB1FD5638800DACC8E /* SDSelectBarViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				287585DC1FD5638800DACC8E /* SDSelectBarViewTests.m */,
+				287585DE1FD5638800DACC8E /* Info.plist */,
+			);
+			path = SDSelectBarViewTests;
+			sourceTree = "<group>";
+		};
+		287585E61FD5638800DACC8E /* SDSelectBarViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				287585E71FD5638800DACC8E /* SDSelectBarViewUITests.m */,
+				287585E91FD5638800DACC8E /* Info.plist */,
+			);
+			path = SDSelectBarViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		287585BE1FD5638700DACC8E /* SDSelectBarView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 287585EC1FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarView" */;
+			buildPhases = (
+				287585BB1FD5638700DACC8E /* Sources */,
+				287585BC1FD5638700DACC8E /* Frameworks */,
+				287585BD1FD5638700DACC8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDSelectBarView;
+			productName = SDSelectBarView;
+			productReference = 287585BF1FD5638700DACC8E /* SDSelectBarView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		287585D71FD5638800DACC8E /* SDSelectBarViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 287585EF1FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarViewTests" */;
+			buildPhases = (
+				287585D41FD5638800DACC8E /* Sources */,
+				287585D51FD5638800DACC8E /* Frameworks */,
+				287585D61FD5638800DACC8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				287585DA1FD5638800DACC8E /* PBXTargetDependency */,
+			);
+			name = SDSelectBarViewTests;
+			productName = SDSelectBarViewTests;
+			productReference = 287585D81FD5638800DACC8E /* SDSelectBarViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		287585E21FD5638800DACC8E /* SDSelectBarViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 287585F21FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarViewUITests" */;
+			buildPhases = (
+				287585DF1FD5638800DACC8E /* Sources */,
+				287585E01FD5638800DACC8E /* Frameworks */,
+				287585E11FD5638800DACC8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				287585E51FD5638800DACC8E /* PBXTargetDependency */,
+			);
+			name = SDSelectBarViewUITests;
+			productName = SDSelectBarViewUITests;
+			productReference = 287585E31FD5638800DACC8E /* SDSelectBarViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		287585B71FD5638700DACC8E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = tianNanYiHao;
+				TargetAttributes = {
+					287585BE1FD5638700DACC8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Manual;
+					};
+					287585D71FD5638800DACC8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 287585BE1FD5638700DACC8E;
+					};
+					287585E21FD5638800DACC8E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 287585BE1FD5638700DACC8E;
+					};
+				};
+			};
+			buildConfigurationList = 287585BA1FD5638700DACC8E /* Build configuration list for PBXProject "SDSelectBarView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 287585B61FD5638700DACC8E;
+			productRefGroup = 287585C01FD5638700DACC8E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				287585BE1FD5638700DACC8E /* SDSelectBarView */,
+				287585D71FD5638800DACC8E /* SDSelectBarViewTests */,
+				287585E21FD5638800DACC8E /* SDSelectBarViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		287585BD1FD5638700DACC8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287585D21FD5638700DACC8E /* LaunchScreen.storyboard in Resources */,
+				287585CF1FD5638700DACC8E /* Assets.xcassets in Resources */,
+				287585CD1FD5638700DACC8E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585D61FD5638800DACC8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585E11FD5638800DACC8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		287585BB1FD5638700DACC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287585CA1FD5638700DACC8E /* ViewController.m in Sources */,
+				287585C71FD5638700DACC8E /* AppDelegate.m in Sources */,
+				287585C41FD5638700DACC8E /* main.m in Sources */,
+				287585F71FD563AD00DACC8E /* SDSelectBarView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585D41FD5638800DACC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287585DD1FD5638800DACC8E /* SDSelectBarViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		287585DF1FD5638800DACC8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				287585E81FD5638800DACC8E /* SDSelectBarViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		287585DA1FD5638800DACC8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 287585BE1FD5638700DACC8E /* SDSelectBarView */;
+			targetProxy = 287585D91FD5638800DACC8E /* PBXContainerItemProxy */;
+		};
+		287585E51FD5638800DACC8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 287585BE1FD5638700DACC8E /* SDSelectBarView */;
+			targetProxy = 287585E41FD5638800DACC8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		287585CB1FD5638700DACC8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287585CC1FD5638700DACC8E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		287585D01FD5638700DACC8E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				287585D11FD5638700DACC8E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		287585EA1FD5638800DACC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		287585EB1FD5638800DACC8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		287585ED1FD5638800DACC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2b9b8756-3e79-4606-b93a-cc50028a0519";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Debug;
+		};
+		287585EE1FD5638800DACC8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2b9b8756-3e79-4606-b93a-cc50028a0519";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+			};
+			name = Release;
+		};
+		287585F01FD5638800DACC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDSelectBarView.app/SDSelectBarView";
+			};
+			name = Debug;
+		};
+		287585F11FD5638800DACC8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDSelectBarView.app/SDSelectBarView";
+			};
+			name = Release;
+		};
+		287585F31FD5638800DACC8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDSelectBarView;
+			};
+			name = Debug;
+		};
+		287585F41FD5638800DACC8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
+				INFOPLIST_FILE = SDSelectBarViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sand.SDSelectBarViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SDSelectBarView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		287585BA1FD5638700DACC8E /* Build configuration list for PBXProject "SDSelectBarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287585EA1FD5638800DACC8E /* Debug */,
+				287585EB1FD5638800DACC8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		287585EC1FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287585ED1FD5638800DACC8E /* Debug */,
+				287585EE1FD5638800DACC8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		287585EF1FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287585F01FD5638800DACC8E /* Debug */,
+				287585F11FD5638800DACC8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		287585F21FD5638800DACC8E /* Build configuration list for PBXNativeTarget "SDSelectBarViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				287585F31FD5638800DACC8E /* Debug */,
+				287585F41FD5638800DACC8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 287585B71FD5638700DACC8E /* Project object */;
+}
