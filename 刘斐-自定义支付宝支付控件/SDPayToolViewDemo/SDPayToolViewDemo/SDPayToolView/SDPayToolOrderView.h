@@ -30,7 +30,7 @@
 
 @interface SDPayToolOrderView : SDPayToolBaseView
 
-@property (nonatomic, assign)id<SDPayToolOrderViewDelegate> delegate;
+@property (nonatomic, weak)id<SDPayToolOrderViewDelegate> delegate;
 
 
 /**

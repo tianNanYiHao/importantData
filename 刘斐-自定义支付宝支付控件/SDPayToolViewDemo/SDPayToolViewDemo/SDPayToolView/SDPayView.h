@@ -11,14 +11,30 @@
 #import "SDPaySuccessAnimationView.h"
 
 
-typedef enum {
+//支付控件类型
+typedef NS_ENUM(NSInteger,SDPayViewStyle){
+    //常规模式
     SDPayViewNomal = 0,
+    //仅密码模式
     SDPayViewOnlyPwd
-}SDPayViewStyle;
+};
 
-
+//支付工具添加卡类型
+typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
+    //添加银行卡
+    SDPayView_ADDBANKCARD = 0,
+    //添加杉德卡
+    SDPayView_ADDSANDCARD
+};
 
 @protocol SDPayViewDelegate <NSObject>
+
+/**
+ 返回处理后的默认支付工具
+
+ @param defulePayToolDic 默认支付工具
+ */
+- (void)payViewReturnDefulePayToolDic:(NSMutableDictionary*)defulePayToolDic;
 
 /**
  返回所选的支付工具
@@ -26,6 +42,14 @@ typedef enum {
  @param selectPayToolDict 列表所选择的支付工具
  */
 - (void)payViewSelectPayToolDic:(NSMutableDictionary*)selectPayToolDict;
+
+
+/**
+ 获取支付工具异常
+
+ @param errorInfo 异常信息
+ */
+- (void)payViewPayToolsError:(NSString*)errorInfo;
 
 /**
  返回支付密码
@@ -51,6 +75,11 @@ typedef enum {
  */
 - (void)payViewAddPayToolCard:(NSString*)type;
 
+/**
+ 点击关闭按钮
+ */
+- (void)payViewClickCloseBtn;
+
 @end
 
 
@@ -58,7 +87,7 @@ typedef enum {
 
 @interface SDPayView : UIView
 
-@property (nonatomic, assign)id<SDPayViewDelegate>delegate;
+@property (nonatomic, weak)id<SDPayViewDelegate>delegate;
 
 
 /**
@@ -66,7 +95,12 @@ typedef enum {
  */
 @property (nonatomic, assign) SDPayViewStyle style;
 
+/**
+ 支付工具添加卡类型 - 添加银行卡/杉德卡
+ */
+@property (nonatomic, assign) SDPayViewAddCardType addCardType;
 
+#pragma mark - 类构造方法
 
 /**
  类方法-构造:杉德支付工具实例
@@ -76,16 +110,28 @@ typedef enum {
 + (instancetype)getPayView;
 
 
+#pragma mark - SDPayViewNomal模式下方法
 /**
- 统一配置支付信息
+ 设置支付工具数组
 
- @param payArray 支付工具(包含三个部分:1,可用支付工具 2,添加cell 3,不可用支付工具)
- @param moneyStr 金额信息
- @param orderTypeStr 订单信息
+ @param payArray 支付工具数组
  */
-- (void)setPayInfo:(NSArray*)payArray moneyStr:(NSString*)moneyStr orderTypeStr:(NSString*)orderTypeStr;
+- (void)setPayTools:(NSArray*)payTools;
+
+/**
+ 设置支付信息
+
+ @param orderInfo 订单信息
+ */
+- (void)setPayInfo:(NSArray*)orderInfo;
+
+/**
+ 支付工具归位:(从支付密码页返回订单页)
+ */
+- (void)originPayTool;
 
 
+#pragma mark - 共用方法
 
 /**
  显示支付工具
@@ -97,5 +143,7 @@ typedef enum {
  隐藏支付工具
  */
 - (void)hidPayTool;
+
+
 
 @end

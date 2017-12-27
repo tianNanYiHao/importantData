@@ -17,15 +17,18 @@
 #import "SDPaySuccessAnimationView.h"
 
 
+#define AdapterWfloat(f) ((f/375.f)*[UIScreen mainScreen].bounds.size.width)
+#define AdapterHfloat(f) ((f/667.f)*[UIScreen mainScreen].bounds.size.height)
+
 
 //颜色设置
 #define Rgba(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
 #define lineColor Rgba(230,230,230)
-#define payBtnColor Rgba(65,131,215)
+#define payBtnColor Rgba(53,139,239)
 #define textGrayColor Rgba(140,144,157)
 #define textBlackColor Rgba(28,28,28)
 #define forgetPwdTextColor Rgba(34, 123, 207)
-#define paySuccessAnimationViewCricleColor Rgba(65,131,215)
+#define paySuccessAnimationViewCricleColor Rgba(0,173,193)
 
 #define pwdBackGroundColor Rgba(225, 225, 225)
 #define pwdBorderColor Rgba(64,101,180)

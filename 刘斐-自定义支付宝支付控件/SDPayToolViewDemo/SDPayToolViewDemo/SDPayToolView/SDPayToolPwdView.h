@@ -36,7 +36,7 @@
 
 @interface SDPayToolPwdView : SDPayToolBaseView
 
-@property (nonatomic, assign)id<SDPayToolPwdViewDelegate>delegate;
+@property (nonatomic, weak)id<SDPayToolPwdViewDelegate>delegate;
 
 
 /**

@@ -21,7 +21,7 @@
 
 @interface SDPayKeyBoardView : UIView
 
-@property (nonatomic, assign)id<SDPayKeyBoardViewDelegate>delegate;
+@property (nonatomic, weak)id<SDPayKeyBoardViewDelegate>delegate;
 
 
 /**

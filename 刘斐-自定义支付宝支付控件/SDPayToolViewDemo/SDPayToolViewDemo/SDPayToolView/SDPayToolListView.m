@@ -29,7 +29,7 @@
 
 - (void)setSuperView{
     //super View Set
-    self.midTitleLab.text = @"请选择付款方式";
+    self.midTitleLab.text = @"请选择收付款方式";
     [self.leftBtn setImage:[UIImage imageNamed:@"payGoBack"] forState:UIControlStateNormal];
     [self.leftBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
 }
@@ -198,17 +198,12 @@
             stateImageView.frame = CGRectZero;
             
         } else {
-            //3.不可用支付工具部分
-            if ([[dic objectForKey:@"available"] boolValue] == NO|| [@"0" isEqualToString:[NSString stringWithFormat:@"%@",[[dic objectForKey:@"account"] objectForKey:@"useableBalance"]]]) {
+            //3.不可用支付工具部分 (代付凭证模式不作为支付工具列表展示项)
+            if ([[dic objectForKey:@"available"] boolValue] == NO || [[dic objectForKey:@"type"] isEqualToString:@"1014"]) {
                 itemBtn.userInteractionEnabled = NO;
-                
-                if ([[dic objectForKey:@"available"] boolValue] == NO) {
-                    bankLimitLabel.text = @"暂不支持当前交易";
-                }else if([@"0" isEqualToString:[[dic objectForKey:@"account"] objectForKey:@"useableBalance"]]){
-                    bankLimitLabel.text = [NSString stringWithFormat:@"可用余额%.2f元 (暂不支持当前交易)",userBalanceFloat];;
-                }
+                iconImageView.image = [UIImage imageNamed:@"notPay"];
+                bankLimitLabel.text = @"暂不支持当前交易";
                 bankNameLabel.textColor = [UIColor lightGrayColor];
-                
                 stateImageView.hidden = YES;
             }
         }
@@ -343,6 +338,9 @@
         NSArray *bankInfoArr = [self getBankIconInfo:title];
         return [bankInfoArr[0] accessibilityIdentifier];
     }
+    else if ([@"1014" isEqualToString:type]) {
+        return @"list_sand_logo";
+    }
     else if([PAYTOOL_PAYPASS isEqualToString:type] || [PAYTOOL_ACCPASS isEqualToString:type]){ //添加卡按钮
         if ([imaUrl isEqualToString:@"list_yinlian_AddCard"]) {
             return @"list_yinlian_AddCard";
@@ -412,6 +410,9 @@
     }
     else if ([@"1012" isEqualToString:type]) {
         return @"网银贷记卡";
+    }
+    else if ([@"1014" isEqualToString:type]) {
+        return @"代付凭证";
     }
     else{
         return @"   ";

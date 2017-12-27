@@ -129,7 +129,7 @@
     
     if (clockWise) {
         startAngle = radian(100);
-        endAngle = radian(190);
+        endAngle = radian(360);
     }
     
     //默认色彩
@@ -292,7 +292,7 @@
         rotaAnimation.fromValue = @(radian(0));
         rotaAnimation.toValue = @(radian(360*successTime));
         rotaAnimation.repeatCount = MAXFLOAT;
-        rotaAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        rotaAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         [circleAngleLayer addAnimation:rotaAnimation forKey:@"CircleAngleRotate"];
         
         //延时执行弧度圆收尾动画 (successTime 确保弧度圆旋转位置不偏差)

@@ -39,6 +39,7 @@
     [self.leftBtn setImage:[UIImage imageNamed:@"payGoBack"] forState:UIControlStateNormal];
     [self.leftBtn addTarget:self action:@selector(goBack) forControlEvents:UIControlEventTouchUpInside];
 }
+
 - (void)goBack{
     
     if ([_delegate respondsToSelector:@selector(payToolPwdViewjumpBackToPayToolOrderView)]) {
@@ -184,7 +185,7 @@
     CGFloat successAnimViewOY = CGRectGetMaxY(payPwdPayBaseView.frame)+SIDE_LEFT_RIGHT;
     
     successAnimationView = [SDPaySuccessAnimationView createCircleSuccessView:CGRectMake(successAnimViewOX, successAnimViewOY, successAnimViewW, successAnimViewW)];
-    successAnimationView.circleLineWidth = 9.f;
+    successAnimationView.circleLineWidth = 5.f;
     successAnimationView.circleBackGroundColor = [UIColor whiteColor];
     successAnimationView.circleLineColor = paySuccessAnimationViewCricleColor;
     successAnimationView.lineSuccessColor = paySuccessAnimationViewCricleColor;

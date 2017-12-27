@@ -37,7 +37,7 @@
 
 
 @interface SDPayToolListView : SDPayToolBaseView
-@property (nonatomic, assign) id<SDPayToolListViewDelegate> delegate;
+@property (nonatomic, weak) id<SDPayToolListViewDelegate> delegate;
 
 
 /**

@@ -30,7 +30,7 @@
 
 - (void)setSuperView{
     //super View Set
-    self.midTitleLab.text = @"确认付款";
+    self.midTitleLab.text = @"订单确认";
     [self.leftBtn addTarget:self action:@selector(closedPayView) forControlEvents:UIControlEventTouchUpInside];
 }
 
