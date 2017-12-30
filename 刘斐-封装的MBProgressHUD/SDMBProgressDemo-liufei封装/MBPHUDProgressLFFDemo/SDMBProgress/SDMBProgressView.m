@@ -11,7 +11,10 @@
 #import "SDActivityView.h"
 
 
-#define bezlViewWH 64
+#define bezlViewWH 30
+
+//转圈一直转啊转的 超时时间
+#define durationTimeOut  45.f
 
 @interface  SDMBProgressView(){
     
@@ -114,7 +117,7 @@
     [HUD hideAnimated:YES afterDelay:time];
     
     //2.延迟执行删除 SDMBProgressView实例
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(time*NSEC_PER_SEC));
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)((time+0.3)*NSEC_PER_SEC));
     dispatch_after(delayTime, dispatch_get_main_queue(), ^{
         //2.删除
         [self removeFromSuperview];
@@ -128,10 +131,14 @@
  */
 -(void)hidden{
     
-    [HUD hideAnimated:YES];
-    [self removeFromSuperview];
- 
-    
+    [HUD hideAnimated:YES afterDelay:0.2];
+     [self removeFromSuperview];
+    //2.延迟执行删除 SDMBProgressView实例(为动画预留时间)
+    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3*NSEC_PER_SEC));
+    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+        //2.删除
+        [self removeFromSuperview];
+    });
 }
 
 
@@ -144,24 +151,24 @@
         
         if (type == SDMBProgressViewOnlyLoading) {
             lableText = @"正在加载中...";
-            [self addMBProgressHUD:MBProgressHUDModeIndeterminate animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:NO delayTime:0];
+            [self addMBProgressHUD:MBProgressHUDModeIndeterminate animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:NO delayTime:durationTimeOut];
         }
         if (type == SDMBProgressViewOnlyLoadingIMG) {
             lableText = @"正在加载中...";
-            SDActivityView *activityV = [[SDActivityView alloc]initWithImage:@"SDMBPLoad" view:self rectWH:bezlViewWH];
-            [self addMBProgressHUD:MBProgressHUDModeCustomView animationType:MBProgressHUDAnimationZoomOut customView:(UIImageView*)activityV lableText:lableText detailsLabelText:nil hid:NO delayTime:0];
+            SDActivityView *activityV = [[SDActivityView alloc]initWithImage:@"SDMBPRotaion" view:self rectWH:bezlViewWH];
+            [self addMBProgressHUD:MBProgressHUDModeCustomView animationType:MBProgressHUDAnimationZoomOut customView:(UIImageView*)activityV lableText:lableText detailsLabelText:nil hid:NO delayTime:durationTimeOut];
         }
         if (type == SDMBProgressViewLoadError) {
-            lableText = @"网络连接异常";
-            [self addMBProgressHUD:MBProgressHUDModeText animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:YES delayTime:1.5f];
+            lableText = @"信息加载失败";
+            [self addMBProgressHUD:MBProgressHUDModeText animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:YES delayTime:2.0f];
         }
         if (type == SDMBProgressViewLoadErrorIMG) {
-            lableText = @"网络连接异常";
+            lableText = @"网络请求失败";
             UIImageView *customview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SDMBPerror"]];
-            [self addMBProgressHUD:MBProgressHUDModeCustomView animationType:MBProgressHUDAnimationZoomOut customView:customview lableText:lableText detailsLabelText:nil hid:YES delayTime:1.5f];
+            [self addMBProgressHUD:MBProgressHUDModeCustomView animationType:MBProgressHUDAnimationZoomOut customView:customview lableText:lableText detailsLabelText:nil hid:YES delayTime:2.0f];
         }
         if (type == SDMBProgressViewNormal) {
-            [self addMBProgressHUD:MBProgressHUDModeText animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:YES delayTime:1.5f];
+            [self addMBProgressHUD:MBProgressHUDModeText animationType:MBProgressHUDAnimationZoomOut customView:nil lableText:lableText detailsLabelText:nil hid:YES delayTime:2.0f];
         }
         
     }return self;
@@ -197,10 +204,10 @@
     
     //4.设置backgroundView(整个屏幕)背景色
     HUD.backgroundView.backgroundColor = [UIColor lightGrayColor];
-    HUD.backgroundView.alpha = 0.3f;
+    HUD.backgroundView.alpha = 0.1f;
     
     //5.设置 bezelView(中间方块)
-    HUD.bezelView.backgroundColor = [UIColor darkGrayColor];
+    HUD.bezelView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.7f];
     
     //6.设置边距
     HUD.margin = 15.0f;
