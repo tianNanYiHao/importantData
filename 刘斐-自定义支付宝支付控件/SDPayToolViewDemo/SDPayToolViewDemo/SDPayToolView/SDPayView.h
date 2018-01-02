@@ -125,25 +125,30 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
  */
 - (void)setPayInfo:(NSArray*)orderInfo;
 
-/**
- 支付工具归位:(从支付密码页返回订单页)
- */
-- (void)originPayTool;
 
-
-#pragma mark - 共用方法
-
-/**
- 显示支付工具
- */
+#pragma mark 外部调用 - 弹出支付工具
+//外部调用方法显示
 - (void)showPayTool;
 
+#pragma mark 外部调用 - 复位到待支付页并删除
+//外部调用 - 复位到待支付页并删除
+- (void)resetPayToolHidden;
 
+#pragma mark 外部调用 - 复位到待支付页_支付失败调用
 /**
- 隐藏支付工具
+ 外部调用复位方法_支付失败调用
+ (方法调用背景:密码输入后,接口返回任何错误信息;)
+ (调用此方法,让PayToolPwdView返回到PayToolOrderView)
  */
-- (void)hidPayTool;
+- (void)payPwdResetToPayOrderView;
 
-
+#pragma mark 外部调用 - 隐藏支付密码页_支付成功/忘记密码调用
+/**
+ 外部调用隐藏方法
+ (方法调用背景:点击忘记密码,支付控件整体隐藏 - 跳转支付密码设置页)
+ (方法调用背景:支付成功,动画类发送成功通知 - 隐藏密码页)
+ (调用此方法,让PayToolPwd页面/PayToolOrder页面均下移隐藏且删除)
+ */
+- (void)hidPayToolInPayPwdView;
 
 @end

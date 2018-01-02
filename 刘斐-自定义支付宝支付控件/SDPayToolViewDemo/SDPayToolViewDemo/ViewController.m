@@ -73,32 +73,34 @@
     //1.支付动画开始
     [successView animationStart];
 
-    if (YES) {
+    if (!YES) {
         //支付成功
         [successView animationSuccess];
     }
     else{
         //支付失败
-        //返回支付订单页
-        [payView originPayTool];
-
-        // or
-
-        //支付控件消失
-        [payView hidPayTool];
+        //支付控件复位 - 不删除
+        [payView payPwdResetToPayOrderView];
+        
+        //支付控件复位 - 后删除
+//        [payView resetPayToolHidden];
     }
 
 }
 
 - (void)payViewForgetPwd:(NSString *)type{
     
-    ForgetPwdViewController *f = [[ForgetPwdViewController alloc] init];
-    
-    f.titles = [NSString stringWithFormat:@"%@忘记密码?",type];
-    
-    [self.navigationController pushViewController:f animated:YES];
-    
-    NSLog(@"点击了忘记密码 密码类型: %@",type);
+    //1.
+    //点击忘记密码 - 隐藏支付控件
+    [payView hidPayToolInPayPwdView];
+//
+//    ForgetPwdViewController *f = [[ForgetPwdViewController alloc] init];
+//
+//    f.titles = [NSString stringWithFormat:@"%@忘记密码?",type];
+//
+//    [self.navigationController pushViewController:f animated:YES];
+//
+//    NSLog(@"点击了忘记密码 密码类型: %@",type);
     
 }
 

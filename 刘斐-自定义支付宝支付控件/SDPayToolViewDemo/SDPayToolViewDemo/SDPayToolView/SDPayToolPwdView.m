@@ -230,7 +230,7 @@
     if ([_delegate respondsToSelector:@selector(payToolPwdForgetReturnPwdType:)]) {
         //1.页面回退
         if ([_delegate respondsToSelector:@selector(payToolPwdViewjumpBackToPayToolOrderView)]) {
-            [_delegate payToolPwdViewjumpBackToPayToolOrderView];
+//            [_delegate payToolPwdViewjumpBackToPayToolOrderView];
         }
         
         //2.代理回调
