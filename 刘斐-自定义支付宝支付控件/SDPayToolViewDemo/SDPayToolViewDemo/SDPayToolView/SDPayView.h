@@ -29,6 +29,8 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
 
 @protocol SDPayViewDelegate <NSObject>
 
+#pragma mark -可选方法
+@optional
 /**
  返回处理后的默认支付工具
 
@@ -52,6 +54,18 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
 - (void)payViewPayToolsError:(NSString*)errorInfo;
 
 /**
+ 添加新支付工具卡
+ 
+ @param type 支付工具类型(paypass/accpass)
+ */
+- (void)payViewAddPayToolCard:(NSString*)type;
+
+/**
+ 点击关闭按钮
+ */
+- (void)payViewClickCloseBtn;
+
+/**
  返回支付密码
  successView负责成功动画的开始(转圈动画) / 成功(打钩动画) / 失败(失败动画)
  
@@ -68,17 +82,6 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
 - (void)payViewForgetPwd:(NSString*)type;
 
 
-/**
- 添加新支付工具卡
- 
- @param type 支付工具类型(paypass/accpass)
- */
-- (void)payViewAddPayToolCard:(NSString*)type;
-
-/**
- 点击关闭按钮
- */
-- (void)payViewClickCloseBtn;
 
 @end
 
