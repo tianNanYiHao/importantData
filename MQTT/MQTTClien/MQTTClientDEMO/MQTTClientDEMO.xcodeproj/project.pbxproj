@@ -252,8 +252,8 @@
 				TargetAttributes = {
 					28435FC41EB1CEF100250F24 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5W6GX84DS4;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = CYP2Q7U7L3;
+						ProvisioningStyle = Manual;
 					};
 					28435FDD1EB1CEF100250F24 = {
 						CreatedOnToolsVersion = 8.1;
@@ -519,12 +519,15 @@
 			baseConfigurationReference = C31AF7406E971D58B435B631 /* Pods-MQTTClientDEMO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5W6GX84DS4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				INFOPLIST_FILE = MQTTClientDEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ba030a12-99c3-466f-8e38-038dfbd73c8c";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
 			};
 			name = Debug;
 		};
@@ -533,12 +536,15 @@
 			baseConfigurationReference = 3FF804323021944370BEF4F4 /* Pods-MQTTClientDEMO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5W6GX84DS4;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = CYP2Q7U7L3;
 				INFOPLIST_FILE = MQTTClientDEMO/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sand.MQTTClientDEMO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "ba030a12-99c3-466f-8e38-038dfbd73c8c";
+				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
 			};
 			name = Release;
 		};

@@ -14,8 +14,8 @@
 
 #import "MQTTClient.h"
 
-#define kMQTTServerHost @"172.28.250.63"
-#define kMQTTServerPort 31883
+#define kMQTTServerHost @"172.28.247.111"
+#define kMQTTServerPort 61613
 #define kMQTTServerName @"testuser"
 #define kMQTTServerPasswd @"0d6be69b264717f2dd33652e212b173104b4a647b7c11ae72e9885f11cd312fb"
 
