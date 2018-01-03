@@ -197,16 +197,21 @@
 //根据支付类型决定标题展示
 - (void)setSelectpayToolDic:(NSDictionary *)selectpayToolDic{
     _selectpayToolDic = selectpayToolDic;
-    NSDictionary *payToolsDic = [[_selectpayToolDic objectForKey:@"authTools"] firstObject];
-    if (payToolsDic != nil) {
-        type = [payToolsDic objectForKey:@"type"];
-    }else{
-        type = [_selectpayToolDic objectForKey:@"type"];
+    NSDictionary *authToolsDic = [[_selectpayToolDic objectForKey:@"authTools"] firstObject];
+    
+    if (authToolsDic != nil) {
+        type = [authToolsDic objectForKey:@"type"];
+    }
+    //若 authTools 为空,则当前业务为提现/??/??
+    else{
+        type = @"paypass";
     }
     if ([type isEqualToString:@"paypass"]) {
         self.midTitleLab.text = @"请输入支付密码";
     }else if ([type isEqualToString:@"accpass"]){
         self.midTitleLab.text = @"请输入主账户密码";
+    }else{
+        self.midTitleLab.text = @"请输入支付密码";
     }
 }
 
@@ -235,10 +240,14 @@
         
         //2.代理回调
         if ([type isEqualToString:@"accpass"]) {
-            [_delegate payToolPwdForgetReturnPwdType:PAYTOOL_ACCPASS];
+            if ([_delegate respondsToSelector:@selector(payToolPwdForgetReturnPwdType:)]) {
+                [_delegate payToolPwdForgetReturnPwdType:PAYTOOL_ACCPASS];
+            }
         }
         if ([type isEqualToString:@"paypass"]) {
-            [_delegate payToolPwdForgetReturnPwdType:PAYTOOL_PAYPASS];
+            if ([_delegate respondsToSelector:@selector(payToolPwdForgetReturnPwdType:)]) {
+                [_delegate payToolPwdForgetReturnPwdType:PAYTOOL_PAYPASS];
+            }
         }
     }
 }
