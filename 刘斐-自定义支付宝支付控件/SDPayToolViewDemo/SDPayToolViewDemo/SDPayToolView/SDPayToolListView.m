@@ -104,16 +104,24 @@
         
         //StepTwo - UI属性赋值
         NSDictionary *dic = payListArray[i];
-        CGFloat limitFloat = 0;
-        CGFloat userBalanceFloat = 0;
+        NSString *userBalanceStr = @"0.00";
         
+        //获取支付工具类型
         NSString *type = [dic objectForKey:@"type"];
+        //获取支付工具名称
         NSString *title = [dic objectForKey:@"title"];
-        
-        //获取limit
+        //获取支付工具余额 - 更具支付工具类型
         if (!([type isEqualToString:PAYTOOL_PAYPASS] || [type isEqualToString:PAYTOOL_ACCPASS])) {
-            limitFloat = [self limitInfo:[dic objectForKey:@"limit"]]/100;
-            userBalanceFloat = [[[dic objectForKey:@"account"] objectForKey:@"useableBalance"] floatValue]/100;
+            NSString *fenStr = [[dic objectForKey:@"account"] objectForKey:@"useableBalance"];
+            NSInteger fenInteger = [fenStr integerValue];
+            if (fenInteger == 0) {
+                userBalanceStr = @"0.00";
+            }
+            else{
+                NSDecimalNumber *yuanDecimalNumber = [[NSDecimalNumber alloc] initWithMantissa:fenInteger exponent:-2 isNegative:NO];
+                NSString *yuanStr = [NSString stringWithFormat:@"%@",yuanDecimalNumber];
+                userBalanceStr = yuanStr;
+            }
         }
         
         //1.2 Icon图片
@@ -128,7 +136,7 @@
         bankNameLabel.text = [NSString stringWithFormat:@"%@(%@)",title,lastfournumber];
         
         //3.2 limitLab文字
-         bankLimitLabel.text = [SDPayToolListView getbankLimitLabelText:type userblance:userBalanceFloat];
+         bankLimitLabel.text = [SDPayToolListView getbankLimitLabelText:type userblance:userBalanceStr];
         
         //4.2 状态img图片
         
@@ -263,35 +271,6 @@
 }
 
 #pragma - mark ================CommFunc==============
-/**
- limit域最大限额
-
- */
--(CGFloat)limitInfo:(NSDictionary*)limitDic{
-    
-    //单月最高
-    NSString *month = [limitDic objectForKey:@"month"];
-    
-    //单月可用
-    NSString *monthRemain = [limitDic objectForKey:@"monthRemain"];
-    CGFloat monthRemainFloat = [monthRemain floatValue];
-    //单日最高
-    NSString *day = [limitDic objectForKey:@"day"];
-    
-    //单日可用
-    NSString *dayRemain = [limitDic objectForKey:@"dayRemain"];
-    CGFloat dayRemainFloat = [dayRemain floatValue];
-    
-    //单笔
-    NSString *single = [limitDic objectForKey:@"single"];
-    CGFloat singleFloat = [single floatValue];
-    
-    monthRemainFloat = monthRemainFloat<dayRemainFloat?monthRemainFloat:dayRemainFloat;
-    monthRemainFloat = monthRemainFloat<singleFloat?monthRemainFloat:singleFloat;
-    return monthRemainFloat;
-}
-
-
 #pragma mark - 获取paylist列表icon
 + (NSString *)getIconImageName:(NSString*)type title:(NSString*)title imaUrl:(NSString*)imaUrl{
     if ([@"1001" isEqualToString:type]){
@@ -341,7 +320,11 @@
     else if ([@"1014" isEqualToString:type]) {
         return @"list_sand_logo";
     }
-    else if([PAYTOOL_PAYPASS isEqualToString:type] || [PAYTOOL_ACCPASS isEqualToString:type]){ //添加卡按钮
+    else if([@"1015" isEqualToString:type]){
+        return @"list_sand_logo";
+    }
+    //添加卡按钮
+    else if([PAYTOOL_PAYPASS isEqualToString:type] || [PAYTOOL_ACCPASS isEqualToString:type]){
         if ([imaUrl isEqualToString:@"list_yinlian_AddCard"]) {
             return @"list_yinlian_AddCard";
         }else if ([imaUrl isEqualToString:@"list_sand_AddCard"]){
@@ -368,13 +351,16 @@
             [iconImage setAccessibilityIdentifier:bankImageNameArray[i]];
         }
     }
-    arrayInfo = @[iconImage];
+    if (iconImage) {
+        arrayInfo = @[iconImage];
+    }else{
+        arrayInfo = @[[UIImage imageNamed:@"qvip_pay_imageholder"]];
+    }
     return arrayInfo;
-    
 }
 
 #pragma mark - 获取payList列表不同支付工具描述
-+ (NSString *)getbankLimitLabelText:(NSString*)type userblance:(CGFloat)userBalanceFloat{
++ (NSString *)getbankLimitLabelText:(NSString*)type userblance:(NSString*)userBalanceStr{
     if ([@"1001" isEqualToString:type]){
         return @"快捷借记卡";
     }
@@ -382,16 +368,16 @@
         return @"快捷贷记卡";
     }
     else if ([@"1003" isEqualToString:type]) {
-        return [NSString stringWithFormat:@"可用余额%.2f元",userBalanceFloat];;
+        return [NSString stringWithFormat:@"可用余额%@元",userBalanceStr];
     }
     else if ([@"1004" isEqualToString:type]) {
-        return [NSString stringWithFormat:@"可用余额%.2f元",userBalanceFloat];;
+        return [NSString stringWithFormat:@"可用余额%@元",userBalanceStr];
     }
     else if ([@"1005" isEqualToString:type]) {
-        return [NSString stringWithFormat:@"可用余额%.2f元",userBalanceFloat];;
+        return [NSString stringWithFormat:@"可用余额%@元",userBalanceStr];
     }
     else if ([@"1006" isEqualToString:type]) {
-        return [NSString stringWithFormat:@"可用余额%.2f元",userBalanceFloat];;
+        return [NSString stringWithFormat:@"可用余额%@元",userBalanceStr];
     }
     else if ([@"1007" isEqualToString:type]) {
         return @"久璋宝杉德币账户";
