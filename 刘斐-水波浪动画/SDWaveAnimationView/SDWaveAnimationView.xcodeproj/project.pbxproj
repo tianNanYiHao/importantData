@@ -15,7 +15,7 @@
 		28574CFD1F5005950003090D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28574CFB1F5005950003090D /* LaunchScreen.storyboard */; };
 		28574D081F5005960003090D /* SDWaveAnimationViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28574D071F5005960003090D /* SDWaveAnimationViewTests.m */; };
 		28574D131F5005960003090D /* SDWaveAnimationViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28574D121F5005960003090D /* SDWaveAnimationViewUITests.m */; };
-		28574D221F5005BB0003090D /* SDWaveViwe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28574D211F5005BB0003090D /* SDWaveViwe.m */; };
+		28B86F53202412FA0068BFDF /* SDWaveViwe.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B86F52202412FA0068BFDF /* SDWaveViwe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +52,8 @@
 		28574D0E1F5005960003090D /* SDWaveAnimationViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDWaveAnimationViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28574D121F5005960003090D /* SDWaveAnimationViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDWaveAnimationViewUITests.m; sourceTree = "<group>"; };
 		28574D141F5005960003090D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28574D201F5005BB0003090D /* SDWaveViwe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaveViwe.h; sourceTree = "<group>"; };
-		28574D211F5005BB0003090D /* SDWaveViwe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaveViwe.m; sourceTree = "<group>"; };
+		28B86F51202412FA0068BFDF /* SDWaveViwe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaveViwe.h; sourceTree = "<group>"; };
+		28B86F52202412FA0068BFDF /* SDWaveViwe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaveViwe.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +104,11 @@
 		28574CEC1F5005950003090D /* SDWaveAnimationView */ = {
 			isa = PBXGroup;
 			children = (
+				28B86F50202412FA0068BFDF /* SDWaveAnimationView */,
 				28574CF01F5005950003090D /* AppDelegate.h */,
 				28574CF11F5005950003090D /* AppDelegate.m */,
 				28574CF31F5005950003090D /* ViewController.h */,
 				28574CF41F5005950003090D /* ViewController.m */,
-				28574D201F5005BB0003090D /* SDWaveViwe.h */,
-				28574D211F5005BB0003090D /* SDWaveViwe.m */,
 				28574CF61F5005950003090D /* Main.storyboard */,
 				28574CF91F5005950003090D /* Assets.xcassets */,
 				28574CFB1F5005950003090D /* LaunchScreen.storyboard */,
@@ -143,6 +142,15 @@
 				28574D141F5005960003090D /* Info.plist */,
 			);
 			path = SDWaveAnimationViewUITests;
+			sourceTree = "<group>";
+		};
+		28B86F50202412FA0068BFDF /* SDWaveAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				28B86F51202412FA0068BFDF /* SDWaveViwe.h */,
+				28B86F52202412FA0068BFDF /* SDWaveViwe.m */,
+			);
+			path = SDWaveAnimationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28574D221F5005BB0003090D /* SDWaveViwe.m in Sources */,
+				28B86F53202412FA0068BFDF /* SDWaveViwe.m in Sources */,
 				28574CF51F5005950003090D /* ViewController.m in Sources */,
 				28574CF21F5005950003090D /* AppDelegate.m in Sources */,
 				28574CEF1F5005950003090D /* main.m in Sources */,
@@ -524,6 +532,7 @@
 				28574D191F5005960003090D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28574D1A1F5005960003090D /* Build configuration list for PBXNativeTarget "SDWaveAnimationViewTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +541,7 @@
 				28574D1C1F5005960003090D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28574D1D1F5005960003090D /* Build configuration list for PBXNativeTarget "SDWaveAnimationViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +550,7 @@
 				28574D1F1F5005960003090D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

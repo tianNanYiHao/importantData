@@ -10,8 +10,14 @@
 
 @interface SDWaveViwe()
 {
+    //前景wave
+    CAShapeLayer *waveLayerZero;
+    
+    //中.后景wave
     CAShapeLayer *waveLayerOne;
     CAShapeLayer *waveLayerTwo;
+    
+    
     CADisplayLink *displayLink;
     
     CGFloat speed;   //波移动速度
@@ -33,22 +39,34 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     
     if ([super initWithFrame:frame]) {
-        self.backgroundColor = [UIColor clearColor];
         
-        speed = 8.f;
+        self.backgroundColor = [UIColor clearColor];
+        //防止水波浪layer超出边际
+        self.layer.masksToBounds = YES;
+        
+        speed =3.f;
         offsetX = 2.f;
-        A = 8.f;
+        A = 3.f;
         offsetY = self.bounds.size.height * (1);
         waveWidth = self.bounds.size.width;
         
+
+        //后
+        waveLayerTwo = [CAShapeLayer layer];
+        waveLayerTwo.fillColor = [UIColor colorWithRed:219/255.f green:219/255.f blue:219/255.f alpha:0.1f].CGColor;
+        [self.layer addSublayer:waveLayerTwo];
         
+        //中
         waveLayerOne = [CAShapeLayer layer];
-        waveLayerOne.fillColor = [UIColor colorWithRed:255/255.f green:255/255.f blue:255/255.f alpha:0.6f].CGColor;
+        waveLayerOne.fillColor = [UIColor colorWithRed:219/255.f green:219/255.f blue:219/255.f alpha:0.15f].CGColor;
         [self.layer addSublayer:waveLayerOne];
         
-        waveLayerTwo = [CAShapeLayer layer];
-        waveLayerTwo.fillColor = [UIColor colorWithRed:240/255.f green:240/255.f blue:240/255.f alpha:0.4f].CGColor;
-        [self.layer addSublayer:waveLayerTwo];
+ 
+        //前 (由于前景wave与 中后景wave 叠加,导致颜色很深,故alpha设置为0.03f)
+        waveLayerZero = [CAShapeLayer layer];
+        waveLayerZero.fillColor = [UIColor colorWithRed:219/255.f green:219/255.f blue:219/255.f alpha:0.2f].CGColor;
+        [self.layer addSublayer:waveLayerZero];
+        
         
 
         //定时器
@@ -59,35 +77,92 @@
     
 }
 
-
-- (void)setScaleRang:(float)scaleRang{
-    
-    _scaleRang = scaleRang;
-
+- (void)setWaveUpRang:(float)waveUpRang{
+    _waveUpRang = waveUpRang;
     
 }
 
+- (void)setWaveChangA:(float)waveChangA{
+    _waveChangA = waveChangA;
+    A = _waveChangA;
+}
 
+- (void)setWavaChangeSpeed:(float)wavaChangeSpeed{
+    _wavaChangeSpeed = wavaChangeSpeed;
+    speed = _wavaChangeSpeed;
+}
 
 
 - (void)drawWaveLayer{
     
+    //设置高度
+    offsetY -= _waveUpSpeed;
+    if (offsetY< self.bounds.size.height * (1-_waveUpRang)) {
+        offsetY = self.bounds.size.height * (1-_waveUpRang);
+        
+    }
+    
+    
+    
+    [self drawWaveZero];
+    
     [self drawWaveOne];
     [self drawWaveTwo];
+    
+    
+    
 }
 
+
 //以60fps绘制水波浪layer
-- (void)drawWaveOne{
+- (void)drawWaveZero{
+    
     /*
      正弦型函数解析式：y=Asin（ωx+φ）+h
      余弦型函数解析式：y=Acos（ωx+φ）+h
      */
     
-    offsetY -= _waveSpeed;
-    if (offsetY< self.bounds.size.height * (1-_scaleRang)) {
-        offsetY = self.bounds.size.height * (1-_scaleRang);
+    offsetX += speed;
+    
+    CGFloat y = 0;
+    
+    CGFloat ω = 3*M_PI / waveWidth;
+    CGFloat φ = offsetX*M_PI/180;
+    CGFloat h = offsetY + 10;
+    
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    //起点
+    CGPathMoveToPoint(path, nil, 0, offsetY);
+    
+    
+    for (int x = 0; x <= waveWidth; x++) {
+        y = A *sin(ω * x + (-φ)) + h;
+        CGPathAddLineToPoint(path, nil, x, y);
     }
     
+    //左下角点
+    CGPathAddLineToPoint(path, nil, waveWidth, self.bounds.size.height);
+    
+    //右下角点
+    CGPathAddLineToPoint(path, nil, 0, self.bounds.size.height);
+    
+    //关闭路径
+    CGPathCloseSubpath(path);
+    
+    waveLayerZero.path = path;
+    
+    //释放
+    CGPathRelease(path);
+    
+}
+
+
+- (void)drawWaveOne{
+    /*
+     正弦型函数解析式：y=Asin（ωx+φ）+h
+     余弦型函数解析式：y=Acos（ωx+φ）+h
+     */
     
     offsetX += speed;
     

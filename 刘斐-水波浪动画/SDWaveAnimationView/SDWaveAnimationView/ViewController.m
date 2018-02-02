@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.view.backgroundColor = [UIColor colorWithRed:177/255.f green:232/255.f blue:199/255.f alpha:1.f];
+    self.view.backgroundColor = [UIColor colorWithRed:0/255.f green:232/255.f blue:199/255.f alpha:1.f];
 
     
     
@@ -33,17 +33,38 @@
 
 - (IBAction)one:(id)sender {
     wave = [[SDWaveViwe alloc] initWithFrame:CGRectMake(0, 80, self.view.bounds.size.width, self.view.bounds.size.height-80)];
-    wave.scaleRang = 1/3.f;
-    wave.waveSpeed = 2;
+    //水波上涨 - 最终刻度
+    wave.waveUpRang = 1/5.f;
+    //水波上涨 - 上涨速度
+    wave.waveUpSpeed = 0.5f;
+    //水波波动 - 波动振幅
+    wave.waveChangA = 8;
+    //水波波动- 波动速度
+    wave.wavaChangeSpeed = 2.f;
     [self.view addSubview:wave];
 }
 - (IBAction)two:(id)sender {
-     wave.scaleRang = 2/3.f;
-    wave.waveSpeed = 2;
+    //水波上涨 - 最终刻度
+    wave.waveUpRang = 3/5.f;
+    //水波上涨 - 上涨速度
+    wave.waveUpSpeed = 0.5f;
+    //水波波动 - 波动振幅
+    wave.waveChangA = 8;
+    //水波波动- 波动速度
+    wave.wavaChangeSpeed = 2.f;
+
 }
 - (IBAction)three:(id)sender {
-     wave.scaleRang = 3/3.f;
-    wave.waveSpeed = 2;
+    //水波上涨 - 最终刻度
+    wave.waveUpRang = 4/5.f;
+    //水波上涨 - 上涨速度
+    wave.waveUpSpeed = 0.5f;
+    //水波波动 - 波动振幅
+    wave.waveChangA = 8;
+    //水波波动- 波动速度
+    wave.wavaChangeSpeed = 2.f;
+
+
 }
 
 
