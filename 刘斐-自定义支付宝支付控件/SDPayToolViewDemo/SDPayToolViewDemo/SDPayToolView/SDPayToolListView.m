@@ -251,6 +251,7 @@
                      [_delegate payToolListViewAddPayToolCardWithpayType:title];
                 }
             }
+            //1.1 UI回退由 payToolListViewAddPayToolCardWithpayType 代理方法处理
         }
     }
     //2.支付工具选择回调
@@ -260,14 +261,11 @@
         if ([_delegate respondsToSelector:@selector(payToolListViewReturnPayToolDict:index:)]) {
             [_delegate payToolListViewReturnPayToolDict:selectPayToolDic index:indexNum];
         }
+        //2.1 UI回退
+        if ([_delegate respondsToSelector:@selector(payToolListViewJumpBackToPayToolOrderView)]) {
+            [_delegate payToolListViewJumpBackToPayToolOrderView];
+        }
     }
-    
-    
-    //3.UI回退
-    if ([_delegate respondsToSelector:@selector(payToolListViewJumpBackToPayToolOrderView)]) {
-        [_delegate payToolListViewJumpBackToPayToolOrderView];
-    }
-
 }
 
 #pragma - mark ================CommFunc==============

@@ -154,4 +154,5 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
  */
 - (void)hidPayToolInPayPwdView;
 
+
 @end
