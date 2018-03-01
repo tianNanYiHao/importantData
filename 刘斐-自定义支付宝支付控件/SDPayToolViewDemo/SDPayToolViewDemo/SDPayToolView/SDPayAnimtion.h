@@ -66,4 +66,11 @@
 
 
 
+/**
+ 支付 - 视图删除
+
+ @param view 所需删除出的视图
+ */
++ (void)payToolHidden:(UIView*)view;
+
 @end

@@ -133,7 +133,13 @@
         //2.2 nameLab文字
         NSString *accNo  = [[dic objectForKey:@"account"] objectForKey:@"accNo"];
         NSString *lastfournumber = accNo.length>=4?[accNo substringFromIndex:accNo.length-4]: @"暂无显示";
-        bankNameLabel.text = [NSString stringWithFormat:@"%@(%@)",title,lastfournumber];
+        //2.2.1 - (钱包账户.电子记名卡)不显示尾号
+        if ([[dic objectForKey:@"type"] isEqualToString:@"1005"]) {
+            bankNameLabel.text = [NSString stringWithFormat:@"%@",title];
+        }else{
+            bankNameLabel.text = [NSString stringWithFormat:@"%@(%@)",title,lastfournumber];
+        }
+        
         
         //3.2 limitLab文字
          bankLimitLabel.text = [SDPayToolListView getbankLimitLabelText:type userblance:userBalanceStr];
@@ -157,9 +163,9 @@
         
         //iconImage
         CGFloat iconImageViewOX = SIDE_LEFT_RIGHT;
-        CGFloat iconImageViewHeight = iconImageSize.height;
+        CGFloat iconImageViewHeight = AdapterWfloat(24);
         CGFloat iconImageViewOY = (itemBtnHeight - iconImageViewHeight) / 2;
-        CGFloat iconImageViewWidth = iconImageSize.width;
+        CGFloat iconImageViewWidth = AdapterWfloat(24);
         iconImageView.frame = CGRectMake(iconImageViewOX, iconImageViewOY, iconImageViewWidth, iconImageViewHeight);
         
         //lable1
@@ -243,12 +249,12 @@
         if ([_delegate respondsToSelector:@selector(payToolListViewAddPayToolCardWithpayType:)]) {
             for (int i = 0; i<paylistArr.count; i++) {
                 NSDictionary *dic = paylistArr[i];
-                NSString *title = [dic objectForKey:@"type"];
-                if ([title isEqualToString:PAYTOOL_PAYPASS]) {
-                    [_delegate payToolListViewAddPayToolCardWithpayType:title];
+                NSString *type = [dic objectForKey:@"type"];
+                if ([type isEqualToString:PAYTOOL_PAYPASS]) {
+                    [_delegate payToolListViewAddPayToolCardWithpayType:type];
                 }
-                else if ([title isEqualToString:PAYTOOL_ACCPASS]){
-                     [_delegate payToolListViewAddPayToolCardWithpayType:title];
+                else if ([type isEqualToString:PAYTOOL_ACCPASS]){
+                     [_delegate payToolListViewAddPayToolCardWithpayType:type];
                 }
             }
             //1.1 UI回退由 payToolListViewAddPayToolCardWithpayType 代理方法处理

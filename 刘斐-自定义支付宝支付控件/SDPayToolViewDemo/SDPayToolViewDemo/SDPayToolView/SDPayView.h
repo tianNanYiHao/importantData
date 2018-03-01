@@ -155,4 +155,11 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
 - (void)hidPayToolInPayPwdView;
 
 
+#pragma mark 外部调用 - 直接(无动画效果)隐藏支付工具_需强制隐藏时调用
+/**
+ 外部调用 - 隐藏PayTool(无动画效果,直接从页面删除)
+ */
+- (void)hidePayTool;
+
+
 @end

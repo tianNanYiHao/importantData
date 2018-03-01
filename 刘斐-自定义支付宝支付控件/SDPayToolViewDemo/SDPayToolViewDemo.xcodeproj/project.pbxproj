@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		283ECC5D2047E50A001FA16A /* sdb_upkeyboard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC592047E508001FA16A /* sdb_upkeyboard@2x.png */; };
+		283ECC5E2047E50A001FA16A /* sdb_upkeyboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC5A2047E509001FA16A /* sdb_upkeyboard@3x.png */; };
+		283ECC5F2047E50A001FA16A /* sdb_saveLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC5B2047E509001FA16A /* sdb_saveLogo@2x.png */; };
+		283ECC602047E50A001FA16A /* sdb_saveLogo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC5C2047E509001FA16A /* sdb_saveLogo@3x.png */; };
+		283ECC632047E9B0001FA16A /* sab_cleanKeyBoard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC612047E9B0001FA16A /* sab_cleanKeyBoard@3x.png */; };
+		283ECC642047E9B0001FA16A /* sab_cleanKeyBoard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 283ECC622047E9B0001FA16A /* sab_cleanKeyBoard@2x.png */; };
 		28A0ABD81F67EA1100E3586A /* format.json in Resources */ = {isa = PBXBuildFile; fileRef = 28A0ABD71F67EA1100E3586A /* format.json */; };
 		28A0ACBC1F68FF5300E3586A /* format2.json in Resources */ = {isa = PBXBuildFile; fileRef = 28A0ACBB1F68FF5300E3586A /* format2.json */; };
 		28DCCF711F6144380036A4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DCCF701F6144380036A4A1 /* main.m */; };
@@ -118,6 +124,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		283ECC592047E508001FA16A /* sdb_upkeyboard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdb_upkeyboard@2x.png"; sourceTree = "<group>"; };
+		283ECC5A2047E509001FA16A /* sdb_upkeyboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdb_upkeyboard@3x.png"; sourceTree = "<group>"; };
+		283ECC5B2047E509001FA16A /* sdb_saveLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdb_saveLogo@2x.png"; sourceTree = "<group>"; };
+		283ECC5C2047E509001FA16A /* sdb_saveLogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sdb_saveLogo@3x.png"; sourceTree = "<group>"; };
+		283ECC612047E9B0001FA16A /* sab_cleanKeyBoard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sab_cleanKeyBoard@3x.png"; sourceTree = "<group>"; };
+		283ECC622047E9B0001FA16A /* sab_cleanKeyBoard@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sab_cleanKeyBoard@2x.png"; sourceTree = "<group>"; };
 		28A0ABD71F67EA1100E3586A /* format.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = format.json; sourceTree = "<group>"; };
 		28A0ACBB1F68FF5300E3586A /* format2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = format2.json; sourceTree = "<group>"; };
 		28DCCF6C1F6144380036A4A1 /* SDPayToolViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDPayToolViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,6 +266,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		283ECC582047E4F8001FA16A /* keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				283ECC622047E9B0001FA16A /* sab_cleanKeyBoard@2x.png */,
+				283ECC612047E9B0001FA16A /* sab_cleanKeyBoard@3x.png */,
+				283ECC5B2047E509001FA16A /* sdb_saveLogo@2x.png */,
+				283ECC5C2047E509001FA16A /* sdb_saveLogo@3x.png */,
+				283ECC592047E508001FA16A /* sdb_upkeyboard@2x.png */,
+				283ECC5A2047E509001FA16A /* sdb_upkeyboard@3x.png */,
+			);
+			path = keyboard;
+			sourceTree = "<group>";
+		};
 		28DCCF631F6144380036A4A1 = {
 			isa = PBXGroup;
 			children = (
@@ -349,6 +374,7 @@
 		28F325141F6A7C9C00E42B3E /* source */ = {
 			isa = PBXGroup;
 			children = (
+				283ECC582047E4F8001FA16A /* keyboard */,
 				28F325151F6A7C9C00E42B3E /* banklist */,
 				28F325521F6A7C9C00E42B3E /* commImg */,
 			);
@@ -567,6 +593,7 @@
 				28F325881F6A7C9C00E42B3E /* banklist_tj@3x.png in Resources */,
 				28F325961F6A7C9C00E42B3E /* list_sand_logo@3x.png in Resources */,
 				28F325921F6A7C9C00E42B3E /* list_cash@3x.png in Resources */,
+				283ECC632047E9B0001FA16A /* sab_cleanKeyBoard@3x.png in Resources */,
 				28F325A31F6A7C9C00E42B3E /* payListSelectedState@2x.png in Resources */,
 				28F3256A1F6A7C9C00E42B3E /* banklist_gf@3x.png in Resources */,
 				28F325701F6A7C9C00E42B3E /* banklist_hs@3x.png in Resources */,
@@ -583,6 +610,7 @@
 				28F325601F6A7C9C00E42B3E /* banklist_bh@3x.png in Resources */,
 				28F3256F1F6A7C9C00E42B3E /* banklist_hs@2x.png in Resources */,
 				28F3257D1F6A7C9C00E42B3E /* banklist_nj@2x.png in Resources */,
+				283ECC602047E50A001FA16A /* sdb_saveLogo@3x.png in Resources */,
 				28F3256D1F6A7C9C00E42B3E /* banklist_gs@2x.png in Resources */,
 				28F325981F6A7C9C00E42B3E /* list_xiaofei@3x.png in Resources */,
 				28F325771F6A7C9C00E42B3E /* banklist_ms@2x.png in Resources */,
@@ -594,6 +622,7 @@
 				28DCCF7A1F6144380036A4A1 /* Main.storyboard in Resources */,
 				28F3257E1F6A7C9C00E42B3E /* banklist_nj@3x.png in Resources */,
 				28F325631F6A7C9C00E42B3E /* banklist_cd@2x.png in Resources */,
+				283ECC642047E9B0001FA16A /* sab_cleanKeyBoard@2x.png in Resources */,
 				28F325831F6A7C9C00E42B3E /* banklist_sh@2x.png in Resources */,
 				28F325991F6A7C9C00E42B3E /* list_yinlian_AddCard@2x.png in Resources */,
 				28F325721F6A7C9C00E42B3E /* banklist_hx@3x.png in Resources */,
@@ -606,8 +635,10 @@
 				28F325911F6A7C9C00E42B3E /* list_cash@2x.png in Resources */,
 				28A0ABD81F67EA1100E3586A /* format.json in Resources */,
 				28F325941F6A7C9C00E42B3E /* list_sand_AddCard@3x.png in Resources */,
+				283ECC5F2047E50A001FA16A /* sdb_saveLogo@2x.png in Resources */,
 				28F3258E1F6A7C9C00E42B3E /* banklist_zs@3x.png in Resources */,
 				28F3256B1F6A7C9C00E42B3E /* banklist_gh@2x.png in Resources */,
+				283ECC5D2047E50A001FA16A /* sdb_upkeyboard@2x.png in Resources */,
 				28F3259E1F6A7C9C00E42B3E /* payClosed@3x.png in Resources */,
 				28A0ACBC1F68FF5300E3586A /* format2.json in Resources */,
 				28F3257B1F6A7C9C00E42B3E /* banklist_nh@2x.png in Resources */,
@@ -619,6 +650,7 @@
 				28F3257F1F6A7C9C00E42B3E /* banklist_pa@2x.png in Resources */,
 				28F3259A1F6A7C9C00E42B3E /* list_yinlian_AddCard@3x.png in Resources */,
 				28F325A01F6A7C9C00E42B3E /* payGoBack@3x.png in Resources */,
+				283ECC5E2047E50A001FA16A /* sdb_upkeyboard@3x.png in Resources */,
 				28F325931F6A7C9C00E42B3E /* list_sand_AddCard@2x.png in Resources */,
 				28F325A51F6A7C9C00E42B3E /* qvip_pay_imageholder@2x.png in Resources */,
 				28F325731F6A7C9C00E42B3E /* banklist_js@2x.png in Resources */,

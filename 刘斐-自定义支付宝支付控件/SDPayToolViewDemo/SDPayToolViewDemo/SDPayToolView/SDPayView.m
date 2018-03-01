@@ -56,7 +56,6 @@
  添加订单信息view
  */
 - (void)addPayToolOrderView{
-
     _payToolOrderView = [[SDPayToolOrderView alloc] initWithFrame:SDPayToolOrderViewWillLoadFrame];
     [_payToolOrderView setPayListArray:_payListArray moneyStr:_moneyStr orderTypeStr:_orderTypeStr];
     _payToolOrderView.delegate = self;
@@ -311,10 +310,37 @@
         [SDPayAnimtion maskBackGroundViewAnimation:self.maskBackGroundView showState:YES];
         [SDPayAnimtion payToolPwdViewAnimation:self.payToolPwdView frame:SDPayToolPwdViewDidLoadFrame showState:YES];
     }
-    
-   
 }
+
 #pragma mark - ********** 隐藏/复位 支付工具 **********
+#pragma mark 外部调用 - 直接(无动画效果)隐藏支付工具_需强制隐藏时调用
+/**
+ 外部调用 - 隐藏PayTool(无动画效果,直接从页面删除)
+ */
+- (void)hidePayTool{
+    if (_style == SDPayViewNomal) {
+        //1. 订单页删除
+        if (self.payToolOrderView) {
+            [SDPayAnimtion payToolHidden:self.payToolOrderView];
+        }
+        //2. 列表页删除
+        if (self.payToolListView) {
+            [SDPayAnimtion payToolHidden:self.payToolListView];
+        }
+        //3. 密码页删除
+        if (self.payToolPwdView) {
+            [SDPayAnimtion payToolHidden:self.payToolPwdView];
+        }
+        //4. 透明背景删除
+        [SDPayAnimtion payToolHidden:self.maskBackGroundView];
+    }
+    if (_style == SDPayViewOnlyPwd) {
+        //3. 密码页删除
+        [SDPayAnimtion payToolHidden:self.payToolPwdView];
+        //4. 透明背景删除
+        [SDPayAnimtion payToolHidden:self.maskBackGroundView];
+    }
+}
 
 #pragma mark 外部调用 - 复位到待支付页并删除
 // 外部调用 - 复位到待支付页并删除

@@ -107,4 +107,23 @@
 }
 
 
+//支付 - 视图删除
++ (void)payToolHidden:(UIView*)view{
+    [UIView animateWithDuration:0.f delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        NSString *className = [NSString stringWithUTF8String:object_getClassName(view)];
+        if ([className isEqualToString:@"UIView"]) {
+            view.superview.frame = CGRectZero;
+            view.superview.alpha = 0;
+        }
+        view.frame = CGRectZero;
+    } completion:^(BOOL finished) {
+        NSString *className = [NSString stringWithUTF8String:object_getClassName(view)];
+        if ([className isEqualToString:@"UIView"]) {
+            view.superview.hidden = YES;
+        }
+        [view removeFromSuperview];
+    }];
+}
+
+
 @end

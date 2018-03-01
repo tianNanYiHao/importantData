@@ -73,14 +73,16 @@
     UIView *pwdTextFieldBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight)];
     pwdTextFieldBackgroundView.backgroundColor = pwdBackGroundColor;
     pwdTextFieldBackgroundView.layer.borderColor = pwdBorderColor.CGColor;
-    pwdTextFieldBackgroundView.layer.borderWidth = 0.7f;
+    pwdTextFieldBackgroundView.layer.borderWidth = 1.f;
     pwdTextFieldBackgroundView.layer.cornerRadius = 5.f;
-    pwdTextFieldBackgroundView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    pwdTextFieldBackgroundView.layer.shadowOffset = CGSizeMake(0, 0);
-    pwdTextFieldBackgroundView.layer.shadowRadius = 4.f;
-    pwdTextFieldBackgroundView.layer.shadowOpacity = 1.f;
-    //        pwdTextFieldBackgroundView.layer.masksToBounds = YES;
+//    pwdTextFieldBackgroundView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+//    pwdTextFieldBackgroundView.layer.shadowOffset = CGSizeMake(0, 0);
+//    pwdTextFieldBackgroundView.layer.shadowRadius = 4.f;
+//    pwdTextFieldBackgroundView.layer.shadowOpacity = 1.f;
+//    pwdTextFieldBackgroundView.layer.masksToBounds = YES;
     [payPwdPayBaseView addSubview:pwdTextFieldBackgroundView];
+    
+
     
     
     pwdTextFieldOne = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, pwdTextFieldWidth, pwdTextFieldHeight)];
@@ -152,9 +154,18 @@
     pwdTextFieldSix.layer.cornerRadius = 5.f;
     [pwdTextFieldBackgroundView addSubview:pwdTextFieldSix];
     
+    //密码输入框覆盖层按钮 - 用于密码键盘消失后触发唤起
+    UIButton *pwdTextFieldBackgroundCoverbtn = [[UIButton alloc] init];
+    pwdTextFieldBackgroundCoverbtn.backgroundColor = [UIColor clearColor];
+    pwdTextFieldBackgroundCoverbtn.tag = 89999;
+    [pwdTextFieldBackgroundCoverbtn addTarget:self action:@selector(addSDPayKeyBoardView) forControlEvents:UIControlEventTouchUpInside];
+    pwdTextFieldBackgroundCoverbtn.frame = CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight);
+    [payPwdPayBaseView addSubview:pwdTextFieldBackgroundCoverbtn];
+    
+    
     //  忘记密码
     UIButton *forgetPayPwdBtn = [[UIButton alloc] init];
-    [forgetPayPwdBtn setTitle:@"忘记密码？" forState: UIControlStateNormal];
+    [forgetPayPwdBtn setTitle:@"忘记支付密码？" forState: UIControlStateNormal];
     forgetPayPwdBtn.titleLabel.font = [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
     [forgetPayPwdBtn setTitleColor:forgetPwdTextColor forState:UIControlStateNormal];
     forgetPayPwdBtn.titleLabel.textAlignment = NSTextAlignmentRight;
@@ -165,7 +176,7 @@
     
     CGSize forgetPayPwdBtnSize = [forgetPayPwdBtn.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:pwdTextFieldTextSizeFont]}];
     CGFloat forgetPayPwdBtnWidth = forgetPayPwdBtnSize.width;
-    CGFloat forgetPayPwdBtnOX = ScreenW - forgetPayPwdBtnWidth - SIDE_LEFT_RIGHT;
+    CGFloat forgetPayPwdBtnOX = SIDE_LEFT_RIGHT;
     CGFloat forgetPayPwdBtnOY = pwdTextFieldOY + pwdTextFieldHeight + SIDE_SPACE;
     CGFloat forgetPayPwdBtnHeight = forgetPayPwdBtnSize.height;
     
@@ -217,9 +228,11 @@
 
 //添加杉德支付键盘
 - (void)addSDPayKeyBoardView{
-    keyBoardView = [SDPayKeyBoardView keyBoardAddWith:self];
-    keyBoardView.delegate = self;
-    [self addSubview:keyBoardView];
+    if (!keyBoardView) {
+        keyBoardView = [SDPayKeyBoardView keyBoardAddWith:self];
+        keyBoardView.delegate = self;
+        [self addSubview:keyBoardView];
+    }
 }
 
 
@@ -254,17 +267,13 @@
 
 #pragma - mark payKeyBoardViewdelegate ==================键盘事件代理=================
 - (void)payKeyBoardCurrentTitle:(UIButton *)btn{
-    
-    if ([btn.currentTitle isEqualToString:@"清除"]) {
-        pwdTextFieldOne.text = @"";
-        pwdTextFieldTwo.text = @"";
-        pwdTextFieldThree.text = @"";
-        pwdTextFieldFour.text = @"";
-        pwdTextFieldFive.text = @"";
-        pwdTextFieldSix.text = @"";
+    //键盘消失按钮
+    if (btn.tag == 90000) {
+        [keyBoardView hiddenDownPayKeyBoardView];
+        keyBoardView = nil;
     }
-    else if ([btn.currentTitle isEqualToString:@"←"]){
-        
+    //回退按钮
+    else if (btn.tag == 90001){
         if(payPwd.length==0)
         {
             pwdTextFieldOne.text=@"";
@@ -275,7 +284,6 @@
             pwdTextFieldSix.text=@"";
             return;
         }
-        
         
         NSString *str=[payPwd substringToIndex:payPwd.length-1];
         
@@ -328,6 +336,17 @@
         }
         payPwd = str;
     }
+    //确认按钮
+    else if(btn.tag == 90002){
+        if(payPwd.length==6){
+            //键盘退出
+            [keyBoardView hiddenDownPayKeyBoardView];
+            //密码回调
+            if ([_delegate respondsToSelector:@selector(payToolPwd:paySuccessView:)]) {
+                [_delegate payToolPwd:payPwd paySuccessView:successAnimationView];
+            }
+        }
+    }
     else{
         
         if (pwdTextFieldOne.text.length<1) {
@@ -360,17 +379,9 @@
                 pwdTextFieldSix.text=btn.currentTitle;
             }
         }
+        //记录支付密码位数
         //密码输入己有6位
         payPwd = [NSString stringWithFormat:@"%@%@%@%@%@%@",pwdTextFieldOne.text,pwdTextFieldTwo.text,pwdTextFieldThree.text,pwdTextFieldFour.text,pwdTextFieldFive.text,pwdTextFieldSix.text];
-        if(payPwd.length==6){
-            //键盘退出
-            [keyBoardView hiddenDownPayKeyBoardView];
-            //密码回调
-            if ([_delegate respondsToSelector:@selector(payToolPwd:paySuccessView:)]) {
-                [_delegate payToolPwd:payPwd paySuccessView:successAnimationView];
-            }
-        }
-        
     }
     
 }

@@ -73,7 +73,7 @@
     //1.支付动画开始
     [successView animationStart];
 
-    if (!YES) {
+    if (YES) {
         //支付成功
         [successView animationSuccess];
     }
@@ -117,7 +117,6 @@
     NSLog(@"你要添加的新卡类型为:%@",type);
     
 }
-
 
 /**
  按钮关闭事件回调

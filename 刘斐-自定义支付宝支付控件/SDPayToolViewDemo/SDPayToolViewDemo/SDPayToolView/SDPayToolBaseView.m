@@ -58,6 +58,7 @@
     //右边按钮
     rightBtn = [[UIButton alloc] init];
     [rightBtn setImage:[UIImage imageNamed:@"payHelp"] forState:UIControlStateNormal];
+    rightBtn.hidden = YES;  /** 暂时屏蔽左边按钮的问号按钮*/
     [headTitleView addSubview:rightBtn];
     
     //线

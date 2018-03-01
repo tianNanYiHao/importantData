@@ -19,7 +19,7 @@
 
 #define AdapterWfloat(f) ((f/375.f)*[UIScreen mainScreen].bounds.size.width)
 #define AdapterHfloat(f) ((f/667.f)*[UIScreen mainScreen].bounds.size.height)
-
+#define AdapterFfloat(f) (([[UIScreen mainScreen] bounds].size.height==736.f)?(f):(f*0.8571))
 
 //颜色设置
 #define Rgba(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
@@ -27,28 +27,28 @@
 #define payBtnColor Rgba(53,139,239)
 #define textGrayColor Rgba(140,144,157)
 #define textBlackColor Rgba(28,28,28)
-#define forgetPwdTextColor Rgba(34, 123, 207)
+#define forgetPwdTextColor Rgba(255, 93, 49)
 #define paySuccessAnimationViewCricleColor Rgba(0,173,193)
 
 #define pwdBackGroundColor Rgba(225, 225, 225)
-#define pwdBorderColor Rgba(64,101,180)
+#define pwdBorderColor Rgba(229,229,229)
 #define pwdTextFieldTextColor [UIColor blackColor]
 
 #define keyBoardColor Rgba(174, 174, 174)
 
 
 //字体设置
-#define titleFont      17.0f
-#define payOrderInfoLabFont 16.f
-#define paylistTitleFont 16.f
-#define paylisttitleDesFont 12.0f
-#define moneyLabFont   36.f
-#define payBtnFont     20.f
-#define pwdTextFieldTextSizeFont 17.f
+#define titleFont      AdapterFfloat(17.f)
+#define payOrderInfoLabFont AdapterFfloat(16.f)
+#define paylistTitleFont AdapterFfloat(15.f)
+#define paylisttitleDesFont AdapterFfloat(12.f)
+#define moneyLabFont   AdapterFfloat(36.f)
+#define payBtnFont     AdapterFfloat(20.f)
+#define pwdTextFieldTextSizeFont AdapterFfloat(17.f)
 
-#define keyBoardBtnCleanFont 18.f
-#define keyBoardBtnFontNormal 27.f
-#define keyBoardBtnFontHeighted 38.f
+#define keyBoardBtnCleanFont AdapterFfloat(18.f)
+#define keyBoardBtnFontNormal AdapterFfloat(20.f)
+#define keyBoardBtnFontHeighted AdapterFfloat(27.f)
 
 
 //按钮TAG
@@ -96,9 +96,10 @@
 
 //键盘属性
 #define keyBordCellBoardLine 0.3f
-#define keyBordCellWidth  ([UIScreen mainScreen].bounds.size.width - 2*keyBordCellBoardLine)/3
-#define keyBordCellHeight keyBordCellWidth*0.54f
-#define keyBordViewHeight 4*keyBordCellHeight
+#define keyBordViewWidth ([UIScreen mainScreen].bounds.size.width - AdapterWfloat(105))
+#define keyBordViewHeight ((AdapterHfloat(98)*2)+AdapterHfloat(40))
+#define keyBordCellWidth  (keyBoardW - 2*keyBordCellBoardLine)/3
+#define keyBordCellHeight (AdapterHfloat(98)*2)/4
 
 //图片size
 #define ImgSizeH(imgName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",imgName]].size.height
