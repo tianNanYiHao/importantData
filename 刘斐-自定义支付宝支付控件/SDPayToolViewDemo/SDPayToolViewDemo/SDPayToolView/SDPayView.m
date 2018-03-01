@@ -90,7 +90,7 @@
         }else{
             _payToolPwdView.selectpayToolDic = [_payListArray firstObject];
         }
-        _payToolPwdView.backgroundColor = [UIColor whiteColor];
+        _payToolPwdView.backgroundColor =  [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1/1.0];
         [self addSubview:_payToolPwdView];
     }
     //仅密码键盘模式
@@ -103,7 +103,7 @@
         }else{
             _payToolPwdView.selectpayToolDic = [_payListArray firstObject];
         }
-        _payToolPwdView.backgroundColor = [UIColor whiteColor];
+        _payToolPwdView.backgroundColor =  [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1/1.0];
         [self addSubview:_payToolPwdView];
 
     }

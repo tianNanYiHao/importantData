@@ -64,17 +64,16 @@
 
     //baseView
     UIView *payPwdPayBaseView = [[UIView alloc] init];
-    payPwdPayBaseView.backgroundColor = [UIColor whiteColor];
+    payPwdPayBaseView.backgroundColor =  [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1/1.0];
     [self addSubview:payPwdPayBaseView];
     
     //  密码输入框
     CGFloat pwdTextFieldOY = 2*SIDE_LEFT_RIGHT;
+    
     //背景框
     UIView *pwdTextFieldBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight)];
     pwdTextFieldBackgroundView.backgroundColor = pwdBackGroundColor;
     pwdTextFieldBackgroundView.layer.borderColor = pwdBorderColor.CGColor;
-    pwdTextFieldBackgroundView.layer.borderWidth = 1.f;
-    pwdTextFieldBackgroundView.layer.cornerRadius = 5.f;
 //    pwdTextFieldBackgroundView.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 //    pwdTextFieldBackgroundView.layer.shadowOffset = CGSizeMake(0, 0);
 //    pwdTextFieldBackgroundView.layer.shadowRadius = 4.f;
@@ -94,7 +93,6 @@
     [pwdTextFieldOne setEnabled:NO];
     pwdTextFieldOne.backgroundColor = [UIColor whiteColor];
     pwdTextFieldOne.layer.borderColor = [UIColor whiteColor].CGColor;
-    pwdTextFieldOne.layer.cornerRadius = 5.f;
     [pwdTextFieldBackgroundView addSubview:pwdTextFieldOne];
     
     pwdTextFieldTwo = [[UITextField alloc] initWithFrame:CGRectMake(pwdTextFieldWidth + pwdTextFieldBorderWidth, 0, pwdTextFieldWidth, pwdTextFieldHeight)];
@@ -151,15 +149,17 @@
     pwdTextFieldSix.backgroundColor = [UIColor whiteColor];
     pwdTextFieldSix.layer.borderColor = [UIColor whiteColor].CGColor;
     [pwdTextFieldSix setEnabled:NO];
-    pwdTextFieldSix.layer.cornerRadius = 5.f;
     [pwdTextFieldBackgroundView addSubview:pwdTextFieldSix];
     
-    //密码输入框覆盖层按钮 - 用于密码键盘消失后触发唤起
+    //密码输入框覆盖层按钮 - 用于密码键盘消失后触发唤起/用于外边框圆角展示
     UIButton *pwdTextFieldBackgroundCoverbtn = [[UIButton alloc] init];
     pwdTextFieldBackgroundCoverbtn.backgroundColor = [UIColor clearColor];
     pwdTextFieldBackgroundCoverbtn.tag = 89999;
     [pwdTextFieldBackgroundCoverbtn addTarget:self action:@selector(addSDPayKeyBoardView) forControlEvents:UIControlEventTouchUpInside];
     pwdTextFieldBackgroundCoverbtn.frame = CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight);
+    pwdTextFieldBackgroundCoverbtn.layer.borderColor = pwdBorderColor.CGColor;
+    pwdTextFieldBackgroundCoverbtn.layer.borderWidth = 0.8f;
+    pwdTextFieldBackgroundCoverbtn.layer.cornerRadius = 5.f;
     [payPwdPayBaseView addSubview:pwdTextFieldBackgroundCoverbtn];
     
     
@@ -197,7 +197,7 @@
     
     successAnimationView = [SDPaySuccessAnimationView createCircleSuccessView:CGRectMake(successAnimViewOX, successAnimViewOY, successAnimViewW, successAnimViewW)];
     successAnimationView.circleLineWidth = 5.f;
-    successAnimationView.circleBackGroundColor = [UIColor whiteColor];
+    successAnimationView.circleBackGroundColor = [UIColor colorWithRed:247/255.0 green:247/255.0 blue:247/255.0 alpha:1/1.0];
     successAnimationView.circleLineColor = paySuccessAnimationViewCricleColor;
     successAnimationView.lineSuccessColor = paySuccessAnimationViewCricleColor;
     [self addSubview:successAnimationView];
