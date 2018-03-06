@@ -85,7 +85,7 @@
 #define ViewBaseOX  0.f
 #define ViewBaseOY  ScreenH - ViewBaseH
 
-#define SIDE_LEFT_RIGHT 15.0f
+#define SIDE_LEFT_RIGHT AdapterWfloat(18.f)
 #define SIDE_SPACE          10.f
 #define SIDE_COMMWIDTH      ScreenW - 2*SIDE_LEFT_RIGHT
 #define LineBorder          0.5f

@@ -55,7 +55,7 @@
 
 - (void)createUI{
     CGFloat lineViewMaxY = CGRectGetMaxY(self.lineView.frame)+LineBorder;
-    CGFloat pwdTextFieldBorderWidth = 0.8f;
+    CGFloat pwdTextFieldBorderWidth = 0.6f;
     CGFloat allPwdTextFieldBorderWidth = pwdTextFieldBorderWidth * 5;
     CGFloat pwdTextFieldWidth = (ScreenW - 2*SIDE_LEFT_RIGHT - allPwdTextFieldBorderWidth)/6;
     CGFloat pwdTextFieldHeight = pwdTextFieldWidth;
@@ -68,7 +68,7 @@
     [self addSubview:payPwdPayBaseView];
     
     //  密码输入框
-    CGFloat pwdTextFieldOY = 2*SIDE_LEFT_RIGHT;
+    CGFloat pwdTextFieldOY = AdapterHfloat(45);
     
     //背景框
     UIView *pwdTextFieldBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight)];
@@ -158,7 +158,7 @@
     [pwdTextFieldBackgroundCoverbtn addTarget:self action:@selector(addSDPayKeyBoardView) forControlEvents:UIControlEventTouchUpInside];
     pwdTextFieldBackgroundCoverbtn.frame = CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, allPwdTextFieldWidth+allPwdTextFieldBorderWidth, pwdTextFieldHeight);
     pwdTextFieldBackgroundCoverbtn.layer.borderColor = pwdBorderColor.CGColor;
-    pwdTextFieldBackgroundCoverbtn.layer.borderWidth = 0.8f;
+    pwdTextFieldBackgroundCoverbtn.layer.borderWidth = 0.9f;
     pwdTextFieldBackgroundCoverbtn.layer.cornerRadius = 5.f;
     [payPwdPayBaseView addSubview:pwdTextFieldBackgroundCoverbtn];
     
@@ -166,7 +166,7 @@
     //  忘记密码
     UIButton *forgetPayPwdBtn = [[UIButton alloc] init];
     [forgetPayPwdBtn setTitle:@"忘记支付密码？" forState: UIControlStateNormal];
-    forgetPayPwdBtn.titleLabel.font = [UIFont systemFontOfSize:pwdTextFieldTextSizeFont];
+    forgetPayPwdBtn.titleLabel.font = [UIFont systemFontOfSize:AdapterFfloat(13)];
     [forgetPayPwdBtn setTitleColor:forgetPwdTextColor forState:UIControlStateNormal];
     forgetPayPwdBtn.titleLabel.textAlignment = NSTextAlignmentRight;
     [forgetPayPwdBtn addTarget:self action:@selector(forgetPwd:) forControlEvents:UIControlEventTouchUpInside];
@@ -182,7 +182,8 @@
     
     forgetPayPwdBtn.frame = CGRectMake(forgetPayPwdBtnOX, forgetPayPwdBtnOY, forgetPayPwdBtnWidth, forgetPayPwdBtnHeight);
     
-    pwdTextFieldBackgroundView.frame = CGRectMake(SIDE_LEFT_RIGHT, SIDE_LEFT_RIGHT*2, pwdTextFieldBackgroundViewW, pwdTextFieldHeight);
+    //重置密码框背景
+    pwdTextFieldBackgroundView.frame = CGRectMake(SIDE_LEFT_RIGHT, pwdTextFieldOY, pwdTextFieldBackgroundViewW, pwdTextFieldHeight);
     
     CGFloat payPwdViewHeight = forgetPayPwdBtnOY + forgetPayPwdBtnHeight + SIDE_LEFT_RIGHT;
     
