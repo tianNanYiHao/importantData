@@ -43,9 +43,17 @@
  设置支付信息
 
  @param payListArray 支付工具数组(包含三个部分:1,可用支付工具 2,添加cell 3,不可用支付工具)
- @param moneyStr 金额信息
- @param orderTypeStr 订单信息
+ @param payToolOrderDic 支付信息字典
+ 
+ @{
+ @"desTitle":@"这里是标题",
+ @"money":@"这里是金额",
+ @"orderTitle":@"这里是订单信息标题",
+ @"orderDes":@"这里是支付功能描述",
+ @"payTitle":@"这里是支付方式标题",
+ @"payBtnTitle":@"这里是确认按钮标题"
+ }
  */
-- (void)setPayListArray:(NSArray *)payListArray moneyStr:(NSString*)moneyStr orderTypeStr:(NSString*)orderTypeStr;
+- (void)setPayListArray:(NSArray *)payListArray payToolOrderInfoDic:(NSDictionary*)payToolOrderDic;
 
 @end

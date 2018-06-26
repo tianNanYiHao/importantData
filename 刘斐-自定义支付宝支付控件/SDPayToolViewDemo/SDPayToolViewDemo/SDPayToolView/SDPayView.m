@@ -29,9 +29,7 @@
 @property (nonatomic, strong) SDPayToolPwdView   *payToolPwdView;
 
 @property (nonatomic, strong) NSArray *payListArray;
-@property (nonatomic, strong) NSString *moneyStr;
-@property (nonatomic, strong) NSString *orderTypeStr;
-
+@property (nonatomic, strong) NSDictionary *orderInfoDic;
 
 @end
 
@@ -57,7 +55,7 @@
  */
 - (void)addPayToolOrderView{
     _payToolOrderView = [[SDPayToolOrderView alloc] initWithFrame:SDPayToolOrderViewWillLoadFrame];
-    [_payToolOrderView setPayListArray:_payListArray moneyStr:_moneyStr orderTypeStr:_orderTypeStr];
+    [_payToolOrderView setPayListArray:_payListArray payToolOrderInfoDic:_orderInfoDic];
     _payToolOrderView.delegate = self;
     _payToolOrderView.backgroundColor = [UIColor whiteColor];
     [self addSubview:_payToolOrderView];
@@ -240,14 +238,13 @@
     }
 }
 #pragma mark 配置支付订单信息
-- (void)setPayInfo:(NSArray *)orderInfo{
+- (void)setPayInfo:(NSDictionary *)orderInfo{
     
     if (newPayToolsArr.count>0) {
         if (_style == SDPayViewNomal) {
-            _payListArray = newPayToolsArr;
-            _orderTypeStr = [orderInfo firstObject];
-            _moneyStr = [orderInfo lastObject];
             payToolListIndex = 0;
+            _payListArray = newPayToolsArr;
+            _orderInfoDic = orderInfo;
         }
         if (_style == SDPayViewOnlyPwd) {
             _payListArray = newPayToolsArr;
@@ -266,7 +263,7 @@
     //2.添加卡dic
     if (_addCardType == SDPayView_ADDBANKCARD) {
         NSMutableDictionary *bankDic = [[NSMutableDictionary alloc] init];
-        [bankDic setValue:@"PAYLTOOL_LIST_PAYPASS" forKey:@"type"];
+        [bankDic setValue:PAYTOOL_PAYPASS forKey:@"type"];
         [bankDic setValue:@"添加银行卡" forKey:@"title"];
         [bankDic setValue:@"list_yinlian_AddCard" forKey:@"img"];
         [bankDic setValue:@"" forKey:@"limit"];
@@ -276,7 +273,7 @@
     }
     if (_addCardType == SDPayView_ADDSANDCARD) {
         NSMutableDictionary *cardDic = [[NSMutableDictionary alloc] init];
-        [cardDic setValue:@"PAYLTOOL_LIST_ACCPASS" forKey:@"type"];
+        [cardDic setValue:PAYTOOL_ACCPASS forKey:@"type"];
         [cardDic setValue:@"添加杉德卡" forKey:@"title"];
         [cardDic setValue:@"list_sand_AddCard" forKey:@"img"];
         [cardDic setValue:@"" forKey:@"limit"];
@@ -284,6 +281,11 @@
         [cardDic setValue:@"true" forKey:@"available"];
         [newPayToolsArr addObject:cardDic];
     }
+    if (_addCardType == SDPayView_ADDNOCARD) {
+        
+    }
+    
+    
     //3.添加不可用
     for (int i = 0; i < payToolsArrayUnusableM.count; i++) {
         [newPayToolsArr addObject:payToolsArrayUnusableM[i]];
@@ -341,6 +343,7 @@
         [SDPayAnimtion payToolHidden:self.maskBackGroundView];
     }
 }
+
 
 #pragma mark 外部调用 - 复位到待支付页并删除
 // 外部调用 - 复位到待支付页并删除

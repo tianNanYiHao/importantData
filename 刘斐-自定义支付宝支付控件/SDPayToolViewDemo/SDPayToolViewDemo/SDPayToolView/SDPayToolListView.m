@@ -134,9 +134,11 @@
         NSString *accNo  = [[dic objectForKey:@"account"] objectForKey:@"accNo"];
         NSString *lastfournumber = accNo.length>=4?[accNo substringFromIndex:accNo.length-4]: @"暂无显示";
         //2.2.1 - (钱包账户.电子记名卡)不显示尾号
-        if ([[dic objectForKey:@"type"] isEqualToString:@"1005"]) {
+        if ([[dic objectForKey:@"type"] isEqualToString:@"1005"] || [[[dic objectForKey:@"account"] objectForKey:@"accCode"] isEqualToString:@"475"]) {
             bankNameLabel.text = [NSString stringWithFormat:@"%@",title];
-        }else{
+        }
+        //2.2.1 - 其他记名账户显示尾号
+        else{
             bankNameLabel.text = [NSString stringWithFormat:@"%@(%@)",title,lastfournumber];
         }
         

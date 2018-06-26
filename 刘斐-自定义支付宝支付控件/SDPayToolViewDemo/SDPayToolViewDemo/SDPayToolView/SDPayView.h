@@ -24,7 +24,9 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
     //添加银行卡
     SDPayView_ADDBANKCARD = 0,
     //添加杉德卡
-    SDPayView_ADDSANDCARD
+    SDPayView_ADDSANDCARD,
+    //不添加任何卡
+    SDPayView_ADDNOCARD
 };
 
 @protocol SDPayViewDelegate <NSObject>
@@ -117,7 +119,7 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
 /**
  设置支付工具数组
 
- @param payArray 支付工具数组
+ @param payTools 支付工具数组
  */
 - (void)setPayTools:(NSArray*)payTools;
 
@@ -125,8 +127,17 @@ typedef NS_ENUM(NSInteger,SDPayViewAddCardType) {
  设置支付信息
 
  @param orderInfo 订单信息
+ 
+ @{
+ @"desTitle":@"订单信息如下",
+ @"money":@"¥90",
+ @"orderTitle":@"订单信息",
+ @"orderDes":@"充值",
+ @"payTitle":@"支付方式",
+ @"payBtnTitle":@"确认支付"
+ }
  */
-- (void)setPayInfo:(NSArray*)orderInfo;
+- (void)setPayInfo:(NSDictionary*)orderInfo;
 
 
 #pragma mark 外部调用 - 弹出支付工具

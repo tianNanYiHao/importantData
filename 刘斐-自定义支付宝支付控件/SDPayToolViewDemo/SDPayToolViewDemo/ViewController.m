@@ -13,14 +13,18 @@
 
 @interface ViewController ()<SDPayViewDelegate>
 {
-    SDPayView *payView;
+    
 }
+@property (nonatomic, strong) SDPayView *payView;
 @property (nonatomic, strong) NSMutableArray *payModeArray;
 @end
 
 @implementation ViewController
 
-
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+}
 
 
 - (void)viewDidLoad {
@@ -29,10 +33,12 @@
     
     
     //1.常规模式
-    payView = [SDPayView getPayView];
-    payView.addCardType = SDPayView_ADDBANKCARD;
-    payView.delegate = self;
-    [self.view addSubview:payView];
+    self.payView = [SDPayView getPayView];
+    self.payView.addCardType = SDPayView_ADDBANKCARD;
+    self.payView.delegate = self;
+//    [self.view addSubview:self.payView];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.payView];
+    
     
     //2.仅支付密码键盘模式
 //    payView = [SDPayView getPayView];
@@ -46,9 +52,16 @@
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSArray *arr = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
 
-    [payView setPayTools:arr];
-    [payView setPayInfo:@[@"提现",@"¥100.00"]];
-    [payView showPayTool];
+    [self.payView setPayTools:arr];
+    [self.payView setPayInfo: @{
+                                @"desTitle":@"订单信息如下",
+                                @"money":@"¥90",
+                                @"orderTitle":@"订单信息",
+                                @"orderDes":@"充值",
+                                @"payTitle":@"支付方式",
+                                @"payBtnTitle":@"确认支付"
+                                }];
+    [self.payView showPayTool];
 }
 
 
@@ -80,7 +93,7 @@
     else{
         //支付失败
         //支付控件复位 - 不删除
-        [payView payPwdResetToPayOrderView];
+        [self.payView payPwdResetToPayOrderView];
         
         //支付控件复位 - 后删除
 //        [payView resetPayToolHidden];
@@ -92,7 +105,7 @@
     
     //1.
     //点击忘记密码 - 隐藏支付控件
-    [payView hidPayToolInPayPwdView];
+    [self.payView hidPayToolInPayPwdView];
 //
 //    ForgetPwdViewController *f = [[ForgetPwdViewController alloc] init];
 //
@@ -101,6 +114,7 @@
 //    [self.navigationController pushViewController:f animated:YES];
 //
 //    NSLog(@"点击了忘记密码 密码类型: %@",type);
+    
     
 }
 

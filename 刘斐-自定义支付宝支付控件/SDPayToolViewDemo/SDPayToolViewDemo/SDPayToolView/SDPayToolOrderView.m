@@ -35,19 +35,40 @@
 }
 
 
-- (void)setPayListArray:(NSArray *)payListArray moneyStr:(NSString*)moneyStr orderTypeStr:(NSString*)orderTypeStr{
-    [self createUI:payListArray moneyStr:moneyStr orderTypeStr:orderTypeStr];
+
+
+- (void)setPayListArray:(NSArray *)payListArray payToolOrderInfoDic:(NSDictionary*)payToolOrderDic{
+    [self createUI:payListArray payToolOrderInfoDic:payToolOrderDic];
 }
 
-
 //创建UI
-- (void)createUI:(NSArray*)payListArray moneyStr:(NSString*)moneyStr orderTypeStr:(NSString*)orderTypeStr{
+- (void)createUI:(NSArray*)payListArray payToolOrderInfoDic:(NSDictionary*)payToolOrderDic{
     
     //设置数据
+    //功能标题
+    NSString *desTitle = [payToolOrderDic objectForKey:@"desTitle"];
+    
+    //金额
+    NSString *money =  [payToolOrderDic objectForKey:@"money"];
+    
+    //订单用途标题
+    NSString *orderTitle = [payToolOrderDic objectForKey:@"orderTitle"];
+    //订单用途描述
+    NSString *orderDes = [payToolOrderDic objectForKey:@"orderDes"];
+    
+    //订单对象标题
+    NSString *payTitle = [payToolOrderDic objectForKey:@"payTitle"];
+    //订单对象描述
     NSString *accNo  = [[[payListArray firstObject] objectForKey:@"account"] objectForKey:@"accNo"];
     NSString *title  = [[payListArray firstObject] objectForKey:@"title"];
     NSString *lastfournumber = accNo.length>=4?[accNo substringFromIndex:accNo.length-4]: @"暂无显示";
     
+    //确认按钮标题
+    NSString *payBtnTitle = [payToolOrderDic objectForKey:@"payBtnTitle"];
+    
+    
+    //0功能标题重置
+    self.midTitleLab.text = desTitle;
     
     //0.payInfoView
     UIView *payInfoView = [[UIView alloc] init];
@@ -63,11 +84,10 @@
     
     //1.1 moneyLab
     UILabel *moneyLab = [[UILabel alloc] init];
-    moneyLab.text = @"¥0.01";
     moneyLab.textColor = textBlackColor;
     moneyLab.font = [UIFont systemFontOfSize:moneyLabFont];
     moneyLab.textAlignment = NSTextAlignmentCenter;
-    moneyLab.text = moneyStr;
+    moneyLab.text = money;
     [paymoneyView addSubview:moneyLab];
     
     
@@ -78,18 +98,17 @@
     
     //2.1 payOrderLab
     UILabel *payOrderLab = [[UILabel alloc] init];
-    payOrderLab.text = @"订单信息";
+    payOrderLab.text = orderTitle;
     payOrderLab.font = [UIFont systemFontOfSize:payOrderInfoLabFont];
     payOrderLab.textColor = textGrayColor;
     [payDesView addSubview:payOrderLab];
     
     //2.2 payOrderDesLab
     UILabel *payOrderDesLab = [[UILabel alloc] init];
-    payOrderDesLab.text = @"转账";
     payOrderDesLab.textAlignment = NSTextAlignmentRight;
     payOrderDesLab.font = [UIFont systemFontOfSize:payOrderInfoLabFont];
     payOrderDesLab.textColor = textBlackColor;
-    payOrderDesLab.text = orderTypeStr;
+    payOrderDesLab.text = orderDes;
     [payDesView addSubview:payOrderDesLab];
     
     
@@ -101,20 +120,19 @@
     
     //2.3 payWayLab
     UILabel *payWayLab = [[UILabel alloc] init];
-    payWayLab.text = @"付款方式";
+    payWayLab.text = payTitle;
     payWayLab.font = [UIFont systemFontOfSize:payOrderInfoLabFont];
     payWayLab.textColor = textGrayColor;
     [payDesView addSubview:payWayLab];
     
     
     //2.4 payWayChooseBtn
-    
     UIButton *payWayChooseBtn = [[UIButton alloc] init];
     payWayChooseBtn.backgroundColor = [UIColor clearColor];
     [payWayChooseBtn addTarget:self action:@selector(jumpToPayToolListView) forControlEvents:UIControlEventTouchUpInside];
     [payDesView addSubview:payWayChooseBtn];
     
-   
+    
     
     //2.4.1 payWayChooseLab
     payWayChooseLab = [[UILabel alloc] init];
@@ -135,12 +153,12 @@
     UIView *lineTwo = [[UIView alloc] init];
     lineTwo.backgroundColor = lineColor;
     [payDesView addSubview:lineTwo];
-
+    
     
     
     //3.payBtn
     UIButton *payBtn = [[UIButton alloc] init];
-    NSMutableAttributedString *payStr = [[NSMutableAttributedString alloc] initWithString:@"立即付款"];
+    NSMutableAttributedString *payStr = [[NSMutableAttributedString alloc] initWithString:payBtnTitle];
     [payStr addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:payBtnFont],
                             NSForegroundColorAttributeName:[UIColor whiteColor]
                             } range:NSMakeRange(0, payStr.length)];
@@ -158,7 +176,7 @@
     CGSize moneyLabSize = [moneyLab.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:moneyLabFont]}];
     CGSize payOrderLabSize = [payOrderLab.text sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:payOrderInfoLabFont]}];
     
-
+    
     CGFloat moneyLabOY = SIDE_LEFT_RIGHT;
     CGFloat payOrderLabOY = SIDE_LEFT_RIGHT;
     CGFloat paymoneyViewH = moneyLabSize.height + moneyLabOY *2;
@@ -179,7 +197,7 @@
     CGFloat payWayLabH = payOrderLabH;
     
     CGFloat payDesViewH   = (payOrderLabH + 2*SIDE_LEFT_RIGHT)*2;
-
+    
     CGFloat payInfoViewH  = paymoneyViewH + payDesViewH;
     CGFloat payInfoViewOY = CGRectGetMaxY(self.lineView.frame);
     
@@ -217,6 +235,8 @@
     lineTwo.frame = CGRectMake(SIDE_LEFT_RIGHT, CGRectGetMaxY(payWayLab.frame)+SIDE_LEFT_RIGHT, SIDE_COMMWIDTH+SIDE_LEFT_RIGHT, LineBorder);
     
     payBtn.frame = CGRectMake(SIDE_LEFT_RIGHT, self.bounds.size.height - SIDE_LEFT_RIGHT*3 - SIDE_LEFT_RIGHT, SIDE_COMMWIDTH, SIDE_LEFT_RIGHT*3);
+    
+    
     
 }
 
