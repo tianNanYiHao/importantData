@@ -171,6 +171,9 @@
     forgetPayPwdBtn.titleLabel.textAlignment = NSTextAlignmentRight;
     [forgetPayPwdBtn addTarget:self action:@selector(forgetPwd:) forControlEvents:UIControlEventTouchUpInside];
     [payPwdPayBaseView addSubview:forgetPayPwdBtn];
+    
+    //由于杉德宝产品流程限制, 不支持支付过程中新开流程进行忘记密码操作,故暂时隐藏忘记支付密码功能
+    forgetPayPwdBtn.hidden = YES;
 
     
     

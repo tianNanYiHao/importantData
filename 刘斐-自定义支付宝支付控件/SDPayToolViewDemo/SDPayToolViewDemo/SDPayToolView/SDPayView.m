@@ -261,6 +261,7 @@
     }
     
     //2.添加卡dic
+    //2.1添加银行卡
     if (_addCardType == SDPayView_ADDBANKCARD) {
         NSMutableDictionary *bankDic = [[NSMutableDictionary alloc] init];
         [bankDic setValue:PAYTOOL_PAYPASS forKey:@"type"];
@@ -271,6 +272,7 @@
         [bankDic setValue:@"true" forKey:@"available"];
         [newPayToolsArr addObject:bankDic];
     }
+    //2.2添加杉德卡
     if (_addCardType == SDPayView_ADDSANDCARD) {
         NSMutableDictionary *cardDic = [[NSMutableDictionary alloc] init];
         [cardDic setValue:PAYTOOL_ACCPASS forKey:@"type"];
@@ -281,8 +283,9 @@
         [cardDic setValue:@"true" forKey:@"available"];
         [newPayToolsArr addObject:cardDic];
     }
+    //2.3不添加任何卡
     if (_addCardType == SDPayView_ADDNOCARD) {
-        
+        //不添加任何卡
     }
     
     
