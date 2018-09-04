@@ -439,8 +439,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sand.saoOrangeCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32ba215d-640b-4eb3-a9d3-4d9d85e23158";
-				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+				PROVISIONING_PROFILE = "4acdd54b-1dad-47d3-aa64-bcca6617c066";
+				PROVISIONING_PROFILE_SPECIFIER = sandbao_Dev_Profile;
 			};
 			name = Debug;
 		};
@@ -454,8 +454,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sand.saoOrangeCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32ba215d-640b-4eb3-a9d3-4d9d85e23158";
-				PROVISIONING_PROFILE_SPECIFIER = sandComm_Dev_Profile;
+				PROVISIONING_PROFILE = "4acdd54b-1dad-47d3-aa64-bcca6617c066";
+				PROVISIONING_PROFILE_SPECIFIER = sandbao_Dev_Profile;
 			};
 			name = Release;
 		};
